@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="Orifice Leakage Rate Calculation" name="title" />
+<meta content="Help/Reference for the oriifice leakage rate calculation" name="description" />
+<meta content="orifice leakage rate" name="keywords" />
+<meta content="Sandeep Raheja" name="author" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Orifice Leakage Calculation &mdash; codecalculation.com 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="codecalculation.com 1 documentation" href="../../index.html"/>
+        <link rel="up" title="Fluid Mechanics" href="index.html"/>
+        <link rel="next" title="Noise" href="../noise.html"/>
+        <link rel="prev" title="Fluid Mechanics" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> codecalculation.com
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../docuMentor.html">docuMentor : Introduction to key features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../process/index.html">Process Calculations</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Mechanical Calculations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../pumps/index.html">Pumps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compressors/index.html">Compressors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../engines/index.html">Engines, Gas Turbine and Steam Turbines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flare/index.html">Flare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../heater/index.html">Fired Heater and Boilers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pressure-vessel/index.html">Pressure Vessels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../piping/index.html">Piping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hvac/index.html">HVAC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seals/index.html">Seals and Seal Systems</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Fluid Mechanics</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Orifice Leakage Calculation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#saint-venant-formula">Saint Venant Formula</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../noise.html">Noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../emissions.html">Emissions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../electrical/index.html">Electrical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../instrumentation/index.html">Instrumentation Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../civil/index.html">Civil/Structural Calculations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">E-Books:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../thermodynamics/index.html">Thermodynamics for Rotating Equipment (from the ground up)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">codecalculation.com</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Mechanical Calculations</a> &raquo;</li>
+        
+          <li><a href="index.html">Fluid Mechanics</a> &raquo;</li>
+        
+      <li>Orifice Leakage Calculation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/mechanical/fluidmech/orifice-leakage.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="orifice-leakage-calculation">
+<h1>Orifice Leakage Calculation<a class="headerlink" href="#orifice-leakage-calculation" title="Permalink to this headline">¶</a></h1>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/reservoir-orifice.png"><img alt="reservoir leakage through orifice" src="../../_images/reservoir-orifice.png" style="width: 600.0px; height: 313.5px;" /></a>
+</div>
+<div class="section" id="saint-venant-formula">
+<h2>Saint Venant Formula<a class="headerlink" href="#saint-venant-formula" title="Permalink to this headline">¶</a></h2>
+<p>The velocity of fluid escaping from the reservoir through orifice is given by the following equation.</p>
+<div class="math">
+\[v = \sqrt{\left[2\left(\frac{\gamma}{\gamma-1}\right)\frac{p_{0}}{\rho_{0}}(1-r^{(\gamma-1)/\gamma})\right]}\]</div>
+<p>where</p>
+<p><br> <span class="math">\(v\)</span> is the flow velocity through orifice
+<br> <span class="math">\(\gamma\)</span> is the ratio of specific heats <span class="math">\(C_p/C_v\)</span>
+<br> <span class="math">\(p_0\)</span> is the pressure in reservoir`
+<br> <span class="math">\(\rho_0\)</span> is the density in reservoir`
+<br> <span class="math">\(r=p_0/p\)</span> is the pressure ratio across orifice`</p>
+<p>The density inside the reservoir <span class="math">\(\rho_0\)</span> can be obtained using the ideal gas law</p>
+<div class="math">
+\[\rho_0 = \frac{p_0}{R_gT_0}\]</div>
+<p>where</p>
+<p><br> <span class="math">\(R_g\)</span> is the specific gas constant
+<br> <span class="math">\(T_0\)</span> is the temperature in the reservoir in K`</p>
+<p>The specific gas constant is obtained as</p>
+<div class="math">
+\[R_g = \frac{R_u}{MW}\]</div>
+<p>where</p>
+<p><br> <span class="math">\(R_u\)</span> is the universal gas constant (=8314 J/kmol.K)
+<br> <span class="math">\(MW\)</span> is the molecular mass of the fluid in kg/kmol or gm/mol`</p>
+<p>The mass flow rate of the fluid escaping through the orifice can be obtained as follows:</p>
+<div class="math" id="equation-orifice-mass-flow">
+<span class="eqno">(1)<a class="headerlink" href="#equation-orifice-mass-flow" title="Permalink to this equation">¶</a></span>\[\dot{m}=Av\rho\]</div>
+<p>where</p>
+<p><br> <span class="math">\(\dot{m}\)</span> is the leakage mass flow rate
+<br> <span class="math">\(A\)</span> is the area of the orifice`
+<br> <span class="math">\(\rho\)</span> is the density of fluid as it just escapes the orifice`</p>
+<p>Using isentropic process relationships we have</p>
+<div class="math" id="equation-density-isentropic-reln">
+<span class="eqno">(2)<a class="headerlink" href="#equation-density-isentropic-reln" title="Permalink to this equation">¶</a></span>\[\rho = \rho_0r^{1/\gamma}\]</div>
+<p>Substituting the value of <span class="math">\(v\)</span> and <span class="math">\(\rho\)</span> in <a class="reference internal" href="#equation-orifice-mass-flow">(1)</a> we get</p>
+<div class="math">
+\[\dot{m} =   A\rho_0\sqrt{\left[2\left(\frac{\gamma}{\gamma-1}\right)\frac{p_{0}}{\rho_{0}}r^{2/\gamma}(1-r^{(\gamma-1)/\gamma})\right]}\]</div>
+<p>In actual practice, the flow will be less than what is derived above and this is addressed by introducing the coefficient of discharge term <span class="math">\(C_d\)</span>. Introducing that in the above equation we get the final form of the equation which is also popular by the name Saint Venant Equation.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Saint Venant Equation</p>
+<div class="last math">
+\[\dot{m} =   C_dA\rho_0\sqrt{\left[2\left(\frac{\gamma}{\gamma-1}\right)\frac{p_{0}}{\rho_{0}}r^{2/\gamma}(1-r^{(\gamma-1)/\gamma})\right]}\]</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../noise.html" class="btn btn-neutral float-right" title="Noise" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Fluid Mechanics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sandeep Raheja.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

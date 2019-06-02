@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="This chapter discusses the limitations of first law and introduces the second law of thermodynamics. The Kelvin Planck statement and its corollary - the Clausius Statement is discussed. The idea of a machine with 100% thermal efficiency is rejected. The concept of reversibility, Carnot cycle and Carnot principle is introduced. The thermodynamic temperature scale (Kelvin scale is defined). The Carnot efficiency of heat engines, heat pumps and refrigerators is derived. " name="description" />
+<meta content="thermodynamics, second law, thermal efficiency, reversible, irreversible, carnot cycle, kelvin planck, clausius, Coefficient of Performance, efficiency, absolute temperaure scale" name="keywords" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CHAPTER 4. - SECOND LAW OF THERMODYNAMICS &mdash; codecalculation.com 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="codecalculation.com 1 documentation" href="../index.html"/>
+        <link rel="up" title="Thermodynamics for Rotating Equipment (from the ground up)" href="index.html"/>
+        <link rel="next" title="CHAPTER 5. - ENTROPY" href="chap05.html"/>
+        <link rel="prev" title="CHAPTER 3. - IDEAL GAS AND SPECIFIC HEATS" href="chap03.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> codecalculation.com
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../docuMentor.html">docuMentor : Introduction to key features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/index.html">Process Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanical/index.html">Mechanical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrical/index.html">Electrical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../instrumentation/index.html">Instrumentation Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../civil/index.html">Civil/Structural Calculations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">E-Books:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Thermodynamics for Rotating Equipment (from the ground up)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap01.html">CHAPTER 1. - INTRODUCTION AND KEY DEFINITIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap02.html">CHAPTER 2. - FIRST LAW OF THERMODYNAMICS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap03.html">CHAPTER 3. - IDEAL GAS AND SPECIFIC HEATS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CHAPTER 4. - SECOND LAW OF THERMODYNAMICS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cyclic-devices-and-their-efficiencies">Cyclic Devices and their efficiencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#second-law-of-thermodynamics">Second Law of Thermodynamics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-kelvin-planck-statement">The Kelvin Planck Statement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-clausius-statement">The Clausius Statement</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reversibile-and-irreversibile-processes">Reversibile and Irreversibile Processes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#carnot-cycle-and-carnot-principles">Carnot cycle and Carnot Principles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-thermodynamic-temperature-scale-kelvin-scale">The Thermodynamic Temperature Scale (Kelvin Scale)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#efficiencies-of-carnot-devices">Efficiencies of Carnot Devices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chap05.html">CHAPTER 5. - ENTROPY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap06.html">CHAPTER 6. - COMPRESSORS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap07.html">CHAPTER 7. - TURBINES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#index">Index</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">codecalculation.com</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Thermodynamics for Rotating Equipment (from the ground up)</a> &raquo;</li>
+        
+      <li>CHAPTER 4. - SECOND LAW OF THERMODYNAMICS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/thermodynamics/chap04.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chapter-4-second-law-of-thermodynamics">
+<h1>CHAPTER 4. - SECOND LAW OF THERMODYNAMICS<a class="headerlink" href="#chapter-4-second-law-of-thermodynamics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cyclic-devices-and-their-efficiencies">
+<h2>Cyclic Devices and their efficiencies<a class="headerlink" href="#cyclic-devices-and-their-efficiencies" title="Permalink to this headline">¶</a></h2>
+<p id="index-0">When a closed system undergoes a thermodynamic cycle, it undergoes a series of processes changing thermodynamic state from one to another and ultimately returns to its original thermodynamic state.</p>
+<div class="math">
+\[\underset{cyclic}{\sum}Q - \underset{cyclic}{\sum}W = \underset{cyclic}{\sum}U\]</div>
+<p>As the system is restored to its original state the energy state of the system remains unchanged during the cycle (<span class="math">\(\underset{cyclic}{\sum}U=0\)</span>). Upon substitution we get:</p>
+<div class="math">
+\[\underset{cyclic}{\sum}Q = \underset{cyclic}{\sum}W\]</div>
+<p id="index-1">Efficiency of a cyclic system would depend on the manner in which it is defined. In general efficiency is nothing but the quantum of goal attained versus the quantum of efforts spend (expressed as a ratio of quantities with same dimensions). The cyclic efficiency would therefore be defined in individual context. There are some common cyclic thermodynamic devices that are encountered in day to day engineering. These are briefly described below:</p>
+<p id="index-2"><em>Heat engines</em> are devices that are deployed to convert heat to work. All practical heat engines are cyclic devices. From experience, it is observed that heat engines (irrespective of their underlying design) would obtain their energy as heat from a body at high temperature, convert a part of it   to work and the residual is dumped to the low temperature body. An energy balance schematic of heat engine  is given below:</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/heat-engine.png"><img alt="schematic of heat engine" src="../_images/heat-engine.png" style="width: 329.7px; height: 385.0px;" /></a>
+</div>
+<p>From first law we have <span class="math">\(W_{out} = Q_H - Q_L\)</span> and therefore upon substitution and simplification we have:</p>
+<p id="index-3">The cyclic efficiency of a heat engine is termed as <em>thermal efficiency</em> and is defined as:</p>
+<div class="math" id="equation-thermal-efficiency-heat-engine">
+<span class="eqno">(1)<a class="headerlink" href="#equation-thermal-efficiency-heat-engine" title="Permalink to this equation">¶</a></span>\[\eta_{thermal} = \frac{W_{out}}{Q_H}  = 1- \frac{Q_L}{Q_H}\]</div>
+<p id="index-4"><em>Refrigerator</em> and <em>Heat pumps</em> devices that take heat from a cold body and deliver it to a hot body. An energy balance schematic of heat pump/refrigerator is given below:</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/heat-pump.png"><img alt="schematic of heat pump" src="../_images/heat-pump.png" style="width: 329.7px; height: 385.0px;" /></a>
+</div>
+<p>While heat pump and refrigerator are very similar in their thermodynamic cycle, the difference lies in the objective. The objective of a heat pump is to to provide heat to the hot body and the objective of a refrigerator is to extract heat from the cold body. Thus the efficiencies of these devices (termed as Coefficient of Performance since this ratio index could be greater than one) are accordingly defined.</p>
+<p id="index-5">The Coefficient of Performance (COP) of a refrigerator is defined as:</p>
+<div class="math" id="equation-cop-refrigerator">
+<span class="eqno">(2)<a class="headerlink" href="#equation-cop-refrigerator" title="Permalink to this equation">¶</a></span>\[COP_{refrigerator} = \frac{Q_L}{W_{in}} = \frac{Q_L}{Q_H - Q_L}\]</div>
+<p id="index-6">The Coefficient of Performance (COP) of a heat pump is defined as:</p>
+<div class="math" id="equation-cop-heat-pump">
+<span class="eqno">(3)<a class="headerlink" href="#equation-cop-heat-pump" title="Permalink to this equation">¶</a></span>\[COP_{heat-pump} = \frac{Q_H}{W_{in}} = = \frac{Q_H}{Q_H - Q_L}\]</div>
+<p>As discussed above these cyclic devices have thermal interactions with a  body (or bodies) in surroundings which absorb or reject heat acting like a heat reservoir of some sort. Our analysis would be significantly simplified given the assumption that this heat interaction takes place in an isothermal manner i.e. does not lead to a fall or rise of the body.</p>
+<div class="admonition important" id="index-7">
+<p class="first admonition-title">Important</p>
+<p class="last">Bodies that can absorb or reject finite amounts of heat in an isothermal manner are called thermal energy reservoirs.</p>
+</div>
+<p>Though this is an idealization but a practical one in most engineering applications if used reasonably.</p>
+</div>
+<div class="section" id="second-law-of-thermodynamics">
+<h2>Second Law of Thermodynamics<a class="headerlink" href="#second-law-of-thermodynamics" title="Permalink to this headline">¶</a></h2>
+<p>In everyday life we observe that certain processes and their behaviour can not fully be explained by the first law of thermodynamics. The inadequacy of first law comes to the fore as we make the following observations in life.</p>
+<p><em>Spontaneity/directionality of processes</em> : We observe that some processes occur spontaneously while their reverse counterparts do not.  For example, A hot body looses heat when kept in cold surroundings spontaneously. The reverse process of surroundings lossing heat and the body becoming hotter would never occur spontaneously. Pressurised air in a tank will always escape to atmosphere when the valve is opened, but atmospheric air will never on its own compress and store itself in the tank. Similarly, if a body falls to ground its kinetic energy would convert to heat and get wasted. But a body lying on the ground will not pick heat from environment and elevate itself spontaneously.</p>
+<p><em>Quality of Energy</em>: In addition it is also observed that all energy is just not the same in terms of the ease with which it lends itself for exploitation say extraction of useful work. An ocean at ambient temperature may have a lot of thermal energy, but steam generated in boiler can much more easily move turbines and produce work.</p>
+<p><em>Limits to Efficiency</em>: While it is possible to convert all work to energy, but all heat does not seem to ever get converted to work.</p>
+<p>So we need to come up with a better understanding or rules that can help us on situations such as the above. The second law of thermodynamics gives us those rules, to plug the gaps that are left by the first law.</p>
+<p>These new laws, happen to be purely empirical in nature and are postulated as statements of denial (what can not be done). Therefore they have no proof and must be accepted as it is. The wonderful thing about these statements are that they have never been found violated till now.</p>
+<p>These statements emerged out years of experience gained by engineers trying to efficiently convert heat to work using devices commonly called as <em>heat engines</em> and those working to extract heat from cooler bodies and transferring them to hotter bodies using devices called as <em>heat pumps</em> (refrigerator).</p>
+<div class="section" id="the-kelvin-planck-statement">
+<span id="index-8"></span><h3>The Kelvin Planck Statement<a class="headerlink" href="#the-kelvin-planck-statement" title="Permalink to this headline">¶</a></h3>
+<p>The second law of thermodynamics is best described by a statement credited to Kelvin Planck which states that:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>The second law</p>
+<p class="last">It is impossible to construct a system which will operate in a cycle, extract some heat from a single reservoir and produce a net amount of work.</p>
+</div>
+<p>In other words it is impossible to build a system with 100% thermal efficiency. Some amount of heat will always have to be rejected to a low temperature reservoir.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/kelvin-planck.png"><img alt="illustration for kelvin-planck statement" src="../_images/kelvin-planck.png" style="width: 329.7px; height: 385.0px;" /></a>
+</div>
+<p>As we can imagine this statement comes from the engineering experience gathered in the domain of heat engines.</p>
+</div>
+<div class="section" id="the-clausius-statement">
+<span id="index-9"></span><h3>The Clausius Statement<a class="headerlink" href="#the-clausius-statement" title="Permalink to this headline">¶</a></h3>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Corollary 1</p>
+<p class="last">It is impossible to construct a system which will operate in a cycle, and produces no other effect other than the transfer heat from a cooler body to a hotter body.</p>
+</div>
+<p>In simpler words work is required to be done by the surroundings on the system to make such a heat transfer happen.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/clausius.png"><img alt="illustration for clausius statement" src="../_images/clausius.png" style="width: 329.7px; height: 385.0px;" /></a>
+</div>
+<p>This statement comes from the engineering experience gathered in the domain of refrigeration.</p>
+<p>It can be demonstrated that the clausius statement is just a corollary of the Kelvin Planck statement.  Suppose that there exists a heat pump that delivers heat <span class="math">\(Q\)</span>  to the hot reservoir from the cold reservoir and for which <span class="math">\(W_{in}=0\)</span>. We could then design and size a heat engine that rejects heat Q to  the cold reservoir while delivering work <span class="math">\(W\)</span>. This engine would take heat <span class="math">\(Q_H = Q+W\)</span> from the hot reservoir. If the heat engine and heat pump are combined together the cold reservoir can be made redundant. Heat rejected by the heat engine would be absorbed by the heat pump. This combined machine would now simply take heat from hot reservoir and deliver it as work, which is in violation of the Kelvin Planck statement.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/kelvin-clausius.png"><img alt="illustration for equivalence of kelvin-planck and clausius statements" src="../_images/kelvin-clausius.png" style="width: 571.9px; height: 395.5px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="reversibile-and-irreversibile-processes">
+<span id="index-10"></span><h2>Reversibile and Irreversibile Processes<a class="headerlink" href="#reversibile-and-irreversibile-processes" title="Permalink to this headline">¶</a></h2>
+<p>The statement of second law (kelvin planck statement) already suggests that it is impossible to make a machine which is 100% thermally efficient. The question now remains - “So what is the maximum efficiency attainable?”. To understand this the concept of reversible and irreversible processes need to be understood.</p>
+<p>In an earlier section, some process examples have been cited that spontaneously happen in one direction while their reverse counterparts do not happen spontaneously or in other words are irreversible.</p>
+<p>A <em>reversible process</em> is a process that can be reversed without leaving any trace on the system and surroundings. Processes that are not reversible are <em>irreversible processes</em>.  Reversible processes never truly happen in nature, but the idea is meaningful in the sense that some processes are more reversible than others. Reversible process is therefore like a theoritical limit.</p>
+<p>The factors that are responsible for irreversiblities that we see are:</p>
+<p><em>friction</em>: Friction is a force that opposes relative motion(whatever the direction). If a cylinder piston arrangement containing gas at pressure, expands a part of the work done goes in overcoming the friction and heats up the environment. When we try to reverse this process of expansion by compressing the piston, the gas gets restored to its original state. However work is again done to overcome friction that further heats the environment. The surroundings have therefore not been restored to their original condition and the process can not be termed as a reversible one.
+In a system, this friction may be present not only between solid surfaces but also between layers of liquids (viscosity) or gas.</p>
+<p><em>unrestrained expansion or compression</em> : As an extreme example consider a gas separated from vacuum by a membrane. If the membrane ruptures, the gas expands to fill the whole tank. To bring the gas back to its original state compression work will have to be done by the system. This compression work must be removed from the system so that there is no rise in internal energy. The surroundings have now spent some work and received an equivalent amount of heat in return. To restore the surroundings back to its original state we need to convert all this returned heat back to work with 100% efficiency. The second law of thermodynamics says this is impossible. Therefore, this process can not be called a reversible one.</p>
+<p><em>temperature transfer across finit temperature gradient</em> : As an example consider a bottle of cold water kept in a hot room. The bucket will absorb heat from surroundings and assume the same temperature as the ambient.   In order to bring this water back to its original temperature, heat that was absorbed will have to be removed from it by refrigeration. This refrigeration process will consume some work from the surroundings and this work will return back to the surroundings as heat.  To restore the surroundings back to its original state this heat will have to be converted totally to work, which is impossible as per the second law. Therefore, this heat transfer process which occured across a finite temperature differential can not be termed as reversible.</p>
+<p>For a process to be classified as reversible, it must change state from one equillibrium state to another. This is possible if the following conditions should be met:</p>
+<ol class="arabic simple">
+<li>absence of friction</li>
+<li>expansion/contraction against infinitismal pressure gradients</li>
+<li>heat transfer against infinitismal temperature gradients.</li>
+</ol>
+</div>
+<div class="section" id="carnot-cycle-and-carnot-principles">
+<span id="index-11"></span><h2>Carnot cycle and Carnot Principles<a class="headerlink" href="#carnot-cycle-and-carnot-principles" title="Permalink to this headline">¶</a></h2>
+<p>Thermodynamic cycles that are acheived entirely using reversible processes are called as reversible cycles. The best known example of reversible cycle is the carnot cycle which was proposed by a French engineer Sadi Carnot in 1824.</p>
+<p>The P-v diagram of a carnot cycle which can be applied for a heat engine is given below. The individual processess are as below:</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/carnot.png"><img alt="P-v diagram of carnot cycle" src="../_images/carnot.png" style="width: 430.5px; height: 350.0px;" /></a>
+</div>
+<p><em>Process 1 to 2</em> : reversible isothermal expansion</p>
+<p><br> <em>Process 2 to 3</em> : reversible adiabatic expansion
+<br> <em>Process 3 to 4</em> : reversible isothermal compression
+<br> <em>Process 4 to 1</em> : reversible adiabatic compression</p>
+<p>This Carnot cycle can be applied in reverse and applied to a heat pump. The P-v diagram of a reversed Carnot cycle is given below.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/reversed-carnot.png"><img alt="P-v diagram of reverse carnot cycle" src="../_images/reversed-carnot.png" style="width: 430.5px; height: 350.0px;" /></a>
+</div>
+<p>While Carnot cycle is no doubt interesting, what is even more are the two principles which have been proposed by Carnot. In some sense, these two carnot principles are just corollaries of the second law. They will be true as long as second law is true. They provide a new insight to our understanding of the second law.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">It is impossible to construct an engine operating between only two thermal reservoirs which will have a higher thermal efficiency than a reversible engine operating between the same two reservoirs.</p>
+</div>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../_images/carnot-first-principle.png"><img alt="Illustration of Carnot First Principle" src="../_images/carnot-first-principle.png" style="width: 772.0px; height: 305.0px;" /></a>
+<p class="caption"><span class="caption-text"><em>Proof</em>: To the contrary, let us assume that there exists an irreversible engine (<span class="math">\(X\)</span>) which is more efficient than a reversible engine (<span class="math">\(R\)</span>) when operating between same thermal reservoirs. Let both of them draw a heat of <span class="math">\(Q\)</span> from the hot reservoir. The work produced by irreversible engine (<span class="math">\(W_X\)</span>) would be greater than the work produced by the reversible engine (<span class="math">\(W_R\)</span>).  The heat rejected by the irreversible engine would be <span class="math">\(Q_{irrev}=Q-W_X\)</span> while the heat rejected by the reversible engine would be <span class="math">\(Q_{rev}=Q-W_R\)</span>. Now if the reversible engine is made to operate in reverse like a pump and is powered by the irreversible engine a net work output would be obtained. However the hot reservoir would now become redundant since the heat sourced by the engine would be same as the heat sunk by the pump. The heat could be directly routed from the pump to the engine. We can now look upon this combination as a device that takes heat input from a single reservoir and delivers net work (<span class="math">\(W_X-W_R\)</span>). As this combination device is in violation of the second law of thermodynamics we can say that our initial assumption about the irreversible machine was wrong.</span></p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">All reversible engines operating between the same two reservoirs have the same efficiency.</p>
+</div>
+<p><em>Proof</em>: To the contrary, let us assume that there exists a reversible engine (<span class="math">\(R1\)</span>) which is more efficient than a reversible engine (<span class="math">\(R2\)</span>) when operating between same thermal reservoirs. We can here onwards follow the same steps as we did in the previous proof. The resulting combination machine again in this case would violate the second law. So this assumption must be wrong again.</p>
+</div>
+<div class="section" id="the-thermodynamic-temperature-scale-kelvin-scale">
+<span id="index-12"></span><h2>The Thermodynamic Temperature Scale (Kelvin Scale)<a class="headerlink" href="#the-thermodynamic-temperature-scale-kelvin-scale" title="Permalink to this headline">¶</a></h2>
+<p>The second carnot principle states that the efficiency of all reversible engines operating between same two thermal reservoirs would be the same. It is noteworthy that this efficiency is independent of the working fluid or any details of the way the cycle is implemented. Now the only parameter that characterises a thermal reservoir is its temperature. Therefore thermal efficiency of a reversible cycle should be a function of temperature of the hot and cold thermal reservoirs. Previously in <a class="reference internal" href="#equation-thermal-efficiency-heat-engine">(1)</a> an expression of this efficiency has already been defined. This expression can also be stated as</p>
+<div class="math">
+\[\eta_{thermal} = 1 - \frac{Q_L}{Q_H}\]</div>
+<p>So we can also conclude that the ratio <span class="math">\(\frac{Q_H}{Q_L}\)</span> is a function of the reservoir temperatures. Expressed mathematically:</p>
+<div class="math" id="equation-heat-temp-ratio">
+<span class="eqno">(4)<a class="headerlink" href="#equation-heat-temp-ratio" title="Permalink to this equation">¶</a></span>\[\frac{Q_H}{Q_L} = f(T_H, T_L)\]</div>
+<p>Let us now try to evaluate what this function <span class="math">\(f\)</span> can look like. To help us do this, consider the arrangement of reversible heat engines as shown in the figure below.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/thermodynamic-temperature-scale.png"><img alt="Thermodynamic Temperature Scale Illustration" src="../_images/thermodynamic-temperature-scale.png" style="width: 352.0px; height: 393.0px;" /></a>
+</div>
+<p>The engines A and B on the left operate in a heat series fashion. The heat rejected by A is received as heat input by engine B. Since A and B are reversible their combination is also a reversible engine. Then as per carnot’s second principle, the thermal efficiency of the combination of engines and engine A must be same. The combined engine (A+B) and engine (C) receive the same amount of heat from the hot reservoir <span class="math">\(Q_1\)</span> and reject the same amount of heat to the low temperature reservoir (<span class="math">\(Q_3\)</span>). The work done <span class="math">\(W_A + W_B = W_C\)</span>.</p>
+<p>Applying equation <a class="reference internal" href="#equation-heat-temp-ratio">(4)</a> to all three engines we get:</p>
+<div class="math">
+\[\frac{Q_1}{Q_2} = f(T_1, T_2), \;\;
+\frac{Q_2}{Q_3} = f(T_2, T_3), \;\;and \;\;
+\frac{Q_1}{Q_3} = f(T_1, T_3)\]</div>
+<p>The following identity :</p>
+<div class="math">
+\[\frac{Q_1}{Q_3} = \frac{Q_1}{Q_2}\frac{Q_2}{Q_3}\]</div>
+<p>can be written as:</p>
+<div class="math">
+\[f(T_1, T_3) = f(T_1, T_2)f(T_2, T_3)\]</div>
+<p>The above equation can only be satisfied if the function <span class="math">\(f\)</span> is of the form:</p>
+<div class="math">
+\[f(T_H, T_L) = \frac{\phi(T_H)}{\phi(T_L)}\]</div>
+<p>Various options of <span class="math">\(\phi\)</span> can satisfy the above form of equation. Kelvin proposed to take <span class="math">\(\phi(T)=T\)</span>. This new temperature scale is called the absolute temperature scale or the Kelvin scale.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>The Absolute or Kelvin Temperature Scale
+On the Kelvin scale, the temperature ratio of two reservoirs is equal to the ratio of heat transfer between a reversible heat engine and the reservoirs.</p>
+<div class="last math" id="equation-absolute-temp-scale">
+<span class="eqno">(5)<a class="headerlink" href="#equation-absolute-temp-scale" title="Permalink to this equation">¶</a></span>\[\frac{T_H}{T_L} = (\frac{Q_H}{Q_L})_{reversible}\]</div>
+</div>
+<p>In order to fix the magnitude of a unit of Kelvin, the International Conference Weights and Measures assigned a value of 273.16 Kelvin to the triple point of water. The magnitudes of temperature units on the Kelvin and Celsius scales are identical (1 K = 1°C).</p>
+</div>
+<div class="section" id="efficiencies-of-carnot-devices">
+<h2>Efficiencies of Carnot Devices<a class="headerlink" href="#efficiencies-of-carnot-devices" title="Permalink to this headline">¶</a></h2>
+<p id="index-13"><strong>Heat Engine</strong></p>
+<p>From <a class="reference internal" href="#equation-thermal-efficiency-heat-engine">(1)</a>, we can write:</p>
+<div class="math">
+\[\eta_{thermal, reversible} = 1 - (\frac{Q_L}{Q_H})_{reversible}\]</div>
+<p>Using the definition of Kelvin scale, <span class="math">\((\frac{Q_L}{Q_H})_{reversible} = \frac{T_L}{T_H}\)</span>, and therefore by substitution we get:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Efficiency of Carnot Heat Engine</p>
+<div class="last math">
+\[\eta_{thermal, reversible} =  1 - \frac{T_L}{T_H}\]</div>
+</div>
+<p><br></p>
+<p id="index-14"><strong>Refrigerator</strong></p>
+<p>From <a class="reference internal" href="#equation-cop-refrigerator">(2)</a>, we can write:</p>
+<div class="math">
+\[COP_{refrigerator, reversible} = (\frac{Q_L}{Q_H-Q_L})_{reversible} = (\frac{1}{\frac{Q_H}{Q_L} - 1})_{reversible}\]</div>
+<p>Using the definition of Kelvin scale, <span class="math">\((\frac{Q_H}{Q_L})_{reversible} = \frac{T_H}{T_L}\)</span>, and therefore by substitution we get:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Efficiency of Carnot Refrigertor</p>
+<div class="last math">
+\[COP_{refrigerator, reversible} =  \frac{1}{\frac{T_H}{T_L}-1}\]</div>
+</div>
+<p><br></p>
+<p id="index-15"><strong>Heat Pump</strong></p>
+<p>From <a class="reference internal" href="#equation-cop-heat-pump">(3)</a>, we can write:</p>
+<div class="math">
+\[COP_{heatpump, reversible} = (\frac{Q_H}{Q_H-Q_L})_{reversible} = (\frac{1}{1-\frac{Q_L}{Q_H}})_{reversible}\]</div>
+<p>Using the definition of Kelvin scale, <span class="math">\((\frac{Q_L}{Q_H})_{reversible} = \frac{T_L}{T_H}\)</span>, and therefore by substitution we get:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Efficiency of Carnot Heat Pump</p>
+<div class="last math">
+\[COP_{heatpump, reversible} =  \frac{1}{1- \frac{T_L}{T_H}}\]</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chap05.html" class="btn btn-neutral float-right" title="CHAPTER 5. - ENTROPY" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chap03.html" class="btn btn-neutral" title="CHAPTER 3. - IDEAL GAS AND SPECIFIC HEATS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sandeep Raheja.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

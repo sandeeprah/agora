@@ -1,0 +1,636 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="This chapter applies the second law of thermodynamics to processes and defines a new property called entropy to quantify second law effects. The concept of entropy increase in isolated systems is introduced. The calculation of entropy changes for ideal and perfect gases is described. The first and second Tds relationships relating entropy to other state properties is developed.  The reversible work in steady flow processes is defined. The use of temperature-entropy and enthalpy entropy diagrams is then demonstrated. " name="description" />
+<meta content="thermodynamics, second law, entropy, Tds relationship, isentropic process, perfect gas, temperature-entropy diagram, enthalpy-entropy diagram" name="keywords" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CHAPTER 5. - ENTROPY &mdash; codecalculation.com 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="codecalculation.com 1 documentation" href="../index.html"/>
+        <link rel="up" title="Thermodynamics for Rotating Equipment (from the ground up)" href="index.html"/>
+        <link rel="next" title="CHAPTER 6. - COMPRESSORS" href="chap06.html"/>
+        <link rel="prev" title="CHAPTER 4. - SECOND LAW OF THERMODYNAMICS" href="chap04.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> codecalculation.com
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../docuMentor.html">docuMentor : Introduction to key features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/index.html">Process Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanical/index.html">Mechanical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrical/index.html">Electrical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../instrumentation/index.html">Instrumentation Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../civil/index.html">Civil/Structural Calculations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">E-Books:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Thermodynamics for Rotating Equipment (from the ground up)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap01.html">CHAPTER 1. - INTRODUCTION AND KEY DEFINITIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap02.html">CHAPTER 2. - FIRST LAW OF THERMODYNAMICS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap03.html">CHAPTER 3. - IDEAL GAS AND SPECIFIC HEATS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap04.html">CHAPTER 4. - SECOND LAW OF THERMODYNAMICS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CHAPTER 5. - ENTROPY</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#clausius-inequality">Clausius Inequality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#entropy-definition">Entropy Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-principle-of-entropy-increase">The principle of entropy increase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tds-relations">Tds Relations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#entropy-change-of-liquids-and-solids">Entropy Change of Liquids and Solids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#entropy-change-of-ideal-gas">Entropy Change of Ideal Gas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#isentropic-processes-of-perfect-gas">Isentropic Processes of Perfect Gas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#work-done-in-reversible-steady-state-flows">Work Done in Reversible Steady State Flows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bernoulli-equation">Bernoulli equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reversible-is-ideal">Reversible is Ideal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#t-s-and-h-s-entropy-diagrams">T-s and h-s entropy diagrams</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chap06.html">CHAPTER 6. - COMPRESSORS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap07.html">CHAPTER 7. - TURBINES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#index">Index</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">codecalculation.com</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Thermodynamics for Rotating Equipment (from the ground up)</a> &raquo;</li>
+        
+      <li>CHAPTER 5. - ENTROPY</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/thermodynamics/chap05.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chapter-5-entropy">
+<h1>CHAPTER 5. - ENTROPY<a class="headerlink" href="#chapter-5-entropy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="clausius-inequality">
+<span id="index-0"></span><h2>Clausius Inequality<a class="headerlink" href="#clausius-inequality" title="Permalink to this headline">¶</a></h2>
+<p>Till now we have been dealing with systems that interact with just two thermal reservoirs. However in real life systems may accept and reject heat at variable temperatures.</p>
+<p>Let us consider a system as shown in the figure below that undergoes a cyclic process accepting and rejecting heat at variable temperatures. Let us also assume that heat is supplied to this variable reservoir from yet another thermal reservoir with a fixed temperature <span class="math">\(T_R\)</span>.  So if the temperature <span class="math">\(T\)</span> of the system is below <span class="math">\(T_R\)</span>, we can put a reversible heat engine device <span class="math">\(R\)</span> to operate between the high temperature reservoir and the system to extract some work <span class="math">\(W_R\)</span>. When the temperature <span class="math">\(T\)</span> of the system is above <span class="math">\(T_R\)</span>, we can use the same reversible device in reverse mode to act like a heat pump. Now, however, the work done by the reversible device will be negative as work will have to be done on the device.</p>
+<p>Using the first law of thermodynamics we have:</p>
+<div class="math">
+\[\delta W_C = \delta Q_R - dE_C\]</div>
+<p>where <span class="math">\(\delta W_C=\delta W_{sys}+W_R\)</span> is the combined work done by the system and the reversible device.</p>
+<p>As the cyclic device is a cylic one, we can make use of the second law corrolary related to absolute scale of temperature given in <a class="reference internal" href="chap04.html#equation-absolute-temp-scale">(5)</a> and write:</p>
+<div class="math">
+\[\frac{\delta Q_R}{T_R}  = \frac{\delta Q}{T}\]</div>
+<p>Eliminating <span class="math">\(\delta Q_R\)</span> from the two equations we get:</p>
+<div class="math">
+\[\delta W_C = T_R\frac{\delta Q}{T} - dE_C\]</div>
+<dl class="docutils">
+<dt>If this work is integrated over a complete cycle of the system while also assuming integral no of cycles of the reversible device and considering that the cyclic integral of the internal energy of the system will be zero.</dt>
+<dd>we have:</dd>
+</dl>
+<div class="math">
+\[W_C = T_R\oint \frac{\delta Q}{T} - 0\]</div>
+<p>Now we observe that the combined system is exchanging heat with only single thermal reservoir and producing work <span class="math">\(W_C\)</span> during a cycle. Now according to the second law (kelvin-planck statement), a net positive work output can never be obtained. Hence this term <span class="math">\(W_C\)</span> must be either less than zero or zero. So a yet another important and useful corollary of the second law of thermodynamics known as the <em>Clausius Inequality</em> is obtained and is given below:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Clausius Inequality</p>
+<p>For a system passing through a cyclic process involving heat exchanges</p>
+<div class="math" id="equation-clausius-inequality">
+<span class="eqno">(1)<a class="headerlink" href="#equation-clausius-inequality" title="Permalink to this equation">¶</a></span>\[\oint \frac{dQ}{T} \leq 0\]</div>
+<p class="last">where delta Q is the is a differential heat transfer to the system at an absolute temperature of <span class="math">\(T\)</span></p>
+</div>
+<p>The above equation holds true for all cycles, reversible or irreversible. The equality holds true for reversible cycle. We can specifically write this as:</p>
+<div class="math" id="equation-clausius-inequality-reversible">
+<span class="eqno">(2)<a class="headerlink" href="#equation-clausius-inequality-reversible" title="Permalink to this equation">¶</a></span>\[\oint \frac{dQ_R}{T} = 0\]</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/clausius-inequality.png"><img alt="Clausius Inequality as Illustration" src="../_images/clausius-inequality.png" style="width: 487.0px; height: 470.0px;" /></a>
+</div>
+</div>
+<div class="section" id="entropy-definition">
+<h2>Entropy Definition<a class="headerlink" href="#entropy-definition" title="Permalink to this headline">¶</a></h2>
+<p>The cyclic integral of the quantity <span class="math">\(\frac{dQ}{T}\)</span> is zero. This behaviour belongs to system property whose value depend only on the state and after a complete cycle the sum total of all the differential changes is zero. Recognising this clausis identified a new thermodynamic property called <em>entropy</em> (<span class="math">\(S\)</span>) and defined it as:</p>
+<div class="math" id="equation-entropy-differential">
+<span class="eqno">(3)<a class="headerlink" href="#equation-entropy-differential" title="Permalink to this equation">¶</a></span>\[dS = \frac{\delta Q_R}{T}\]</div>
+<p>Integrating this over a interval gives us the change in entropy as below:</p>
+<div class="admonition important" id="index-1">
+<p class="first admonition-title">Important</p>
+<p>Entropy</p>
+<div class="math" id="equation-entropy">
+<span class="eqno">(4)<a class="headerlink" href="#equation-entropy" title="Permalink to this equation">¶</a></span>\[S_2 - S_1 = \int_1^2 \frac{dQ_R}{T}\]</div>
+<p>On per unit mass basis,</p>
+<div class="last math" id="equation-specific-entropy">
+<span class="eqno">(5)<a class="headerlink" href="#equation-specific-entropy" title="Permalink to this equation">¶</a></span>\[s_2 - s_1 = \int_1^2 \frac{dq_R}{T}\]</div>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">It is important to note that in going from state 1 to state 2, entropy should be evaluated for a reversible process path only. Only then can a unique value of entropy be obtained. If this integral is performed over an arbitrary path its value will become path dependent and entropy <span class="math">\(s\)</span> will not qualify as a property. So whether the path in moving from state 1 to state 2 is reversible or not, the change in entropy will be evaluated only by integration along the reversible path.</p>
+</div>
+<p>For the special case of isothermal heat transfer the change in entropy is easy to calculate as the temperature is constant and is given by :</p>
+<div class="math">
+\[\varDelta S = \int_{1}^{2}(\frac{\delta Q}{T})_{int,rev} = \frac{1}{T_0}\int_1^2(\delta Q)_{int,rev}\]</div>
+<p>which after simplification yields:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Entropy change in internally reversible isothermal process</p>
+<div class="last math" id="equation-entropy-change-isothermal">
+<span class="eqno">(6)<a class="headerlink" href="#equation-entropy-change-isothermal" title="Permalink to this equation">¶</a></span>\[\varDelta S = \frac{Q_{int,rev}}{T_0}\]</div>
+</div>
+</div>
+<div class="section" id="the-principle-of-entropy-increase">
+<span id="index-2"></span><h2>The principle of entropy increase<a class="headerlink" href="#the-principle-of-entropy-increase" title="Permalink to this headline">¶</a></h2>
+<p>Consider a cycle that is made up of two processes 1-2, which is an arbitrary process (reversible, irreversible or internally reversible) and process 2-1 which is internally reversible.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/entropy-increase.png"><img alt="entropy increase principle" src="../_images/entropy-increase.png" style="width: 320.0px; height: 360.0px;" /></a>
+</div>
+<p>From the clausius inequality we can write:</p>
+<div class="math">
+\[\oint \frac{\delta Q}{T} \leq 0\]</div>
+<p>or,</p>
+<div class="math">
+\[\int_1^2 \frac{\delta Q}{T} + \int_2^1 \left(\frac{\delta Q}{T} \right)_{int,rev} \leq 0\]</div>
+<p>The second integral can be evaluated using the definition of entropy and can be written as:</p>
+<div class="math">
+\[\int_1^2 \frac{\delta Q}{T} + S_1 - S_2 \leq 0\]</div>
+<p>rearranging,</p>
+<div class="math" id="equation-entropy-change-irreversible-process">
+<span class="eqno">(7)<a class="headerlink" href="#equation-entropy-change-irreversible-process" title="Permalink to this equation">¶</a></span>\[\varDelta S_{sys} = S_2 - S_1 \geq \int_1^2 \frac{\delta Q}{T}\]</div>
+<p>For a steady one dimensional flow through a control volume in which the fluid experiences a change of state from 1 at entry to 2 at exit, the change of entropy can be written in a time rate equation as</p>
+<blockquote>
+<div><div class="math">
+\[\dot{m}(s_2 - s_1) \geq \int_1^2 \frac{d\dot{Q}}{T}\]</div>
+</div></blockquote>
+<p>removing the inequality in equation <a class="reference internal" href="#equation-entropy-change-irreversible-process">(7)</a>,</p>
+<div class="math" id="equation-entropy-change-irreversible-process-alternative">
+<span class="eqno">(8)<a class="headerlink" href="#equation-entropy-change-irreversible-process-alternative" title="Permalink to this equation">¶</a></span>\[\varDelta S_{sys} = S_2 - S_1 =  \int_1^2 \frac{\delta Q}{T} + S_{gen}\]</div>
+<p>where <span class="math">\(S_{gen}\)</span> is the entropy generated within the system due to irreversibilities and is always a positive quantity.</p>
+<p>For an isolated system (adiabatic and closed) we have <span class="math">\(\delta Q = 0\)</span>, therefore equation <a class="reference internal" href="#equation-entropy-change-irreversible-process">(7)</a> reduces to</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Entropy Increase Principle</p>
+<p>For an isolated system:</p>
+<div class="math" id="equation-entropy-increase-principle">
+<span class="eqno">(9)<a class="headerlink" href="#equation-entropy-increase-principle" title="Permalink to this equation">¶</a></span>\[\varDelta S_{isolated} \geq 0\]</div>
+<p class="last">The universe as a whole can be looked upon as an isolated system. Every process that occurs in the universe ultimately leads to a net increase in its entropy level. As one goes “forward” in time, the entropy of universe can increase, but not decrease. Hence, from one perspective, entropy can be looked upon as an arrow of time. When measured for an isolated system, it helps distinguish the past from the future</p>
+</div>
+</div>
+<div class="section" id="tds-relations">
+<span id="index-3"></span><h2>Tds Relations<a class="headerlink" href="#tds-relations" title="Permalink to this headline">¶</a></h2>
+<p>Consider a closed system undergoing a cyclic process which is internally reversible. The first law equation in its differential form <a class="reference internal" href="chap02.html#equation-first-law-closed-differential">(14)</a> can be applied and written as:</p>
+<div class="math">
+\[\delta Q_{int,rev} - \delta W_{int,rev} = dU\]</div>
+<p>By using the entropy definition and the equation for boundary work we have:</p>
+<div class="math">
+\[\begin{split}\delta Q_{int,rev} &amp;= TdS \\
+\delta W_{int,rev} &amp;= PdV \\\end{split}\]</div>
+<p>Substituting we have</p>
+<div class="math">
+\[\begin{split}TdS - PdV &amp;= dU \\
+TdS  &amp;= dU + PdV\end{split}\]</div>
+<p>Dividing by <span class="math">\(m\)</span> we get the relation on per unit mass basis as:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>First Tds or Gibbs equation</p>
+<div class="math" id="equation-first-tds">
+<span class="eqno">(10)<a class="headerlink" href="#equation-first-tds" title="Permalink to this equation">¶</a></span>\[Tds  = du + Pdv\]</div>
+<p>or,</p>
+<div class="last math">
+\[ds = \frac{du}{T} + \frac{Pdv}{T}\]</div>
+</div>
+<p>Using the equation of enthalpy we can write</p>
+<blockquote>
+<div><div class="math">
+\[h = u + Pv\]</div>
+</div></blockquote>
+<p>taking a differential</p>
+<div class="math">
+\[dh = du + Pdv +vdP\]</div>
+<p>or,</p>
+<div class="math">
+\[du = dh - Pdv - vdP\]</div>
+<p>eliminating <span class="math">\(du\)</span> from the first <span class="math">\(Tds\)</span> relation we get</p>
+<div class="math">
+\[Tds  = dh - Pdv -vdP + Pdv\]</div>
+<p>on simplification we get the second important <span class="math">\(Tds\)</span> relationship</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Second Tds Relation</p>
+<div class="math" id="equation-second-tds">
+<span class="eqno">(11)<a class="headerlink" href="#equation-second-tds" title="Permalink to this equation">¶</a></span>\[Tds  = dh -vdP\]</div>
+<p>or,</p>
+<div class="last math">
+\[ds = \frac{dh}{T} - \frac{vdP}{T}\]</div>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Although these Tds relationships have been developed in the context of closed reversible systems, the resultant equation holds good for any process reversible or irreversible. These relationships show how the property entropy is related to other thermodynamic properties. Since, all properties are only a function of state they are considered path independent.</p>
+</div>
+</div>
+<div class="section" id="entropy-change-of-liquids-and-solids">
+<h2>Entropy Change of Liquids and Solids<a class="headerlink" href="#entropy-change-of-liquids-and-solids" title="Permalink to this headline">¶</a></h2>
+<p>Liquids and solids are incompressible substances and therefore <span class="math">\(dv=0\)</span> during any process. The first Tds relationship <a class="reference internal" href="#equation-first-tds">(10)</a> can be written as</p>
+<div class="math">
+\[ds = \frac{du}{T}\]</div>
+<p>Now by definition of specific heat at constant volume we can write</p>
+<div class="math">
+\[du = c_v(T)dT\]</div>
+<p>But for liquids and solids <span class="math">\(c_p = c_v = c\)</span>, and therefore we can simply write</p>
+<div class="math">
+\[du = c(T)dT\]</div>
+<p>entropy change can be written as</p>
+<div class="math">
+\[s_2  - s_1 = \int_1^2 \frac{c(T)}{T} \simeq c_{avg}ln\frac{T_2}{T_1}\]</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Entropy change for liquids and solids</p>
+<div class="last math" id="equation-entropy-change-incompressible">
+<span class="eqno">(12)<a class="headerlink" href="#equation-entropy-change-incompressible" title="Permalink to this equation">¶</a></span>\[s_2  - s_1 \simeq c_{avg}ln\frac{T_2}{T_1}\]</div>
+</div>
+</div>
+<div class="section" id="entropy-change-of-ideal-gas">
+<h2>Entropy Change of Ideal Gas<a class="headerlink" href="#entropy-change-of-ideal-gas" title="Permalink to this headline">¶</a></h2>
+<p>The ideal gas equation can be rearranged as follows</p>
+<div class="math">
+\[P = \frac{RT}{v}\]</div>
+<p>substituting in the first Tds relationship <a class="reference internal" href="#equation-first-tds">(10)</a> we get</p>
+<div class="math">
+\[ds = \frac{du}{T} + \frac{Pdv}{T} = c_v(T)\frac{dT}{T} + R\frac{dv}{v}\]</div>
+<p>the change in entropy ,</p>
+<div class="math">
+\[s_2 - s_1  = \int_1^2 c_v(T)\frac{dT}{T} + \int_1^2 R\frac{dv}{v}\]</div>
+<p>or,</p>
+<div class="math">
+\[s_2 - s_1  = \int_1^2 c_v(T)\frac{dT}{T} + Rln \frac{v_2}{v_1}\]</div>
+<p>The change in enthalpy can also be evaluated using the second Tds relationship in a similar fashion as above to obtain</p>
+<div class="math">
+\[s_2 - s_1  = \int_1^2 c_p(T)\frac{dT}{T} - Rln \frac{P_2}{P_1}\]</div>
+<p>For an accurate evaluation of the first term the specific heats as functions of T must be known.For an approximate analysis, an average value of <span class="math">\(c_p\)</span> or <span class="math">\(c_v\)</span> can be used. The resulting errors with this approximation are fairly acceptable. Thus the change in entropy for an ideal gas can be expressed in terms of average specific heats as</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Change in specific heat for Ideal Gas</p>
+<div class="math" id="equation-entropy-change-ideal-gas-first">
+<span class="eqno">(13)<a class="headerlink" href="#equation-entropy-change-ideal-gas-first" title="Permalink to this equation">¶</a></span>\[s_2 - s_1  \simeq c_{v,avg} ln \frac{T_2}{T_1} + Rln \frac{v_2}{v_1}\]</div>
+<p>alternatively,</p>
+<div class="last math" id="equation-entropy-change-ideal-gas-second">
+<span class="eqno">(14)<a class="headerlink" href="#equation-entropy-change-ideal-gas-second" title="Permalink to this equation">¶</a></span>\[s_2 - s_1  \simeq c_{p,avg} ln \frac{T_2}{T_1} - Rln \frac{P_2}{P_1}\]</div>
+</div>
+</div>
+<div class="section" id="isentropic-processes-of-perfect-gas">
+<h2>Isentropic Processes of Perfect Gas<a class="headerlink" href="#isentropic-processes-of-perfect-gas" title="Permalink to this headline">¶</a></h2>
+<p>An ideal gas is just a theoritical model providing the simplest equation of state. To further simplify analysis additional approximation is made by assuming that the specific heats of the gas are constant. This simpliefied model of ideal gas is called perfect gas.</p>
+<p>An isentropic process is one which is both adiabatic and reversible.</p>
+<p>If the process is adiabatic we have <span class="math">\(Q=0\)</span>. Substituting in <a class="reference internal" href="#equation-entropy-change-irreversible-process-alternative">(8)</a> we get the following relationship, <span class="math">\(S_2 = S_1 + S_{gen}\)</span> or as a simple inequality</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>For an adiabatic process</p>
+<div class="last math">
+\[S_2 &gt; S_1\]</div>
+</div>
+<p>or on per unit mass basis</p>
+<div class="math">
+\[s_2 &gt; s_1\]</div>
+<p>For reversible process there is no entropy generated in the system therefore <span class="math">\(S_{gen}=0\)</span>. So for an isentropic process</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>For an isentropic process (adiabatic and reversible)</p>
+<div class="math">
+\[S_2 = S_1\]</div>
+<p>or on per unit mass basis</p>
+<div class="last math">
+\[s_2 = s_1\]</div>
+</div>
+<p>Utilizing the equality above, for a perfect gas undergoing an isentropic process the entropy change equation given in <a class="reference internal" href="#equation-entropy-change-ideal-gas-first">(13)</a> can be written as</p>
+<div class="math">
+\[\begin{split}c_{v} ln \frac{T_2}{T_1} &amp;=- Rln \frac{v_2}{v_1} \\
+ln \frac{T_2}{T_1} &amp;=- \frac{R}{c_v}ln \frac{v_2}{v_1} \\
+ln \frac{T_2}{T_1} &amp;= ln \left(\frac{v_1}{v_2}\right)^{\frac{R}{c_v}} \\\end{split}\]</div>
+<p>Making use of the following ideal gas relationships</p>
+<div class="math">
+\[\begin{split}R  &amp;= c_p - c_v \\
+k  &amp;= \frac{c_p}{c_v} \\
+\frac{R}{c_v} &amp;= k - 1\end{split}\]</div>
+<p>we have after substitution in above equation and simplification</p>
+<div class="math" id="equation-first-isentropic-relation">
+<span class="eqno">(15)<a class="headerlink" href="#equation-first-isentropic-relation" title="Permalink to this equation">¶</a></span>\[\frac{T_2}{T_1} = \left(\frac{v_1}{v_2}\right)^{k-1}\]</div>
+<p>Making use of the second Tds relation and the equation derived at :eq:entropy_ideal_gas_second, we can similarly get the following result</p>
+<div class="math" id="equation-second-isentropic-relation">
+<span class="eqno">(16)<a class="headerlink" href="#equation-second-isentropic-relation" title="Permalink to this equation">¶</a></span>\[\frac{T_2}{T_1} = \left(\frac{P_2}{P_1}\right)^{\frac{k-1}{k}}\]</div>
+<p>Substituting :eq: <cite>second_isentropic_relation</cite> in <a class="reference internal" href="#equation-first-isentropic-relation">(15)</a> we get</p>
+<div class="math" id="equation-third-isentropic-relation">
+<span class="eqno">(17)<a class="headerlink" href="#equation-third-isentropic-relation" title="Permalink to this equation">¶</a></span>\[\frac{P_2}{P_1} = \left(\frac{v_1}{v_2}\right)^{k}\]</div>
+<p>All the above isentropic relations can also be written in an alternative form and are presented below</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Isentropic Relations for Perfect Gas</p>
+<div class="last math" id="equation-isentropic-relations-perfect-gas">
+<span class="eqno">(18)<a class="headerlink" href="#equation-isentropic-relations-perfect-gas" title="Permalink to this equation">¶</a></span>\[\begin{split}Tv^{k-1} &amp;= constant \\
+TP^{\frac{1-k}{k}} &amp;= constant \\
+Pv^{k} &amp;= constant\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="work-done-in-reversible-steady-state-flows">
+<h2>Work Done in Reversible Steady State Flows<a class="headerlink" href="#work-done-in-reversible-steady-state-flows" title="Permalink to this headline">¶</a></h2>
+<p>The equation for work done under steady state conditions was developed in <em>Chapter 02 - First Law of Thermodynamics</em>. This is reproduced below:</p>
+<div class="math">
+\[q - w  =  h_2 - h_1 +\frac{V_2^2 - V_1^2 }{2}+g(z_2-z_1)\]</div>
+<p>The differential form of this equation for a reversible process can be written as</p>
+<div class="math">
+\[\delta q_{rev} - \delta w_{rev}  =  dh + dke + dpe\]</div>
+<p>From the definition of entropy given at <a class="reference internal" href="#equation-entropy-differential">(3)</a>, we can substitute <span class="math">\(\delta q\)</span> and write</p>
+<div class="math">
+\[Tds - \delta w_{rev}  =  dh + dke + dpe\]</div>
+<p>Using the second Tds relationship given at <a class="reference internal" href="#equation-second-tds">(11)</a> and substituting <span class="math">\(Tds\)</span> we get</p>
+<div class="math">
+\[dh - vdP - \delta w_{rev}  =  dh + dke + dpe\]</div>
+<p>simplifying and rearranging we get</p>
+<div class="math">
+\[\delta w_{rev}  =  -vdP - dke - dpe\]</div>
+<p>Integrating over the process we get an important relation for work done in steady flow process:</p>
+<div class="math">
+\[w_{rev} = \int \delta w_{rev}  =  -\int vdP - \varDelta ke - \varDelta pe\]</div>
+<p>If the inlet conditions are denoted by (1) and outlet by (2), and substituting for <span class="math">\(ke\)</span> and <span class="math">\(pe\)</span> we get the work done in a reversible steady flow process as:</p>
+<div class="admonition important" id="index-4">
+<p class="first admonition-title">Important</p>
+<p>Work Done in Reversible Steady Flow Process</p>
+<div class="last math" id="equation-work-steady-reversible-flow">
+<span class="eqno">(19)<a class="headerlink" href="#equation-work-steady-reversible-flow" title="Permalink to this equation">¶</a></span>\[w_{rev}  =  -\int_1^2 vdP +  \frac{V_1^2-V_2^2}{2} +  g(z_1 - z_2)\]</div>
+</div>
+</div>
+<div class="section" id="bernoulli-equation">
+<span id="index-5"></span><h2>Bernoulli equation<a class="headerlink" href="#bernoulli-equation" title="Permalink to this headline">¶</a></h2>
+<p>The work done in a reversible steady flow process has been derived in the previous section at equation <a class="reference internal" href="#equation-work-steady-reversible-flow">(19)</a>. For the case of incompressible fluids, the equation assumes a simpler form after carrying out the integration. For incompressible fluids, the specific volume <span class="math">\(v\)</span> remains unchanged. The work done in case of reversible steady flow with incompressible liquids can be written after integration and some rearrangement as</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Work Done in Reversible Steady Flow Process (Incompressible Fluid)</p>
+<div class="last math" id="equation-work-steady-reversible-flow-incompressible">
+<span class="eqno">(20)<a class="headerlink" href="#equation-work-steady-reversible-flow-incompressible" title="Permalink to this equation">¶</a></span>\[w_{rev}  =  v(P_1-P_2) +  \frac{V_1^2-V_2^2}{2} +  g(z_1 - z_2)\]</div>
+</div>
+<p>For the special case, when there is no work done on or by the system <span class="math">\(w_{rev}=0\)</span> such as a nozzle or pipe section where the irreversibilities due to friction can be neglected, the above equation can be further simplified to:</p>
+<div class="math">
+\[v(P_1-P_2) +  \frac{V_1^2-V_2^2}{2} +  g(z_1 - z_2) = 0\]</div>
+<p>Or,</p>
+<div class="math">
+\[P_1v + \frac{1}{2}V_1^2 + gz_1 =   P_2v + \frac{1}{2}V_2^2 + gz_2\]</div>
+<p>Or using <span class="math">\(\rho=\frac{1}{v}\)</span> for a streamline where no work is performed and no friction or viscous losses happen, we get the popular equation of Fluid Mechanics known as the Bernoulli equation:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Bernoulli Equation</p>
+<div class="last math" id="equation-bernoulli-equation">
+<span class="eqno">(21)<a class="headerlink" href="#equation-bernoulli-equation" title="Permalink to this equation">¶</a></span>\[P + \frac{1}{2}\rho V^2 + \rho gz = constant\]</div>
+</div>
+</div>
+<div class="section" id="reversible-is-ideal">
+<h2>Reversible is Ideal<a class="headerlink" href="#reversible-is-ideal" title="Permalink to this headline">¶</a></h2>
+<p>In the previous chapter, it was demonstrated that cyclic devices are the most efficient, when operating between any two thermal reservoirs. Even for non cyclic processes, where the system goes from state 1 to state 2, the reversible process is the most efficient one.</p>
+<p>For proof, let us consider both a reversible process and irreversible process between state 1 and 2. From the first law of thermodynamics as applied to controlled volumes/flow process</p>
+<div class="math">
+\[\begin{split}q_{rev} - w_{rev} &amp;= \delta h + \delta ke + \delta pe \\
+q_{actual} - w_{actual} &amp;= \delta h + \delta ke + \delta pe \\\end{split}\]</div>
+<p>eliminating the right hand side of the equation as they are equal for both equations we have</p>
+<div class="math">
+\[q_{rev} - w_{rev} = q_{actual} - w_{actual}\]</div>
+<p>on rearrangement,</p>
+<div class="math">
+\[w_{rev} - w_{actual} = q_{rev} - q_{actual}\]</div>
+<p>Using the definition of entropy <span class="math">\(\delta q_{rev} = Tds\)</span> in the above equation we have</p>
+<div class="math">
+\[w_{rev} - w_{actual} = Tds - q_{actual} = T(ds - \frac{q_{actual}}{T})\]</div>
+<p>All actual processes have some irreversibility. By entropy generation principle, refer <a class="reference internal" href="#equation-entropy-change-irreversible-process">(7)</a> we have</p>
+<div class="math">
+\[ds \geq \frac{q_{actual}}{T}\]</div>
+<p>and therefore the quanitity on the right hand side is a postive quantity Therefore</p>
+<div class="math">
+\[w_{rev} &gt; w_{actual}\]</div>
+<p>Now for a turbine, the work done has a positive sign, therefore in terms of magnitudes</p>
+<div class="math">
+\[w_{rev} &gt; w_{actual}\]</div>
+<p>Now for a turbine, the work done has a positive sign, while for compressors they have a negative sign, therefore in terms of magnitudes</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>A turbine working on internally reversible process between two states produces more work than turbine working on internally irreversible process</p>
+<div class="math">
+\[|w_{turbine, reversible}| &gt; |w_{turbine, actual}|\]</div>
+<p>A compressor working on internally reversible process between two states consumes less work than compressor working on internally irreversible process</p>
+<div class="last math">
+\[|w_{compressor, reversible}| &lt; |w_{compressor, actual}|\]</div>
+</div>
+</div>
+<div class="section" id="t-s-and-h-s-entropy-diagrams">
+<span id="index-6"></span><h2>T-s and h-s entropy diagrams<a class="headerlink" href="#t-s-and-h-s-entropy-diagrams" title="Permalink to this headline">¶</a></h2>
+<p>Property diagrams are used to aid in visualization of the thermodynamic process. Two property diagrams are commonly used utilizing entropy as a  the variables on the x-axis. These are the <em>Temperature-entropy (T-s)</em> diagram and the <em>enthalpy-entropy(h-s)</em> diagram which is also known as the mollier chart.</p>
+<p>The following figure illustrates a T-s diagram.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/temperature-entropy.png"><img alt="temperature entropy diagram" src="../_images/temperature-entropy.png" style="width: 640.0px; height: 480.0px;" /></a>
+</div>
+<p>The figure above shows a reversible process 1-2. The area under the curve of this reversible path gives us the heat input to the process.</p>
+<p>Isothermal processes appear as horizontal line segments while isentropic processes appear as vertical line segment on the T-s diagram. This is illustrated in the figure below:</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/temperature-entropy-isothermal.png"><img alt="temperature entropy diagram for isothermal and isentropic process" src="../_images/temperature-entropy-isothermal.png" style="width: 640.0px; height: 480.0px;" /></a>
+</div>
+<p>The other diagram called the enthalpy-entropy diagram or h-s diagram is extensively used in the study of steady flow devices like compressors, turbines and nozzles.  On an h-s diagram the vertical distance denotes the change in enthaly <span class="math">\(\varDelta h\)</span> and the horizontal distance <span class="math">\(\varDelta s\)</span> denotes the change in entropy. Now practically as most compressors, turbines and nozzles are adiabatic in their operation, the change in enthalpy corresponds to work delivered or absorbed and the change in entropy is mainly attributed to the entropy generated within the system. Such entropy gets generated as part of the work gets converted to heat due to friction, viscosities or due to sudden expansion and contractions. The h-s diagram manages to capture both key concerns of a designer the work input output and the losses.</p>
+<p>An h-s diagram showing expansion process in a turbine is shown in the figure below.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/enthalpy-entropy.png"><img alt="enthalpy entropy diagram" src="../_images/enthalpy-entropy.png" style="width: 640.0px; height: 480.0px;" /></a>
+</div>
+<p>The expansion process is from pressure <span class="math">\(p_1\)</span> to pressure <span class="math">\(p_2\)</span>. The isobars corresponding to these pressures are shown as blue lines in the figure.  process is adiabatic in nature. If no irreversibilities were present in the system, the process would have traced the course 1-2s and delivered work equivalent to the corresponding change in enthalpy <span class="math">\(\varDelta h_{is}\)</span>. However as irreversibilities are present the process traces the path 1-2. The work done in this case <span class="math">\(\varDelta h\)</span> is lower than the isentropic work  <span class="math">\(\varDelta h_{is}\)</span>.  Further for an ideal gas, we know that enthalpy is a function of temperature alone. Since state <span class="math">\(2\)</span>, has higher enthalpy than state <span class="math">\(2s\)</span> we can say that the exhaust for the actual process is hotter than the reversible process.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chap06.html" class="btn btn-neutral float-right" title="CHAPTER 6. - COMPRESSORS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chap04.html" class="btn btn-neutral" title="CHAPTER 4. - SECOND LAW OF THERMODYNAMICS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sandeep Raheja.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

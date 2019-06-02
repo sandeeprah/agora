@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="This chapter covers the relevant areas of thermodynamics applications and the approaches for system definition. It brings out definitions that are central to the understanding of the subject like property, state, process, equillibrium, pressure, specific volume and temperature." name="description" />
+<meta content="thermodynamics, closed system, open system, equillibrium, pressure, specific volume, temperature" name="keywords" />
+<meta content="Sandeep Raheja" name="author" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CHAPTER 1. - INTRODUCTION AND KEY DEFINITIONS &mdash; codecalculation.com 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="codecalculation.com 1 documentation" href="../index.html"/>
+        <link rel="up" title="Thermodynamics for Rotating Equipment (from the ground up)" href="index.html"/>
+        <link rel="next" title="CHAPTER 2. - FIRST LAW OF THERMODYNAMICS" href="chap02.html"/>
+        <link rel="prev" title="Thermodynamics for Rotating Equipment (from the ground up)" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> codecalculation.com
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../docuMentor.html">docuMentor : Introduction to key features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/index.html">Process Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanical/index.html">Mechanical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrical/index.html">Electrical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../instrumentation/index.html">Instrumentation Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../civil/index.html">Civil/Structural Calculations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">E-Books:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Thermodynamics for Rotating Equipment (from the ground up)</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CHAPTER 1. - INTRODUCTION AND KEY DEFINITIONS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#relevant-areas">Relevant areas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#system-definition">System Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#system-study-approaches">System Study approaches</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#closed-system">closed system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#controlled-volume">controlled volume</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#property-state-and-process">Property, State and Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extensive-and-intensive-properties">Extensive and Intensive Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phase-and-pure-substance">Phase and Pure Substance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#equilibrium">Equilibrium</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#three-measurable-properties-and">Three Measurable Properties <span class="math">\(P\)</span>, <span class="math">\(v\)</span> and <span class="math">\(T\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pressure">Pressure (<span class="math">\(P\)</span>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#specific-volume">Specific Volume (<span class="math">\(v\)</span>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#temperature">Temperature (<span class="math">\(T\)</span>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chap02.html">CHAPTER 2. - FIRST LAW OF THERMODYNAMICS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap03.html">CHAPTER 3. - IDEAL GAS AND SPECIFIC HEATS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap04.html">CHAPTER 4. - SECOND LAW OF THERMODYNAMICS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap05.html">CHAPTER 5. - ENTROPY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap06.html">CHAPTER 6. - COMPRESSORS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap07.html">CHAPTER 7. - TURBINES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#index">Index</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">codecalculation.com</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Thermodynamics for Rotating Equipment (from the ground up)</a> &raquo;</li>
+        
+      <li>CHAPTER 1. - INTRODUCTION AND KEY DEFINITIONS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/thermodynamics/chap01.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chapter-1-introduction-and-key-definitions">
+<h1>CHAPTER 1. - INTRODUCTION AND KEY DEFINITIONS<a class="headerlink" href="#chapter-1-introduction-and-key-definitions" title="Permalink to this headline">¶</a></h1>
+<p>The word <em>thermodynamics</em> originates from the greek words <em>therme</em> (heat) and <em>dynamis</em> (force). The name of this branch of study suggests that it sprang out of the human endeavour to convert heat energy into useful mechanical work.</p>
+<p>Modern thermodynamics, today deals with all aspects of energy conversion including chemical energy, heating and cooling aspects etc.</p>
+<div class="section" id="relevant-areas">
+<h2>Relevant areas<a class="headerlink" href="#relevant-areas" title="Permalink to this headline">¶</a></h2>
+<p>Study of thermodynamics is especially fruitful for engineers who are dealing with equipment like pumps, compressors, engines, gas turbines and steam turbines, fired heaters, boilers, combustion processes, refrigeration and air conditioning etc.</p>
+<p>All the above applications deal with heat, work and chemical energy interconversions. Certain processes as encountered in mechanical equipment deserve special attentions and have therefore become the focus of thermodynamic analysis. These include:</p>
+<ul class="simple">
+<li>compression of fluids using work energy in compressors</li>
+<li>expansion of fluids deriving work energy in turbines and expanders</li>
+<li>acceleration of fluids in nozzles</li>
+<li>deacceleration of fluids in diffusers</li>
+<li>heat addition through combustion or nuclear reactions</li>
+<li>power or refrigeration cycles which involve a sequence of compression, heat addition, expansion and heat removal in some variant or other.</li>
+<li>propulsion</li>
+<li>throttling of fluids</li>
+<li>mixing of fluids</li>
+<li>heat transfer</li>
+<li>phase changes (evaporation, condensation, gas separation, liquefaction etc)</li>
+</ul>
+<p>Reader may recall from their own experience, as to how often these are encountered in our day to day engineering activities.</p>
+</div>
+<div class="section" id="system-definition">
+<span id="index-0"></span><h2>System Definition<a class="headerlink" href="#system-definition" title="Permalink to this headline">¶</a></h2>
+<p>An important step in any problem solving is to have a proper definition of problem. In order to avoid distractions, the subject of our study is separated from the rest of the world and all interactions of our subject with the external world carefully analysed.</p>
+<p>In mechanics for example a free body diagram is drawn for the subject, identifying all the forces which act on the subject. The principles of second law of motion can then be applied.</p>
+<p>In thermodynamics also we need to separate the subject (which we shall henceforth refer to as <strong>system</strong>) from the external world (which shall henceforth be referred to as <strong>surroundings</strong>) by a <strong>boundary</strong>. This boundary is totally fictitious and may change in shape and size even. This boundary is created to identify all interactions of concern that may happen between the system and the surroundings. In thermodynamics important interactions are mass and energy (in any form heat/work/kinetic/potential etc.), moving into and out of the system.</p>
+</div>
+<div class="section" id="system-study-approaches">
+<h2>System Study approaches<a class="headerlink" href="#system-study-approaches" title="Permalink to this headline">¶</a></h2>
+<p>Two basic kinds of systems are used in analysis.</p>
+<div class="section" id="closed-system">
+<span id="index-1"></span><h3>closed system<a class="headerlink" href="#closed-system" title="Permalink to this headline">¶</a></h3>
+<p>The system is defined as a fixed quantity of matter under study. No mass transfer applies at the boundary. As an example, a gas expanding in a cylinder piston arrangement can be analysed as a <em>closed</em> system.</p>
+<p id="index-2">If there is no heat or work transfer also at the boundary, the closed system can be called as an <em>isolated</em> system.</p>
+<p>As no mass flows cross the system boundary, thermodynamic process related to closed systems is also referred to as <em>non flow  process</em>.</p>
+</div>
+<div class="section" id="controlled-volume">
+<span id="index-3"></span><h3>controlled volume<a class="headerlink" href="#controlled-volume" title="Permalink to this headline">¶</a></h3>
+<p>In this approach a region within a prescribed area of space is studied. Mass may flow into and out of this system. A steam turbine where steam enters the inlet nozzle and leaves the exhaust nozzle, can be modelled using a controlled volume approach.</p>
+<p>As mass flows may cross the system boundary, thermodynamic process related to controlled volume is also referred to as <em>flow process</em>.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p>Just because gas expansion in cylinder piston has been used as an example for closed system does not imply that closed system approach is the most convenient approach in equipment with cylinder pistons. In most practical cases this is not the case. Performance of engines and reciprocating compressors can be more easily analysed using a control volume approach where air/gas enters the system, exhausts/discharge leave the system and also other fluid streams like cooling water, lube oil and sealing fluids could enter and leave.</p>
+<p class="last">ASME PTC codes aptly use controlled volume approach in analysing performance tests of various.</p>
+</div>
+</div>
+</div>
+<div class="section" id="property-state-and-process">
+<span id="index-4"></span><h2>Property, State and Process<a class="headerlink" href="#property-state-and-process" title="Permalink to this headline">¶</a></h2>
+<p>To sufficiently describe a system we need to take recourse to some quantified measureables that serve to characterize a system.</p>
+<p>A <strong>property</strong> is thus a macroscopic characteristic of a system such as mass, volume, energy, pressure, and temperature to which a numerical value can be assigned.</p>
+<p>The <strong>state</strong> refers to the condition of a system as described by its properties. Since <em>properties</em> may be interrelated, knowing just a few may help us in determining all the rest. A system is said to be in <strong>steady state</strong> if none of its properties changes with time.</p>
+<p>A <strong>process</strong> is a transformation from one <em>state</em> to another. So when <em>property(or properties)</em> change the <em>state</em> of the system is understood to have changed.</p>
+<p>A <strong>thermodynamic cycle</strong> is a sequence of <em>processes</em> that begins and ends at the same <em>state</em>.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">A quantity is a property if its change in value between two states is independent of the process. It follows that if the value of a particular quantity depends on the details of the process, and not solely on the end states, that quantity cannot be a property. So while <em>pressure</em>, <em>temperature</em> , <em>density</em>, <em>enthalpy</em>, <em>entropy</em> qualify as properties, <em>work</em> and <em>heat</em> do not. The amount of work or heat transferred during a process does not depend on the initial and final states alone, but also on the path taken.</p>
+</div>
+</div>
+<div class="section" id="extensive-and-intensive-properties">
+<span id="index-5"></span><h2>Extensive and Intensive Properties<a class="headerlink" href="#extensive-and-intensive-properties" title="Permalink to this headline">¶</a></h2>
+<p>A property is called <strong>extensive</strong> if its value for an overall system is the sum of its values for the parts into which the system is divided e.g.  mass, volume, energy etc. Extensive properties are dependent on the size or extent of the system.</p>
+<p>A property is called <strong>intensive</strong> if its value is independent of the size or extent of a system and may vary from place to place within the
+system at any moment e.g. pressure, temperature, specific volume etc.</p>
+</div>
+<div class="section" id="phase-and-pure-substance">
+<span id="index-6"></span><h2>Phase and Pure Substance<a class="headerlink" href="#phase-and-pure-substance" title="Permalink to this headline">¶</a></h2>
+<p>The term <strong>phase</strong> refers to a quantity of matter that is homogeneous throughout in both chemical composition and physical structure (i.e. all solid, all liquid, or all vapor). A system can contain one or more phases.</p>
+<p>A <strong>pure substance</strong> is one that is uniform and invariable in chemical composition. A pure substance can exist in more than one phase, but its chemical composition must be the same in each phase e.g. a substance containing liquid water and ice can be called as pure.</p>
+<p>A uniform mixture of gases can be regarded as a pure substance provided it remains a gas and does not react chemically and no liquids are formed in the temperature/pressure range of interest.</p>
+</div>
+<div class="section" id="equilibrium">
+<span id="index-7"></span><h2>Equilibrium<a class="headerlink" href="#equilibrium" title="Permalink to this headline">¶</a></h2>
+<p>A thermodynamic system can be said to be in a state of equillibrium if, when isolated from the surroundings, does not show any tendency of change of state spontaneously. Thus pressure (ignoring gravity effects), temperature and other property values should tend towards uniform values and there should be no tendency to change in terms of phase and chemical composition.</p>
+</div>
+<div class="section" id="three-measurable-properties-and">
+<h2>Three Measurable Properties <span class="math">\(P\)</span>, <span class="math">\(v\)</span> and <span class="math">\(T\)</span><a class="headerlink" href="#three-measurable-properties-and" title="Permalink to this headline">¶</a></h2>
+<p>Three particularly important intensive properties in the study of thermodynamics are:</p>
+<ul class="simple">
+<li>Pressure (<span class="math">\(P\)</span>)</li>
+<li>Specific Volume (<span class="math">\(v\)</span>)</li>
+<li>Temperature (<span class="math">\(T\)</span>)</li>
+</ul>
+<p>Thermodynamics takes a macroscopic perspective of the system. It makes use of an assumption (the <em>continuum hypothesis</em>) that the matter is distributed continuously throughout the region. It is therefore possible to speak of thermodynamic properties at a point.</p>
+<div class="section" id="pressure">
+<span id="index-8"></span><h3>Pressure (<span class="math">\(P\)</span>)<a class="headerlink" href="#pressure" title="Permalink to this headline">¶</a></h3>
+<p>Let us take a point in the fluid at rest and consider a small area <span class="math">\(A\)</span> passing through it. The fluid on one side of this area <span class="math">\(A\)</span> exerts a compressive force normal to the area. The fluid on the other side exerts an equal and opposite force. The <em>pressure</em> <span class="math">\(P\)</span> at the specified point is defined as the limit</p>
+<div class="math" id="equation-pressure-defn">
+<span class="eqno">(1)<a class="headerlink" href="#equation-pressure-defn" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+  p=\lim_{A\rightarrow A^{'}}\frac{F_{normal}}{A}
+\end{equation}\]</div>
+<p>where <span class="math">\(A^{'}\)</span> is the smallest area for which a definite value of this ratio exists. The area is large enough for sufficient molecules to exist so that the <em>continuum hypothesis</em> can hold through statistical averages.</p>
+</div>
+<div class="section" id="specific-volume">
+<span id="index-9"></span><h3>Specific Volume (<span class="math">\(v\)</span>)<a class="headerlink" href="#specific-volume" title="Permalink to this headline">¶</a></h3>
+<p>Density (<span class="math">\(\rho\)</span>) is defined as the mass (<span class="math">\(m\)</span>) per unit volume (<span class="math">\(V\)</span>). Density at a point in fluid can be defined as a limit:</p>
+<div class="math" id="equation-density-defn">
+<span class="eqno">(2)<a class="headerlink" href="#equation-density-defn" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+  \rho=\lim_{V\rightarrow V^{'}}\frac{m}{V}
+\end{equation}\]</div>
+<p>where <span class="math">\(V^{'}\)</span> is the smallest volume for which a definite value of this ratio exists. The volume is large enough for sufficient molecules to exist so that the <em>continuum hypothesis</em> can hold through statistical averages.</p>
+<p>The <em>specific volume</em> (<span class="math">\(v\)</span>) is defined as the reciprocal of density.</p>
+<div class="math" id="equation-specific-volume-defn">
+<span class="eqno">(3)<a class="headerlink" href="#equation-specific-volume-defn" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+  v=\frac{1}{\rho}
+\end{equation}\]</div>
+</div>
+<div class="section" id="temperature">
+<span id="index-10"></span><h3>Temperature (<span class="math">\(T\)</span>)<a class="headerlink" href="#temperature" title="Permalink to this headline">¶</a></h3>
+<p>In layman’s terms Temperature is the degree of <em>hotness</em> or <em>coldness</em> of a body. However, this description can not be accepted as a scientific one as it is based on perceptions which may also be erroneous. To understand temperature we have to understand the concept of  <em>thermal equillibrium</em>. The concept of equillibrium has already been defined in earlier sections. In short, a system at equillibrium does not show any spontaneous change in properties when isolated from its surroundings</p>
+<p id="index-11">Temperature is in some sense the key to all properties i.e. all other properties depend on it. If we take Two different bodies and bring them in contact with each other a specific interaction which we can call us <em>thermal interaction</em> occurs. The warmer body tends to cool off while the colder body tends to warm. A change in properties like density, thermal conductivity, electrical conductivity, mechanical strength also occur during this interaction. Over a period of time, both bodies reach equilibrium and the state (i.e. properties) of the two bodies no longer changes. It would be beneficial to ascribe a property to the two bodies, which helps determine whether the two are at equillibrium or not. Developing this idea further, it is can be postulated that two bodies will be in thermal equillibrium, if their <em>temperature</em> property is equal.</p>
+<p id="index-12">It is also a universal experience that when two bodies are in thermal equillibrium with a third body, they are also in thermal equillibrium with each other. This is also known as the <em>zeroeth law of thermodynamics</em>. This law, forms the basis of temperature measurement and the third body which is used as a reference body is the <em>thermometer</em>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chap02.html" class="btn btn-neutral float-right" title="CHAPTER 2. - FIRST LAW OF THERMODYNAMICS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Thermodynamics for Rotating Equipment (from the ground up)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sandeep Raheja.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

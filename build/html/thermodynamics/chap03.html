@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="This chapter introduces the ideal gas equation of state and specific heats. The concept of specific heat at constant volume and specific heat at constant pressure are defined. The relationship between the two specific heats is developed for ideal gas. The chapter also defines the concept of perfect gas which is used to further simplify the thermodynamic analysis." name="description" />
+<meta content="thermodynamics, ideal gas, equation of state, specific heat, specific heat at constant volume, specific heat at constant pressure, perfect gas" name="keywords" />
+<meta content="Sandeep Raheja" name="author" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CHAPTER 3. - IDEAL GAS AND SPECIFIC HEATS &mdash; codecalculation.com 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="codecalculation.com 1 documentation" href="../index.html"/>
+        <link rel="up" title="Thermodynamics for Rotating Equipment (from the ground up)" href="index.html"/>
+        <link rel="next" title="CHAPTER 4. - SECOND LAW OF THERMODYNAMICS" href="chap04.html"/>
+        <link rel="prev" title="CHAPTER 2. - FIRST LAW OF THERMODYNAMICS" href="chap02.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> codecalculation.com
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../docuMentor.html">docuMentor : Introduction to key features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/index.html">Process Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanical/index.html">Mechanical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrical/index.html">Electrical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../instrumentation/index.html">Instrumentation Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../civil/index.html">Civil/Structural Calculations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">E-Books:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Thermodynamics for Rotating Equipment (from the ground up)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap01.html">CHAPTER 1. - INTRODUCTION AND KEY DEFINITIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap02.html">CHAPTER 2. - FIRST LAW OF THERMODYNAMICS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CHAPTER 3. - IDEAL GAS AND SPECIFIC HEATS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-0">Ideal Gas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#specific-heats-and">Specific Heats (<span class="math">\(c_p\)</span> and <span class="math">\(c_v\)</span>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#specific-heat-at-constant-volume">Specific Heat at constant volume (<span class="math">\(c_v\)</span>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#specific-heat-at-constant-pressure">Specific Heat at constant pressure (<span class="math">\(c_p\)</span>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#specific-heat-for-ideal-gas">Specific Heat for Ideal Gas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#perfect-gas">Perfect Gas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chap04.html">CHAPTER 4. - SECOND LAW OF THERMODYNAMICS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap05.html">CHAPTER 5. - ENTROPY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap06.html">CHAPTER 6. - COMPRESSORS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap07.html">CHAPTER 7. - TURBINES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#index">Index</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">codecalculation.com</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Thermodynamics for Rotating Equipment (from the ground up)</a> &raquo;</li>
+        
+      <li>CHAPTER 3. - IDEAL GAS AND SPECIFIC HEATS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/thermodynamics/chap03.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chapter-3-ideal-gas-and-specific-heats">
+<h1>CHAPTER 3. - IDEAL GAS AND SPECIFIC HEATS<a class="headerlink" href="#chapter-3-ideal-gas-and-specific-heats" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="index-0">
+<span id="ideal-gas"></span><h2>Ideal Gas<a class="headerlink" href="#index-0" title="Permalink to this headline">¶</a></h2>
+<p>Three properties of substances are measurable in nature which are <span class="math">\(P\)</span> , <span class="math">\(v\)</span> and <span class="math">\(T\)</span>. A relation (which is in the form of an equation) amongst these three state variables or properties is called an <strong>equation of state</strong>.</p>
+<p>The simplest of these equations is the <strong>ideal gas equation of state</strong> which is experimentally found to closely approximate the behaviour of several gases at low pressures and high temperatures.   The ideal gas equation is given by</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Ideal Gas Equation of State</p>
+<div class="last math">
+\[Pv = RT\]</div>
+</div>
+<p>The constant in the above equation is called as the gas constant. Gas constant is given by the following relationship</p>
+<div class="math">
+\[R = \frac{R_0}{MW}\]</div>
+<p>where</p>
+<p><br> <span class="math">\(R_0\)</span> is the universal gas constant (8314 J/kmol.K units)
+<br> <span class="math">\(MW\)</span> is the molecular weight (kg/kmol) units)</p>
+</div>
+<div class="section" id="specific-heats-and">
+<span id="index-1"></span><h2>Specific Heats (<span class="math">\(c_p\)</span> and <span class="math">\(c_v\)</span>)<a class="headerlink" href="#specific-heats-and" title="Permalink to this headline">¶</a></h2>
+<p>Specific heat is defined as the energy required to raise the temperature of a unit mass of substance by one degree.</p>
+<p>The specific heat of a substance depends on the manner in which the substance is heated. In thermodynamic analysis, two types of specific heats are of interest namely, the specific heat at constant volume (<span class="math">\(c_v\)</span>)  and the specific heat at constant pressure (<span class="math">\(c_p\)</span>).</p>
+<div class="section" id="specific-heat-at-constant-volume">
+<span id="index-2"></span><h3>Specific Heat at constant volume (<span class="math">\(c_v\)</span>)<a class="headerlink" href="#specific-heat-at-constant-volume" title="Permalink to this headline">¶</a></h3>
+<p>Physically specific heat at constant volume (<span class="math">\(c_v\)</span>) is the heat required to raise the temperature when the volume is kept constant (an isochoric process)</p>
+<p>In chapter02, the first law equation for an isochoric process was derived <a class="reference internal" href="chap02.html#equation-first-law-closed-specific">(16)</a> and is reproduced here, as</p>
+<div class="math">
+\[\begin{split}q - w =  \varDelta u + \varDelta pe + \varDelta ke \\\end{split}\]</div>
+<p>Ignoring the potential and kinetic energy terms for a stationary closed system, and using the equation in differential form we have</p>
+<div class="math">
+\[\delta q - \delta w =  du\]</div>
+<p>In chapter 02, the boundary work for an isochoric process was demonstrated as zero (<span class="math">\(w=0\)</span>, no displacement means no work). All the heat supplied goes to raise the internal energy of the fluid. Substituting work as zero we get</p>
+<div class="math">
+\[\delta q =  du\]</div>
+<p>By definition of <span class="math">\(c_v\)</span> we have</p>
+<div class="math">
+\[\delta q =  c_v dT\]</div>
+<p>By substitution we have</p>
+<div class="math">
+\[c_v dT =  du\]</div>
+<p>or</p>
+<div class="math">
+\[c_v  =  \left(\frac{ \partial u}{\partial T}\right)_v\]</div>
+</div>
+<div class="section" id="specific-heat-at-constant-pressure">
+<span id="index-3"></span><h3>Specific Heat at constant pressure (<span class="math">\(c_p\)</span>)<a class="headerlink" href="#specific-heat-at-constant-pressure" title="Permalink to this headline">¶</a></h3>
+<p>In chapter 02, the equation for boundary work was derived as <a class="reference internal" href="chap02.html#equation-first-law-isobaric">(22)</a></p>
+<div class="math">
+\[W_{boundary} = P_0(\mathbb{V}_2-\mathbb{V}_1)\]</div>
+<p>or on per unit mass basis as</p>
+<div class="math">
+\[w_{boundary} = P_0v_2-P_0v_1 = P_2v_2 - P_1v_1\]</div>
+<p>in the above we have utilised the fact that for an isobaric process, <span class="math">\(p_0=p_1=p_2\)</span>.</p>
+<p>Stepping back, the first law equation is restated below</p>
+<div class="math">
+\[q - w =  \varDelta u = u_2 - u_1\]</div>
+<p>substituting the value of <span class="math">\(w\)</span> as boundary work for isobaric system and after rearrangment we get</p>
+<div class="math">
+\[\begin{split}q  &amp;=  u_2 - u_1 + P_2v_2 - P_1v_1 \\
+q  &amp;=  (u_2 + P_2v_2) - (u_1  + P_1v_1)\end{split}\]</div>
+<p>or making use of the definition of enthalpy <span class="math">\(h = u + Pv\)</span> we have</p>
+<div class="math">
+\[q  =  h_2 - h_1\]</div>
+<p>In differential form the above equation can also be written as</p>
+<div class="math">
+\[dq  =  dh\]</div>
+<p>By using the definition of <span class="math">\(c_p\)</span>, we can substitute <span class="math">\(dq\)</span> in the above equation and write</p>
+<div class="math">
+\[\begin{split}c_p dT  &amp;=  dh \\\end{split}\]</div>
+<p>or,</p>
+<div class="math">
+\[c_p  =  \left(\frac{ \partial h}{\partial T}\right)_p\]</div>
+</div>
+<div class="section" id="specific-heat-for-ideal-gas">
+<h3>Specific Heat for Ideal Gas<a class="headerlink" href="#specific-heat-for-ideal-gas" title="Permalink to this headline">¶</a></h3>
+<p>It has been demonstrated experimentally by Joule, that the internal energy is only a function of temperature (<span class="math">\(T\)</span>) i.e.</p>
+<div class="math">
+\[u = u(T)\]</div>
+<p>From enthalpy definition and ideal gas equation we have</p>
+<div class="math">
+\[\begin{split}h &amp;= u + Pv \\
+Pv &amp;= RT\end{split}\]</div>
+<p>therefore,</p>
+<div class="math">
+\[h = u + RT  = u(T) + RT\]</div>
+<p>as the entire expression on the right hand side is a function of temperature (<span class="math">\(T\)</span>) only we can say that enthalpy is a function of temperature only.</p>
+<div class="math">
+\[h = h(T)\]</div>
+<p>Since <span class="math">\(u\)</span> and <span class="math">\(h\)</span> are a function of temperature only, specific heats which are their temperature derivatives, are also a function of temperature only.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Specific Heat behaviour for Ideal Gas</p>
+<div class="math">
+\[\begin{split}u &amp;= u(T) \\
+h &amp;= h(T) \\\end{split}\]</div>
+<p>and</p>
+<div class="last math">
+\[\begin{split}du &amp;= c_v(T)dT \\
+dh &amp;= c_p(T)dT\end{split}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="perfect-gas">
+<span id="index-4"></span><h2>Perfect Gas<a class="headerlink" href="#perfect-gas" title="Permalink to this headline">¶</a></h2>
+<p>In thermodynamic analysis many property and heat, work evaluations require that the function <span class="math">\(C_p(T)\)</span> and <span class="math">\(C_v(T)\)</span> be known. The analysis becomes very simple, if we assume that during the process the specific heats remain constant.  When such an assumption is made about the gas, the gas is called as a <em>calorically perfect gas</em> or simply <em>perfect gas</em>.</p>
+<p>While there might be some variation in the values of specific heats, but assuming that they are constant at an average value during the process, the loss of accuracy incurred due to this assumtion is found to be fairly acceptable in most circumstances.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>For a Perfect Gas</p>
+<div class="last math">
+\[\begin{split}c_p &amp;= constant \\
+c_v &amp;= constant\end{split}\]</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chap04.html" class="btn btn-neutral float-right" title="CHAPTER 4. - SECOND LAW OF THERMODYNAMICS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chap02.html" class="btn btn-neutral" title="CHAPTER 2. - FIRST LAW OF THERMODYNAMICS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sandeep Raheja.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,366 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="Receiver Sizing Calculation - Reference" name="title" />
+<meta content="Help/Reference for the sizin of air/nitrogen/utility receivers based on hold up time criteria and alternatively using maximum permissible switching frequency of load/unload or start/stop cycle of the associated receiver charging compressor" name="description" />
+<meta content="receiver sizing air nitrogen hold up time switching frequency" name="keywords" />
+<meta content="Sandeep Raheja" name="author" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Receiver Sizing Calculation &mdash; codecalculation.com 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="codecalculation.com 1 documentation" href="../../index.html"/>
+        <link rel="up" title="Storage" href="index.html"/>
+        <link rel="next" title="Mechanical Calculations" href="../../mechanical/index.html"/>
+        <link rel="prev" title="Storage" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> codecalculation.com
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../docuMentor.html">docuMentor : Introduction to key features</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Process Calculations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../thermophysical.html">Thermophysical Property Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pressure-drop.html">Pressure Drop Calculations</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Storage</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Receiver Sizing Calculation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#design-formulas">Design Formulas</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../mechanical/index.html">Mechanical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../electrical/index.html">Electrical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../instrumentation/index.html">Instrumentation Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../civil/index.html">Civil/Structural Calculations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">E-Books:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../thermodynamics/index.html">Thermodynamics for Rotating Equipment (from the ground up)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">codecalculation.com</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Process Calculations</a> &raquo;</li>
+        
+          <li><a href="index.html">Storage</a> &raquo;</li>
+        
+      <li>Receiver Sizing Calculation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/process/storage/receiver-sizing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="receiver-sizing-calculation">
+<h1>Receiver Sizing Calculation<a class="headerlink" href="#receiver-sizing-calculation" title="Permalink to this headline">¶</a></h1>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/receiver-sizing.png"><img alt="receiver sizing" src="../../_images/receiver-sizing.png" style="width: 581.5px; height: 304.0px;" /></a>
+</div>
+<div class="section" id="design-formulas">
+<h2>Design Formulas<a class="headerlink" href="#design-formulas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="notations">
+<h3>Notations<a class="headerlink" href="#notations" title="Permalink to this headline">¶</a></h3>
+<p>The following notations are used in this calculation:</p>
+<p><span class="math">\(P_{std}\)</span> : The reference pressure for standard conditions at which the standard flow rate is declared. This is
+usually 1.01325 bar.  This is considered as a user input to allow custom reference conditions.</p>
+<p><span class="math">\(T_{std}\)</span> : The reference temerature  for standard conditions at which the standard flow rate is declared. This is
+usually 15°C.  This is considered as a user input to allow custom reference conditions.</p>
+<p><span class="math">\(t\)</span> : Hold up time period. This is the time duration for which the receiver vessel should be able to cater to the consumer when no input supply is available.</p>
+<p><span class="math">\(t\)</span> : Hold up time period. This is the time duration for which the receiver vessel should be able to cater to the consumer when no input supply is available.</p>
+<p><span class="math">\(f_s\)</span> : Maximum permissible frequency (cycles/hour) of load/unload or start/stop for the associated compressor charging the receiver. More than acceptable cycles may potentially damage the equipment/driver.</p>
+<p><span class="math">\(Q_{in}\)</span> : Incoming flow rate to the vessel, which is usually from a compressor. Hence, the compressor capacity can be used as the input here. T</p>
+<p><span class="math">\(Q_{out}\)</span> : Outgoing flow rate from the vessel to the consumers. When sizing the vessels for maximum permissible switching frequency, the worst case scenario is realised when this flow rate is half the incoming flow rate.</p>
+<p><span class="math">\(P_{u}\)</span> : This is the upper pressure set point, which represents the maximum pressure to which the receiver is charged initially. The chrging compressor must be capable of delivering the specified flow corresponding to this pressure.</p>
+<p><span class="math">\(P_{l}\)</span> : This is the lower pressure set point, which represents the minimum pressure to which the receiver is depleted. The pressure requirement of all consumers must be below this minimum pressure.</p>
+<p><span class="math">\(\zeta\)</span> : A safety factor to be applied on the final receiver size calculated to absorb any uncertainties or future demand growth.</p>
+<p><span class="math">\(T_{max}\)</span> : The maximum temperature at which the gaseous fluid is deemed stored in the vessel. Where this receiver is fed through a cooler, this can be assumed to be coolant plus the approach temperature. As most air/nitrogen compressors may adopt an air cooled discharge cooler, this temperature can be considered as maximum ambient plus approach (~ 10°C).</p>
+<p><span class="math">\(V\)</span> : Receiver volume as calculated to satisfy the design criteria.</p>
+<p><span class="math">\(V_{rec}\)</span> : Recommended receiver volume considering worst case load factor. This is applicable for sizing based on permitted cycles when the air compressor capacity is known with certainity but the demand flow rate is considered uncertain.</p>
+</div>
+<div class="section" id="receiver-size-for-hold-up-time">
+<h3>Receiver Size for Hold Up time<a class="headerlink" href="#receiver-size-for-hold-up-time" title="Permalink to this headline">¶</a></h3>
+<p>Considering that general receiver application is at low to medium pressures, ideal gas equation is considered sufficiently accurate for our purpose and will lead to conservative estimates for storage volume. The ideal gas equation is :</p>
+<div class="math" id="equation-ideal-molar">
+<span class="eqno">(1)<a class="headerlink" href="#equation-ideal-molar" title="Permalink to this equation">¶</a></span>\[\begin{split}PV &amp;= nRT \\
+n &amp;= \frac{PV}{RT}\end{split}\]</div>
+<p>For a demand flow rate of <span class="math">\(Q_{out}\)</span> for a duration of time <span class="math">\(t\)</span>.  The total volume of gas consumed from the receiver at standard condition is <span class="math">\(V_{c}\)</span> can be given as:</p>
+<div class="math" id="equation-moles-consumed">
+<span class="eqno">(2)<a class="headerlink" href="#equation-moles-consumed" title="Permalink to this equation">¶</a></span>\[V_{c} = Q_{out}t\]</div>
+<p>Equating the no of moles consumed from the receiver (<span class="math">\(n_{c}\)</span>) as the difference of no of moles of gas present initially (<span class="math">\(n_{i}\)</span>) and finally (<span class="math">\(n_{f}\)</span>) in the receiver we have the following  mole balance equation:</p>
+<div class="math">
+\[n_i - n_f = n_c\]</div>
+<p>Making use of the ideal gas equation, we can write the above mole balance equation as:</p>
+<div class="math">
+\[\begin{split}\frac{P_uV_r}{RT_{max}} - \frac{P_lV_r}{RT_{max}} = \frac{P_{std}V_c}{RT_{std}} \\\end{split}\]</div>
+<p>Or after rearrangement,</p>
+<div class="math">
+\[V_r = V_c\left(\frac{P_{std}}{P_u-P_l}\right)\left(\frac{T_{max}}{T_{std}}\right)\]</div>
+<p>Upon substituting the value of <span class="math">\(V_c\)</span> from equation <a class="reference internal" href="#equation-moles-consumed">(2)</a>, we get:</p>
+<blockquote>
+<div>the final useful formula for the size of the receiver as</div></blockquote>
+<div class="math">
+\[V_r = Q_{out}t\left(\frac{P_{std}}{P_u-P_l}\right)\left(\frac{T_{max}}{T_{std}}\right)\]</div>
+<p>Introducing the design margin (<span class="math">\(\zeta\)</span>) as known we get the final form as the formula:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Receiver Sizing Formula for a given hold up time</p>
+<div class="last math">
+\[V_r = (1+\frac{\zeta}{100})Q_{out}t\left(\frac{P_{std}}{P_u-P_l}\right)\left(\frac{T_{max}}{T_{std}}\right)\]</div>
+</div>
+</div>
+<div class="section" id="receiver-size-for-switching-frequency">
+<h3>Receiver Size for Switching Frequency<a class="headerlink" href="#receiver-size-for-switching-frequency" title="Permalink to this headline">¶</a></h3>
+<p>From the equation as derived above for the reservoir volume based on hold up time, we can also derive an expression for the time taken to charge or discharge a vessel between <span class="math">\(P_u\)</span> and <span class="math">\(P_l\)</span>, by a simple rearrangement of the same equation. The time <span class="math">\(t\)</span> can be expressed as:</p>
+<div class="math">
+\[t = \frac{V_r}{Q}\left( \frac{P_u-P_l}{P_{std}}\right)\left(\frac{T_{std}}{T_{max}}\right) = K\frac{V_r}{Q}\]</div>
+<p>where,</p>
+<div class="math">
+\[K = \left( \frac{P_u-P_l}{P_{std}}\right)\left(\frac{T_{std}}{T_{max}}\right)\]</div>
+<p>If the maximum permissible frequency of load/unload (<span class="math">\(f_s\)</span>) is known. The total time period of the charge discharge cycle (<span class="math">\(t_{cycle}\)</span>) can be expressed as:</p>
+<div class="math">
+\[t_{cycle} = \frac{1}{f_s}\]</div>
+<p>the overall cycle can be broken down in two parts i.e. charge and discharge. During charging phase the net flow is <span class="math">\(Q_{in}-Q_{out}\)</span> and during the discharge phase the net flow is <span class="math">\(Q_{out}\)</span>.</p>
+<div class="math">
+\[t_{charge} + t_{discharge} = t_{cycle}\]</div>
+<p>Upon substitution we have:</p>
+<div class="math">
+\[V_r\frac{K}{Q_{in}-Q_{out}} + V_r\frac{K}{Q_{out}}  = \frac{1}{f_s}\]</div>
+<p>Using the definition of the load factor we have:</p>
+<div class="math">
+\[\begin{split}x &amp;= \frac{Q_{out}}{Q_{in}} \\
+Q_{out} &amp;= x Q_{in}\end{split}\]</div>
+<p>Upon substituion in the above and rearrangement we get:</p>
+<div class="math">
+\[\frac{V_rK}{Q_{in}}\left[ \frac{1}{x(1-x)}\right] = \frac{1}{f_s}\]</div>
+<p>rearranging</p>
+<div class="math">
+\[V_r = x(1-x)\left(\frac{Q_{in}}{f_s}\right)\left(\frac{1}{K}\right)\]</div>
+<p>substituting back the value of K we get the following:</p>
+<div class="math">
+\[V_r = x(1-x)\left(\frac{Q_{in}}{f_s}\right)\left(\frac{P_{std}}{P_u-P_l}\right)\left(\frac{T_{max}}{T_{std}}\right)\]</div>
+<p>If the design margin specified is <span class="math">\(\zeta\)</span>, introducing it in the above equations gives us the formula for the receiver volume based on permissible switching frequency:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Recevier Volume based on permissible switching frequency</p>
+<div class="last math">
+\[V_r = x(1-x)(1 + \frac{\zeta}{100})\left(\frac{Q_{in}}{f_s}\right)\left(\frac{P_{std}}{P_u-P_l}\right)\left(\frac{T_{max}}{T_{std}}\right)\]</div>
+</div>
+<p>The function <span class="math">\(x(1-x)\)</span> has a maxima at <span class="math">\(x=0.5\)</span>, and its value is <span class="math">\(0.5(1-0.5)=0.25\)</span>. So, if the outflow is uncertain (which is always a right assumption in this context), the recommended receiver volume is obtained as:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Recevier Volume based on permissible switching frequency for worst case load factor of 0.5</p>
+<div class="last math">
+\[V_{rec} = 0.25(1 + \frac{\zeta}{100})\left(\frac{Q_{in}}{f_s}\right)\left(\frac{P_{std}}{P_u-P_l}\right)\left(\frac{T_{max}}{T_{std}}\right)\]</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../mechanical/index.html" class="btn btn-neutral float-right" title="Mechanical Calculations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Storage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sandeep Raheja.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

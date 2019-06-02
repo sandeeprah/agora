@@ -1,0 +1,710 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="This chapter applies the principle of energy conservation to closed and open systems. The first law of thermodynamics is introduced as a relation between heat transfered, work done and change in the  energy content of the system. For a closed system the concept of work is expanded to include boundary work Pdv. For an open system, the concept of flow energy Pv and enthalpy is introduced. The principle of first law is applied to isochoric, isobaric, isothermal, isentropic and polytropic processes for a closed system. First law equation is also applied to open system devices like nozzles, diffusers, compressors, turbines, mixing chambers and throttling devices. " name="description" />
+<meta content="thermodynamics, closed system, open system, boundary work, flow energy, enthalpy, isochoric, isobaric, isothermal, isentropic, polytropic, nozzle, diffuser, compressor, turbine, mixing, throttling " name="keywords" />
+<meta content="Sandeep Raheja" name="author" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CHAPTER 2. - FIRST LAW OF THERMODYNAMICS &mdash; codecalculation.com 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="codecalculation.com 1 documentation" href="../index.html"/>
+        <link rel="up" title="Thermodynamics for Rotating Equipment (from the ground up)" href="index.html"/>
+        <link rel="next" title="CHAPTER 3. - IDEAL GAS AND SPECIFIC HEATS" href="chap03.html"/>
+        <link rel="prev" title="CHAPTER 1. - INTRODUCTION AND KEY DEFINITIONS" href="chap01.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> codecalculation.com
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../docuMentor.html">docuMentor : Introduction to key features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/index.html">Process Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanical/index.html">Mechanical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrical/index.html">Electrical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../instrumentation/index.html">Instrumentation Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../civil/index.html">Civil/Structural Calculations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">E-Books:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Thermodynamics for Rotating Equipment (from the ground up)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap01.html">CHAPTER 1. - INTRODUCTION AND KEY DEFINITIONS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CHAPTER 2. - FIRST LAW OF THERMODYNAMICS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mass-balance-principle">Mass Balance Principle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#energy-balance-principle">Energy Balance Principle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#first-law-analysis-for-closed-systems">First Law Analysis for  Closed Systems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#energy-balance-for-closed-systems">Energy Balance for Closed Systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#concept-of-boundary-work">Concept of Boundary Work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#first-law-equation-boundary-work-form">First Law Equation (Boundary Work Form)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#isochoric-constant-volume-process">Isochoric (Constant-Volume) Process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#isobaric-constant-pressure-process">Isobaric (Constant-Pressure) Process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#isothermal-constant-temperature-process-ideal-gas">Isothermal (Constant-Temperature) Process (Ideal Gas)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#polytropic-process">Polytropic Process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#isentropic-process">Isentropic Process</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#first-law-analysis-of-controlled-volume-system">First Law Analysis of Controlled Volume System</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mass-energy-balance-for-controlled-volumes">Mass &amp; Energy Balance for Controlled Volumes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#concept-of-flow-work">Concept of Flow Work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#first-law-equation-enthalpy-form">First Law Equation (Enthalpy Form)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nozzles-and-diffusers">Nozzles and Diffusers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compressors-and-turbines">Compressors and Turbines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#throttling-valves">Throttling Valves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mixing-chambers">Mixing Chambers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#heat-exchanger">Heat Exchanger</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chap03.html">CHAPTER 3. - IDEAL GAS AND SPECIFIC HEATS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap04.html">CHAPTER 4. - SECOND LAW OF THERMODYNAMICS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap05.html">CHAPTER 5. - ENTROPY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap06.html">CHAPTER 6. - COMPRESSORS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap07.html">CHAPTER 7. - TURBINES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#index">Index</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">codecalculation.com</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Thermodynamics for Rotating Equipment (from the ground up)</a> &raquo;</li>
+        
+      <li>CHAPTER 2. - FIRST LAW OF THERMODYNAMICS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/thermodynamics/chap02.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chapter-2-first-law-of-thermodynamics">
+<h1>CHAPTER 2. - FIRST LAW OF THERMODYNAMICS<a class="headerlink" href="#chapter-2-first-law-of-thermodynamics" title="Permalink to this headline">¶</a></h1>
+<p>While analysing any thermodynamic system, the universal principles of conservation of mass and energy must stand demonstrated in the mathematical model. The method to mathematically invoke these principles in analysis is presented in the sections below under <em>mass balance principle</em> and <em>energy balance principle</em>.</p>
+<div class="section" id="mass-balance-principle">
+<h2>Mass Balance Principle<a class="headerlink" href="#mass-balance-principle" title="Permalink to this headline">¶</a></h2>
+<p id="index-0">The principle of mass balance (which follows from the law of conservation of energy) can be stated as:</p>
+<div class="math" id="equation-mass-balance">
+<span class="eqno">(1)<a class="headerlink" href="#equation-mass-balance" title="Permalink to this equation">¶</a></span>\[m_{in}- m_{out}=\varDelta m_{system}\]</div>
+<p>where,
+<br><span class="math">\(m_{in}\)</span> is mass going in to the system
+<br><span class="math">\(m_{out}\)</span> is mass going out of the system
+<br><span class="math">\(\varDelta m_{system}\)</span> is the change in mass of the system.</p>
+<p>In time rate form this can be written as:</p>
+<div class="math" id="equation-mass-balance-timerate">
+<span class="eqno">(2)<a class="headerlink" href="#equation-mass-balance-timerate" title="Permalink to this equation">¶</a></span>\[\dot{m}_{in} - \dot{m}_{out}=\dot{m}_{system}\]</div>
+<p>Under steady state conditions <span class="math">\(\dot{m}_{system}=0\)</span>, hence</p>
+<div class="math" id="equation-mass-balance-steady">
+<span class="eqno">(3)<a class="headerlink" href="#equation-mass-balance-steady" title="Permalink to this equation">¶</a></span>\[\dot{m}_{in} = \dot{m}_{out}\]</div>
+<p>For a single stream moving in and a single stream moving out, we have:</p>
+<div class="math" id="equation-mass-balance-steady-single-stream">
+<span class="eqno">(4)<a class="headerlink" href="#equation-mass-balance-steady-single-stream" title="Permalink to this equation">¶</a></span>\[\begin{split}\dot{m}_1 &amp;= \dot{m}_2 \\\end{split}\]</div>
+<p>where subscript <span class="math">\(1\)</span> denotes the inlet stream and subscript <span class="math">\(2\)</span> denotes outlet stream.</p>
+<p>Making use of the relationship <span class="math">\(\dot{m}=\rho\dot{\mathbb{V}}=\rho VA\)</span> , where <span class="math">\(\dot{\mathbb{V}}\)</span> is the volumetric flow rate, <span class="math">\(\rho\)</span> is density, <span class="math">\(V\)</span> is fluid velocity and <span class="math">\(A\)</span> is the fluid flow area we can write the mass balance equation <a class="reference internal" href="#equation-mass-balance-steady-single-stream">(4)</a> as:</p>
+<div class="math" id="equation-mass-balance-steady-compressible">
+<span class="eqno">(5)<a class="headerlink" href="#equation-mass-balance-steady-compressible" title="Permalink to this equation">¶</a></span>\[\begin{split}\rho_1V_1A_1 &amp;= \rho_2V_2A_2 \\\end{split}\]</div>
+<p>For incompressible flows, the density at inlet (<span class="math">\(\rho_1\)</span>) and outlet (<span class="math">\(\rho_2\)</span>) are the same and so the mass balance equation can be simplified to:</p>
+<div class="math" id="equation-mass-balance-steady-incompressible">
+<span class="eqno">(6)<a class="headerlink" href="#equation-mass-balance-steady-incompressible" title="Permalink to this equation">¶</a></span>\[V_1A_1 = V_2A_2\]</div>
+</div>
+<div class="section" id="energy-balance-principle">
+<h2>Energy Balance Principle<a class="headerlink" href="#energy-balance-principle" title="Permalink to this headline">¶</a></h2>
+<p id="index-1">The principle of energy balance (which follows from the law of conservation of energy) can be stated as:</p>
+<div class="math" id="equation-energy-balance">
+<span class="eqno">(7)<a class="headerlink" href="#equation-energy-balance" title="Permalink to this equation">¶</a></span>\[E_{in} - E_{out}=\varDelta E_{system}\]</div>
+<p>where,
+<br><span class="math">\(E_{in}\)</span> is energy going in to the system
+<br><span class="math">\(E_{out}\)</span> is energy going out of the system
+<br><span class="math">\(\varDelta E_{system}\)</span> is the change in energy of the system.</p>
+<p>In time rate form this can be written as:</p>
+<div class="math" id="equation-energy-balance-timerate">
+<span class="eqno">(8)<a class="headerlink" href="#equation-energy-balance-timerate" title="Permalink to this equation">¶</a></span>\[\dot{E}_{in} - \dot{E}_{out}=\dot{E}_{system}\]</div>
+<p>Under steady state conditions <span class="math">\(\dot{E}_{system}=0\)</span>, hence</p>
+<div class="math" id="equation-energy-balance-steady">
+<span class="eqno">(9)<a class="headerlink" href="#equation-energy-balance-steady" title="Permalink to this equation">¶</a></span>\[\dot{E}_{in} = \dot{E}_{out}\]</div>
+</div>
+<div class="section" id="first-law-analysis-for-closed-systems">
+<span id="index-2"></span><h2>First Law Analysis for  Closed Systems<a class="headerlink" href="#first-law-analysis-for-closed-systems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="energy-balance-for-closed-systems">
+<h3>Energy Balance for Closed Systems<a class="headerlink" href="#energy-balance-for-closed-systems" title="Permalink to this headline">¶</a></h3>
+<p>In the case of closed system no mass enters or leaves the system. However, mass balance principle which applies can still be evoked for the sake of mathematical rigour.</p>
+<div class="math" id="equation-mass-balance-closed-system">
+<span class="eqno">(10)<a class="headerlink" href="#equation-mass-balance-closed-system" title="Permalink to this equation">¶</a></span>\[\varDelta m = m_{in} - m_{out}= 0 - 0 = 0\]</div>
+<p>The energy balance principle as given in equation <a class="reference internal" href="#equation-energy-balance">(7)</a> can be invoked in thermodynamic context of a closed system with <span class="math">\(E_{in}\)</span>, <span class="math">\(E_{out}\)</span> and <span class="math">\(\varDelta E_{system}\)</span> as given below:</p>
+<div class="math">
+\[\begin{split}E_{in} &amp;= Q_{in} + W_{in} \\
+E_{out} &amp;= Q_{out} + W_{out} \\
+\varDelta E_{system} &amp;= \varDelta U + \varDelta PE + \varDelta KE\end{split}\]</div>
+<p>where,</p>
+<p><span class="math">\(Q_{in}\)</span> is heat going in to the system
+<br> <span class="math">\(Q_{out}\)</span> is heat going out of the system
+<br> <span class="math">\(W_{in}\)</span> is work done on the system
+<br> <span class="math">\(W_{out}\)</span> is work done by the system
+<br> <span class="math">\(\varDelta U\)</span> is the change in internal energy of system
+<br> <span class="math">\(\varDelta PE\)</span> is the change in potential energy of system
+<br> <span class="math">\(\varDelta KE\)</span> is the change in kinetic energy of system</p>
+<p>Upon substitution in energy balance equation <a class="reference internal" href="#equation-energy-balance">(7)</a>, we have,</p>
+<div class="math" id="equation-energy-balance-closed-system">
+<span class="eqno">(11)<a class="headerlink" href="#equation-energy-balance-closed-system" title="Permalink to this equation">¶</a></span>\[\begin{split}(Q_{in} + W_{in}) - (Q_{out} + W_{out}) &amp;= \varDelta U + \varDelta PE + \varDelta KE \\
+(Q_{in} - Q_{out}) - (W_{out} - W_{in}) &amp;= \varDelta U + \varDelta PE + \varDelta KE\end{split}\]</div>
+<p>To further simplify the above, let us use the expressions of net heat (<span class="math">\(Q\)</span>) moving in to the system  and net work (<span class="math">\(W\)</span>) done by the system i.e. :</p>
+<div class="math">
+\[\begin{split}Q &amp;= Q_{in} - Q_{out}\\
+W &amp;= W_{out} - W_{in}\end{split}\]</div>
+<p>Substituting in <a class="reference internal" href="#equation-energy-balance-closed-system">(11)</a> we get the first law equation of thermodynamics for closed system i.e.</p>
+<div class="math" id="equation-first-law-closed-system">
+<span class="eqno">(12)<a class="headerlink" href="#equation-first-law-closed-system" title="Permalink to this equation">¶</a></span>\[\begin{split}Q - W = \varDelta U + \varDelta PE + \varDelta KE \\\end{split}\]</div>
+<p>For the typical case of a stationary closed system, the potential and kinetic energy terms can be set to zero. So, <em>First Law in stationary form</em> can be written as:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>First Law equation for closed systems</p>
+<div class="last math" id="equation-first-law-closed-system-stationary">
+<span class="eqno">(13)<a class="headerlink" href="#equation-first-law-closed-system-stationary" title="Permalink to this equation">¶</a></span>\[Q - W = \varDelta U\]</div>
+</div>
+<p><em>First Law in differential form</em>  can be written as:</p>
+<div class="math" id="equation-first-law-closed-differential">
+<span class="eqno">(14)<a class="headerlink" href="#equation-first-law-closed-differential" title="Permalink to this equation">¶</a></span>\[\delta Q-\delta W  = dU + dPE + dKE\]</div>
+<p><em>First Law in time rate form</em> can be written as:</p>
+<div class="math" id="equation-first-law-closed-timerate">
+<span class="eqno">(15)<a class="headerlink" href="#equation-first-law-closed-timerate" title="Permalink to this equation">¶</a></span>\[\dot{Q}-\dot{W} = \frac{dU}{dt} + \frac{dPE}{dt} + \frac{dKE}{dt}\]</div>
+<p>Dividing by mass <span class="math">\(m\)</span> we get <em>First Law in specific quantity form</em> as:</p>
+<div class="math" id="equation-first-law-closed-specific">
+<span class="eqno">(16)<a class="headerlink" href="#equation-first-law-closed-specific" title="Permalink to this equation">¶</a></span>\[\begin{split}q - w =  \varDelta u + \varDelta pe + \varDelta ke \\\end{split}\]</div>
+</div>
+<div class="section" id="concept-of-boundary-work">
+<h3>Concept of Boundary Work<a class="headerlink" href="#concept-of-boundary-work" title="Permalink to this headline">¶</a></h3>
+<p>In the context of closed system, we need to expand our idea of work, to include a special form of work that happens when a closed system undergoes expansion or compression. This special form of work which happens because of the motion of the boundary enclosing the closed system is termed as <strong>boundary work</strong>. In classical mechanics the work done is described by the <strong>mechanical work equation</strong> as given below:</p>
+<div class="math" id="equation-work-mechanical">
+<span id="index-3"></span><span class="eqno">(17)<a class="headerlink" href="#equation-work-mechanical" title="Permalink to this equation">¶</a></span>\[W_{mech} = \int_{x1}^{x2}F.dx\]</div>
+<p>To exemplify a closed system let us take the example of a cylinder piston arrangement as shown in figure.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/closed-system.png"><img alt="boundary work in non flow process (closed system)" src="../_images/closed-system.png" style="width: 228.5px; height: 306.5px;" /></a>
+</div>
+<p>The cylinder has an internal pressure (<span class="math">\(p\)</span>) and the force (<span class="math">\(F\)</span>) acting on the piston face of a given area (<span class="math">\(A\)</span>) will be <span class="math">\(F=pA\)</span>. Substituting this in the mechanical work equation <a class="reference internal" href="#equation-work-mechanical">(17)</a> we get the following:</p>
+<div class="math">
+\[W_{boundary} = \int_{x1}^{x2}PA.dx\]</div>
+<p>Since <span class="math">\(dV=Adx\)</span>, on substitution in the above we get the <strong>boundary work equation</strong>:</p>
+<div class="math" id="equation-boundary-work">
+<span id="index-4"></span><span class="eqno">(18)<a class="headerlink" href="#equation-boundary-work" title="Permalink to this equation">¶</a></span>\[W_{boundary} = \int_{\mathbb{V}_1}^{\mathbb{V}_2}Pd\mathbb{V}\]</div>
+</div>
+<div class="section" id="first-law-equation-boundary-work-form">
+<h3>First Law Equation (Boundary Work Form)<a class="headerlink" href="#first-law-equation-boundary-work-form" title="Permalink to this headline">¶</a></h3>
+<p>There may be several types of work interactions acting on a closed system. Boundary work is just one of the various work interactions for the system. So in general terms,</p>
+<div class="math">
+\[W = W_{other} + W_{boundary}\]</div>
+<p>Having developed the expression of boundary work as applicable to closed system <a class="reference internal" href="#equation-boundary-work">(18)</a>, the first law equation <a class="reference internal" href="#equation-first-law-closed-system">(12)</a> upon substitution of <span class="math">\(W\)</span> gives the following equation:</p>
+<div class="math" id="equation-first-law-closed-rigorous">
+<span class="eqno">(19)<a class="headerlink" href="#equation-first-law-closed-rigorous" title="Permalink to this equation">¶</a></span>\[Q- W_{other} -  \int_{\mathbb{V}_1}^{\mathbb{V}_2}Pd\mathbb{V} = \varDelta U + \varDelta PE + \varDelta KE\]</div>
+<p>Most closed systems are stationary in nature and hence the change in potential and kinetic energy is zero (<span class="math">\(\varDelta PE=0\)</span> and <span class="math">\(\varDelta KE=0\)</span>). In a large majority of cases, the only applicable work is the boundary work and hence, <span class="math">\(W_{other}=0\)</span>. Thus we can simplify the above equation to:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>First Law equation for closed system (Boundary Work form)</p>
+<div class="last math" id="equation-first-law-closed-simple">
+<span class="eqno">(20)<a class="headerlink" href="#equation-first-law-closed-simple" title="Permalink to this equation">¶</a></span>\[Q -   \int_{\mathbb{V}_1}^{\mathbb{V}_2}Pd\mathbb{V} = \varDelta U\]</div>
+</div>
+<p>While analysing any closed system process, certain idealizations are required to be made to simplify the mathematics. A process may have to be treated as isochoric, isobaric, isothermal, adiabatic or polytropic. A brief on what these are given in the following sections. In each of these processes, the boundary work term must be evaluated and plugged in equation <a class="reference internal" href="#equation-first-law-closed-rigorous">(19)</a> or <a class="reference internal" href="#equation-first-law-closed-simple">(20)</a> . An evaluation of boundary work for each of these processes is now discussed. This is no more complicated than working out a correct mathematical integral of <span class="math">\(\int PdV\)</span>, using an appropriate relationship between <span class="math">\(P\)</span> and <span class="math">\(V\)</span></p>
+</div>
+<div class="section" id="isochoric-constant-volume-process">
+<span id="index-5"></span><h3>Isochoric (Constant-Volume) Process<a class="headerlink" href="#isochoric-constant-volume-process" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/isochoric.png"><img alt="P-v diagram of isochoric process" src="../_images/isochoric.png" style="width: 299.0px; height: 299.0px;" /></a>
+</div>
+<p>For a constant volume process, the volume of the system remains fixed and hence <span class="math">\(dV=0\)</span> and consequently the boundary work</p>
+<div class="math" id="equation-boundary-work-isochoric">
+<span class="eqno">(21)<a class="headerlink" href="#equation-boundary-work-isochoric" title="Permalink to this equation">¶</a></span>\[W_{boundary} = \int Pd\mathbb{V} =0.\]</div>
+</div>
+<div class="section" id="isobaric-constant-pressure-process">
+<span id="index-6"></span><h3>Isobaric (Constant-Pressure) Process<a class="headerlink" href="#isobaric-constant-pressure-process" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/isobaric.png"><img alt="P-v diagram of isobaric process" src="../_images/isobaric.png" style="width: 299.0px; height: 299.0px;" /></a>
+</div>
+<p>For a constant pressure process, <span class="math">\(P=P_0\)</span> where <span class="math">\(P_0\)</span> is the constant pressure. Hence, boundary work is given by:</p>
+<div class="math">
+\[W_{boundary} = \int_{\mathbb{V}_1}^{\mathbb{V}_2} Pd\mathbb{V}= P_0\int_{\mathbb{V}_1}^{\mathbb{V}_2}d\mathbb{V}\]</div>
+<p>therefore</p>
+<div class="math" id="equation-first-law-isobaric">
+<span class="eqno">(22)<a class="headerlink" href="#equation-first-law-isobaric" title="Permalink to this equation">¶</a></span>\[W_{boundary} = P_0(\mathbb{V}_2-\mathbb{V}_1)\]</div>
+</div>
+<div class="section" id="isothermal-constant-temperature-process-ideal-gas">
+<span id="index-7"></span><h3>Isothermal (Constant-Temperature) Process (Ideal Gas)<a class="headerlink" href="#isothermal-constant-temperature-process-ideal-gas" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/isothermal.png"><img alt="P-v diagram of isothermal process" src="../_images/isothermal.png" style="width: 299.0px; height: 299.0px;" /></a>
+</div>
+<p>For a constant temperature process, <span class="math">\(T=T_0\)</span> where <span class="math">\(T_0\)</span> is the constant temperature. For an ideal gas the following relation holds:</p>
+<div class="math" id="equation-ideal-gas-isothermal">
+<span class="eqno">(23)<a class="headerlink" href="#equation-ideal-gas-isothermal" title="Permalink to this equation">¶</a></span>\[\begin{split}P\mathbb{V} = mR_{g}T_0 = C\\\end{split}\]</div>
+<p>or,</p>
+<div class="math">
+\[P  = \frac{C}{\mathbb{V}}\]</div>
+<p>where,
+<br><span class="math">\(m\)</span> is the mass of the gas in the closed system
+<br><span class="math">\(R_{g}\)</span> is the specific gas constant (<span class="math">\(\frac{R}{MW}\)</span>)
+<br><span class="math">\(C\)</span> is a constant used for simplicity</p>
+<p>Hence boundary work for isothermal expansion/compression can be written as:</p>
+<div class="math">
+\[W_{boundary} = \int_{1}^{2}Pd\mathbb{V} = \int_{1}^{2}\frac{C}{\mathbb{V}}d\mathbb{V} = C\int_{1}^{2}\frac{d\mathbb{V}}{\mathbb{V}} =  C\ln\frac{\mathbb{V}_{2}}{\mathbb{V}_{1}}\]</div>
+<p>or substituting the value of <span class="math">\(C\)</span> from <a class="reference internal" href="#equation-ideal-gas-isothermal">(23)</a>,</p>
+<div class="math" id="equation-boundary-work-isothermal">
+<span class="eqno">(24)<a class="headerlink" href="#equation-boundary-work-isothermal" title="Permalink to this equation">¶</a></span>\[W_{boundary} = P_{1}\mathbb{V}_{1}\ln\frac{\mathbb{V}_{2}}{\mathbb{V}_{1}} = P_{2}\mathbb{V}_{2}\ln\frac{\mathbb{V}_{2}}{\mathbb{V}_{1}} = mR_{g}T_0\ln\frac{\mathbb{V}_{2}}{\mathbb{V}_{1}}\]</div>
+</div>
+<div class="section" id="polytropic-process">
+<span id="index-8"></span><h3>Polytropic Process<a class="headerlink" href="#polytropic-process" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/polytropic.png"><img alt="P-v diagram of polytropic process" src="../_images/polytropic.png" style="width: 299.0px; height: 299.0px;" /></a>
+</div>
+<p>A study of actual expansion and compression processes in most practical situations reveal that the pressure <span class="math">\(P\)</span> and volume <span class="math">\(V\)</span> are related by the following equation:</p>
+<div class="math" id="equation-polytropic-process">
+<span class="eqno">(25)<a class="headerlink" href="#equation-polytropic-process" title="Permalink to this equation">¶</a></span>\[P\mathbb{V}^{n} = C\]</div>
+<p>where <span class="math">\(n\)</span> and <span class="math">\(C\)</span> are constants. Under these situations we can express <span class="math">\(P\)</span> as :</p>
+<div class="math">
+\[P = \frac{C}{\mathbb{V}^n}\]</div>
+<p>boundary work can then be written as:</p>
+<div class="math">
+\[W_{boundary} = \int_{1}^{2}Pd\mathbb{V} = \int_{1}^{2}C\mathbb{V}^{-n}d\mathbb{V} = C\frac{\mathbb{V}_2^{-n+1} - \mathbb{V}_1^{-n+1}}{-n+1}\]</div>
+<p>we can make use of the fact that <span class="math">\(C=P_1\mathbb{V}_1^n=P_2\mathbb{V}_2^n\)</span> in the above equation and get the equation for boundary work in polytropic process as:</p>
+<div class="math" id="equation-boundary-work-polytropic-a">
+<span class="eqno">(26)<a class="headerlink" href="#equation-boundary-work-polytropic-a" title="Permalink to this equation">¶</a></span>\[W_{boundary} = \frac{P_2\mathbb{V}_2 - P_1\mathbb{V}_1}{1-n}\]</div>
+<p>For an ideal gas gas <span class="math">\(P\mathbb{V}=mR_gT\)</span>, and therefore we may also write:</p>
+<div class="math" id="equation-boundary-work-polytropic-b">
+<span class="eqno">(27)<a class="headerlink" href="#equation-boundary-work-polytropic-b" title="Permalink to this equation">¶</a></span>\[W_{boundary} = \frac{mR_g(T_2-T_1)}{1-n}\]</div>
+<p>Polytropic process is a very generalised process model. Specific values of polytropic exponent <span class="math">\(n\)</span> lead to specific processes for example,</p>
+<p>For <span class="math">\(n=0\)</span> is an isobaric process
+<br> For <span class="math">\(n=+\infty\)</span> is an isochoric process
+<br> For <span class="math">\(n=1\)</span> is an isothermal process
+<br> For <span class="math">\(n=\kappa\)</span> is an adiabatic process</p>
+</div>
+<div class="section" id="isentropic-process">
+<span id="index-9"></span><h3>Isentropic Process<a class="headerlink" href="#isentropic-process" title="Permalink to this headline">¶</a></h3>
+<p>Isentropic Process is a special case of Polytropic process where <span class="math">\(n=\kappa\)</span>. By substituting the same in <a class="reference internal" href="#equation-boundary-work-polytropic-a">(26)</a> and <a class="reference internal" href="#equation-boundary-work-polytropic-a">(26)</a> we get :</p>
+<div class="math" id="equation-boundary-work-isentropic-a">
+<span class="eqno">(28)<a class="headerlink" href="#equation-boundary-work-isentropic-a" title="Permalink to this equation">¶</a></span>\[W_{boundary} = \frac{P_2\mathbb{V}_2 - P_1\mathbb{V}_1}{1-\kappa}\]</div>
+<div class="math" id="equation-boundary-work-isentropic-b">
+<span class="eqno">(29)<a class="headerlink" href="#equation-boundary-work-isentropic-b" title="Permalink to this equation">¶</a></span>\[W_{boundary} = \frac{mR_g(T_2-T_1)}{1-\kappa}\]</div>
+<p>where,</p>
+<div class="math">
+\[\kappa = \frac{c_p}{c_v}\]</div>
+</div>
+</div>
+<div class="section" id="first-law-analysis-of-controlled-volume-system">
+<span id="index-10"></span><h2>First Law Analysis of Controlled Volume System<a class="headerlink" href="#first-law-analysis-of-controlled-volume-system" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mass-energy-balance-for-controlled-volumes">
+<h3>Mass &amp; Energy Balance for Controlled Volumes<a class="headerlink" href="#mass-energy-balance-for-controlled-volumes" title="Permalink to this headline">¶</a></h3>
+<p>In the case of controlled volume system mass may enter and leave the system. For a system in steady state, the rate of mass <em>flowing in</em> equals that <em>flowing out</em>. Invoking mass balance principle in steady state system <a class="reference internal" href="#equation-mass-balance-steady">(3)</a> we get:</p>
+<div class="math">
+\[\dot{m}_{in} = \dot{m}_{out}\]</div>
+<p>for a single stream we can write this as:</p>
+<div class="math">
+\[\dot{m}_1 = \dot{m}_2 = \dot{m}\]</div>
+<p>The energy balance principle for steady state as given in <a class="reference internal" href="#equation-energy-balance-steady">(9)</a> can be invoked in the context of a controlled volume system with <span class="math">\(\dot{E}_{in}\)</span> and <span class="math">\(\dot{E}_{out}\)</span> as given below: state.</p>
+<div class="math">
+\[\begin{split}\dot{E}_{in} &amp;= \dot{Q}_{in} + \dot{W}_{in} + \underset{in}{\sum}\lambda_{in}\\
+\dot{E}_{out} &amp;= \dot{Q}_{out} + \dot{W}_{out} + \underset{out}{\sum}\lambda_{out}\\\end{split}\]</div>
+<p>where,</p>
+<p><span class="math">\(\dot{Q}_{in}\)</span> is the rate at which heat goes into the system
+<br> <span class="math">\(\dot{Q}_{out}\)</span> is the rate at which heat goes out of the system
+<br> <span class="math">\(\dot{W}_{in}\)</span> is the rate at which work is done on the system (power in)
+<br> <span class="math">\(\dot{W}_{out}\)</span> is the rate at which work is done by the system (power out)
+<br> <span class="math">\(\lambda_{in}\)</span> is the rate at which energy is transported by an incoming stream.
+<br> <span class="math">\(\lambda_{out}\)</span> is the rate at which energy is transported by an  outgoing stream.</p>
+<p>Upon substitution in energy balance equation <a class="reference internal" href="#equation-energy-balance-steady">(9)</a>, we have,</p>
+<div class="math" id="equation-energy-balance-controlled-volume">
+<span class="eqno">(30)<a class="headerlink" href="#equation-energy-balance-controlled-volume" title="Permalink to this equation">¶</a></span>\[\begin{split}\dot{Q}_{in} + \dot{W}_{in} + \lambda_{in} &amp;= \dot{Q}_{out} + \dot{W}_{out} + \lambda_{out} \\
+(\dot{Q}_{in} - \dot{Q}_{out}) -  (\dot{W}_{out} - \dot{W}_{in})  &amp;=  \underset{out}{\sum}\lambda_{out} - \underset{in}{\sum}\lambda_{in}\end{split}\]</div>
+<p>To further simplify the above, let us use the expressions of net heat transfer rate(<span class="math">\(\dot{Q}\)</span>) moving in to the system  and net work rate (<span class="math">\(\dot{W}\)</span>) done by the system i.e. :</p>
+<div class="math">
+\[\begin{split}\dot{Q} &amp;= \dot{Q}_{in} - \dot{Q}_{out}\\
+\dot{W} &amp;= \dot{W}_{in} - \dot{W}_{out}\\\end{split}\]</div>
+<p>Substituting in <a class="reference internal" href="#equation-energy-balance-controlled-volume">(30)</a> we get :</p>
+<div class="math" id="equation-energy-balance-controlled-volume-simplified">
+<span class="eqno">(31)<a class="headerlink" href="#equation-energy-balance-controlled-volume-simplified" title="Permalink to this equation">¶</a></span>\[\dot{Q} -  \dot{W}  =  \underset{out}{\sum}\lambda_{out} - \underset{in}{\sum}\lambda_{in}\]</div>
+<p>The rate of energy transfer by incoming and outgoing mass ( <span class="math">\(\lambda\)</span>) needs to be elaborated further to evolve this equation in to a more useable form.  To understand this energy term, the concept of <em>flow work</em>, needs to defined which applies to flow processes or controlled volumes.</p>
+</div>
+<div class="section" id="concept-of-flow-work">
+<span id="index-11"></span><h3>Concept of Flow Work<a class="headerlink" href="#concept-of-flow-work" title="Permalink to this headline">¶</a></h3>
+<p>Just as in the case of closed systems, we need to enhance our idea of work for controlled volume systems as well. A special form of work applies in this case which is termed as <strong>flow work</strong>.</p>
+<p>In a flow process, Work is spent to push the fluid into the system. To help our imagination, let us assume that there is a tiny packet of length <span class="math">\(L\)</span> which is about to enter the system through an area <span class="math">\(A\)</span>.  The system has a pressure of <span class="math">\(P\)</span>. This packet is being pushed by the fluid behind, which can be imagined to act like a piston, The work that this piston has to do to push this packet completely in is:</p>
+<div class="math" id="equation-work-flow">
+<span class="eqno">(32)<a class="headerlink" href="#equation-work-flow" title="Permalink to this equation">¶</a></span>\[W_{flow} = FL = PAL = P\mathbb{V}\]</div>
+<p>The flow work performed per unit mass can be written as:</p>
+<div class="math" id="equation-specific-flow-work">
+<span class="eqno">(33)<a class="headerlink" href="#equation-specific-flow-work" title="Permalink to this equation">¶</a></span>\[w_{flow} = Pv\]</div>
+<p>A similar work is retrieved (sign shall be negative) as fluid moves out of the control volume, pushing the gas downstream.</p>
+<p>Though this is work, while working with flow process in controlled volumes it becomes convenient to treat it like an energy associated with the stream. So this is also sometimes referred to as <strong>flow energy</strong>.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/controlled-volume.png"><img alt="flow work in flow process" src="../_images/controlled-volume.png" style="width: 360.5px; height: 369.5px;" /></a>
+</div>
+</div>
+<div class="section" id="first-law-equation-enthalpy-form">
+<h3>First Law Equation (Enthalpy Form)<a class="headerlink" href="#first-law-equation-enthalpy-form" title="Permalink to this headline">¶</a></h3>
+<p>The energy transported by stream of fluid  moving in to a controlled volume constitutes of the internal energy, potential energy, kinetic energy as well as the flow energy.  Thus, on per unit mass terms this can be expressed as:</p>
+<div class="math" id="equation-methalpy">
+<span class="eqno">(34)<a class="headerlink" href="#equation-methalpy" title="Permalink to this equation">¶</a></span>\[\theta = w_{flow} + u + pe + ke\]</div>
+<p>The individual terms on the right hand side can be substituted as follows:</p>
+<p><br> specific Work Flow energy <span class="math">\(w_{flow} = Pv\)</span> from <a class="reference internal" href="#equation-specific-flow-work">(33)</a>
+<br> specific Potential energy <span class="math">\(pe = gz\)</span>, where <span class="math">\(z\)</span> is the elevation from datum
+<br> specific Kinetic energy <span class="math">\(ke = \frac{1}{2}V^2\)</span>, where <span class="math">\(V\)</span> is the fluid velocity</p>
+<p>After substitution in <a class="reference internal" href="#equation-methalpy">(34)</a>  we get:</p>
+<div class="math" id="equation-energy-stream">
+<span class="eqno">(35)<a class="headerlink" href="#equation-energy-stream" title="Permalink to this equation">¶</a></span>\[\theta = Pv + u + gz + \frac{1}{2}V^2\]</div>
+<p id="index-12">The quantity <span class="math">\(Pv + u\)</span> occurs invariably in all flow problems and hence a new property <strong>enthalpy</strong> is defined just to help simplify matters. Thus enthalpy is defined as:</p>
+<div class="math" id="equation-enthalpy">
+<span class="eqno">(36)<a class="headerlink" href="#equation-enthalpy" title="Permalink to this equation">¶</a></span>\[h = u + Pv\]</div>
+<p>where,
+<br> <span class="math">\(u\)</span> is the internal energy per unit mass
+<br> <span class="math">\(P\)</span> is pressure of the flow stream
+<br> <span class="math">\(v\)</span> is specific volume</p>
+<p>Substituting <span class="math">\(h\)</span> in the equation <a class="reference internal" href="#equation-energy-stream">(35)</a> above we get,</p>
+<div class="math">
+\[\theta = h + gz + \frac{1}{2}V^2\]</div>
+<p>The rate at which energy is transported by a mass stream can now be expressed as:</p>
+<div class="math">
+\[\lambda = \dot{m}\theta = \dot{m}(h + gz + \frac{1}{2}V^2)\]</div>
+<p>Using this expression of stream energy rate (<span class="math">\(\lambda\)</span>) we can write <a class="reference internal" href="#equation-energy-balance-controlled-volume-simplified">(31)</a> as follows:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>First Law equation for controlled volumes (steady state and multiple streams)</p>
+<div class="last math" id="equation-first-law-controlled-volume-rigorous">
+<span class="eqno">(37)<a class="headerlink" href="#equation-first-law-controlled-volume-rigorous" title="Permalink to this equation">¶</a></span>\[\dot{Q} - \dot{W}  =  \underset{out}{\sum}\dot{m}_{out}(h_{out}+\frac{V_{out}^2}{2}+gz_{out}) -  \underset{in}{\sum}\dot{m}_{in}(h_{in}+\frac{V_{in}^2}{2}+gz_{in})\]</div>
+</div>
+<p>For the most popular case of single stream in and out of controlled volume and acknowledging that under steady state <span class="math">\(\dot{m}_1 = \dot{m}_2 = \dot{m}\)</span> we get the first law equation as applicable to controlled volumes:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>First Law equation for controlled volumes (steady state and single stream)</p>
+<div class="last math" id="equation-first-law-controlled-volume">
+<span class="eqno">(38)<a class="headerlink" href="#equation-first-law-controlled-volume" title="Permalink to this equation">¶</a></span>\[\dot{Q} - \dot{W}  =  \dot{m}(h_2 - h_1 +\frac{V_2^2 - V_1^2 }{2}+g(z_2-z_1))\]</div>
+</div>
+<p>Dividing both sides of the equation by mass flow rate (<span class="math">\(\dot{m}\)</span>), we get the equation on <strong>per unit mass basis</strong>:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>First Law equation for controlled volumes (steady state and single stream) on per unit mass basis</p>
+<div class="last math" id="equation-first-law-controlled-volume-specific">
+<span class="eqno">(39)<a class="headerlink" href="#equation-first-law-controlled-volume-specific" title="Permalink to this equation">¶</a></span>\[q - w  =  h_2 - h_1 +\frac{V_2^2 - V_1^2 }{2}+g(z_2-z_1)\]</div>
+</div>
+<p>if the changes in kinetic and potential energies can be neglected, then the above further simplifies to:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>First Law equation for controlled volumes (steady state and single stream) on per unit mass basis with neglible potential and kinetic energy changes</p>
+<div class="last math" id="equation-first-law-controlled-volume-simple">
+<span class="eqno">(40)<a class="headerlink" href="#equation-first-law-controlled-volume-simple" title="Permalink to this equation">¶</a></span>\[q - w  =  h_2 - h_1\]</div>
+</div>
+<p>In the subsequent part of this chapter we shall look into the application of these equation to various devices like nozzles, diffusers, compressors, expanders, throttle valves and mixers etc.</p>
+</div>
+<div class="section" id="nozzles-and-diffusers">
+<span id="index-13"></span><h3>Nozzles and Diffusers<a class="headerlink" href="#nozzles-and-diffusers" title="Permalink to this headline">¶</a></h3>
+<p>Nozzles and Diffusers are used in propulsion jet engines, rockets and stationary aerodynamic components of compressors and turbines etc.</p>
+<p>A <strong>nozzle</strong> is a device that increases the velocity of the fluid at the expense of pressure.</p>
+<p>A <strong>diffuser</strong> is a device that increases the pressure of the fluid at the expense of velocity.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/nozzle_diffuser.png"><img alt="flow work in flow process" src="../_images/nozzle_diffuser.png" style="width: 278.5px; height: 319.0px;" /></a>
+</div>
+<p>In both these devices the heat transfer  can be neglected (<span class="math">\(q=0\)</span>)as the time period of interaction is very short. Since there is no work done on or by the device we also have (<span class="math">\(w=0\)</span>). The change in elevation is also negligible and therefore we can consider (<span class="math">\(z_2 = z_1\)</span>).</p>
+<p>Thus the first law equation for controlled volume <a class="reference internal" href="#equation-first-law-controlled-volume">(38)</a>, after using the above substitutions becomes:</p>
+<div class="math" id="equation-first-law-nozzle-diffuser">
+<span class="eqno">(41)<a class="headerlink" href="#equation-first-law-nozzle-diffuser" title="Permalink to this equation">¶</a></span>\[h_2 = h_1 - \frac{V_2^2 - V_1^2 }{2}\]</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">For nozzles, <span class="math">\(V_2 &gt; V_1\)</span> and hence <span class="math">\(h_2 &lt; h_1\)</span>, so a cooling effect is observed.
+<br> For diffusers, <span class="math">\(V_2 &lt; V_1\)</span> and hence <span class="math">\(h_2 &gt; h_1\)</span>, so a heating effect is observed.</p>
+</div>
+</div>
+<div class="section" id="compressors-and-turbines">
+<span id="index-14"></span><h3>Compressors and Turbines<a class="headerlink" href="#compressors-and-turbines" title="Permalink to this headline">¶</a></h3>
+<p>In a compressor mechanical work is spent to raise the pressure of a fluid (compressible fluid), while in a turbine work is obtained by letting down the pressure of the fluid stream. For approximate calculations these devices can be treated as adiabatic i.e. <span class="math">\(\dot{Q}=0\)</span>. Further the changes in kinetic and potential energy can also be neglected <span class="math">\(\varDelta{pe}=0\)</span> and <span class="math">\(\varDelta{ke}=0\)</span>.</p>
+<p>For turbines, a net work is obtained from the device and we can call this work as <span class="math">\(W_{output}\)</span>. The first law equation <a class="reference internal" href="#equation-first-law-controlled-volume">(38)</a> can be written for an approximate analysis case as:</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/turbine.png"><img alt="first law for turbines" src="../_images/turbine.png" style="width: 352.09999999999997px; height: 306.59999999999997px;" /></a>
+</div>
+<div class="math">
+\[- \dot{W}_{output} = \dot{m}(h_{2} - h_{1})\]</div>
+<p>rearranging we get the first law equation as applicable to turbines.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>First Law applied to turbines</p>
+<div class="last math">
+\[\dot{W}_{output} =  \dot{m}(h_1 - h_2)\]</div>
+</div>
+<p>For compressors net positive work is done on the machine and we can call this work as <span class="math">\(W_{input}\)</span>. In a more rigorous performance evaluation such as those adopted by the ASME PTC 10 code for compressor a more accurate approach is adopted. Heat losses from the equipment (<span class="math">\(Q_{loss}\)</span> is not ignored. The affect of change in potential energy is always neglected by codes as well because it is really very small compared to the other energy terms. Kinetic energy term does not directly enter the heat balance equation, but it is still accounted for by making  use of the concept of total enthalpy (or stagnation enthalpy). Total enthalpy is defined as:</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/compressor.png"><img alt="first law for compressor" src="../_images/compressor.png" style="width: 352.09999999999997px; height: 306.59999999999997px;" /></a>
+</div>
+<div class="math">
+\[h_{total} = h + \frac{V^2}{2}\]</div>
+<p>The first law equation <a class="reference internal" href="#equation-first-law-controlled-volume">(38)</a> can be written as:</p>
+<div class="math">
+\[-\dot{Q}_{loss} + \dot{W}_{input} = \dot{m}(h_{2_{total}} - h_{1_{total}})\]</div>
+<p>rearranging we get the first law equation as applicable to compressors.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>First Law applied to compressors</p>
+<div class="math" id="equation-first-law-compressor">
+<span class="eqno">(42)<a class="headerlink" href="#equation-first-law-compressor" title="Permalink to this equation">¶</a></span>\[\dot{W}_{input} = \dot{Q}_{loss} + \dot{m}(h_{2_{total}} - h_{1_{total}})\]</div>
+<p class="last">The heat loss is primarily the bearing loss (mechanical loss) and can be determined by measurement of oil flow rates to bearings and the oil temperature rise, using a known value for the oil specific heat. Surface losses can be measuring the compressor body area, surface temperatures and air temperatures and use convective heat loss rules.</p>
+</div>
+</div>
+<div class="section" id="throttling-valves">
+<span id="index-15"></span><h3>Throttling Valves<a class="headerlink" href="#throttling-valves" title="Permalink to this headline">¶</a></h3>
+<p>Throttling valves are flow restricting devices that cause a  significant drop in pressure in the fluid. These devices could be adjustable valves, porous plugs or capillary tubes.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/throttle.png"><img alt="first law for throttling" src="../_images/throttle.png" style="width: 285.0px; height: 240.0px;" /></a>
+</div>
+<p>No work interaction happens in the device and the heat loss is also considered negligible due to the short interaction time.  Thus both heat rate (<span class="math">\(\dot{Q}\)</span>) and work rate (<span class="math">\(\dot{W}\)</span>) are zero and therefore after substituting in <a class="reference internal" href="#equation-first-law-controlled-volume">(38)</a> we have:</p>
+<div class="math">
+\[0 - 0 = \dot{m}(h_2 - h_1)\]</div>
+<p>which upon rearrangement leads to the following equation of first law as applicable to throttle valves:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>First Law applied to Throttle valves</p>
+<div class="math">
+\[\begin{split}h_1 &amp;= h_2\\
+u_1 + P_1v_1 &amp;= u_2 + P_2v_2\end{split}\]</div>
+<p class="last">while, <span class="math">\(h\)</span> remains constant its constituents <span class="math">\(u\)</span> and <span class="math">\(Pv\)</span> could change such that their sum is a constant.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>For ideal gases enthalpy <span class="math">\(h\)</span> is a function of temperature <span class="math">\(T\)</span> only. Thus when an ideal gas undergoes throttling the temperature remains same.</p>
+<p class="last">However for most real gases, a temperature drop is observed therby implying that there is a fall in internal energy <span class="math">\(u\)</span>. This is most notable for refrigerants. For hydrogen, a temperature rise is observed during throttling.</p>
+</div>
+</div>
+<div class="section" id="mixing-chambers">
+<span id="index-16"></span><h3>Mixing Chambers<a class="headerlink" href="#mixing-chambers" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/mixer.png"><img alt="first law for mixing chamber" src="../_images/mixer.png" style="width: 363.0px; height: 299.5px;" /></a>
+</div>
+<p>Mixing of two streams is a very common engineering problem. For an adiabatic mixing case (which is usually the case), both Heat rate (<span class="math">\(\dot{Q}\)</span>) and work rate (<span class="math">\(\dot{W}\)</span>) are zero. Kinetic and potential energy changes can also be neglected. Therefore after substituting in <a class="reference internal" href="#equation-first-law-controlled-volume-rigorous">(37)</a> and some rearrangement we have:</p>
+<div class="math">
+\[(\dot{m_1} + \dot{m_2})h_3 = (\dot{m_1}h_1 + \dot{m_2}h_2 )\]</div>
+<p>if <span class="math">\(y = \dot{m}_1/\dot{m}_2\)</span>, we get upon dividing the above equation by <span class="math">\(\dot{m_2}\)</span> :</p>
+<div class="math">
+\[(1+y)h_3 = yh_1 + h_2\]</div>
+<p>upon rearrangment, leads to the first law as applicable to mixing:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>First Law applied to Mixing</p>
+<div class="math">
+\[h_3 = \frac{yh_1 + h_2}{1 + y}\]</div>
+<p>with rearrangement, if the enthalpy of the stream after mixing is known, then mixing ratio can be expressed as:</p>
+<div class="math">
+\[y  = \frac{h_3 - h_2}{h_1 - h_3}\]</div>
+<p class="last">where <span class="math">\(y = \dot{m}_1/\dot{m}_2\)</span>, is the mixing ratio</p>
+</div>
+</div>
+<div class="section" id="heat-exchanger">
+<span id="index-17"></span><h3>Heat Exchanger<a class="headerlink" href="#heat-exchanger" title="Permalink to this headline">¶</a></h3>
+<p>Heat exchanger is a device where two moving streams exchange heat without mixing with each other. There is no work interaction in a heat exchanger and assuming adiabatic process (which is a good approximation of heat exchanger), the heat interaction can also be neglected.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/heat-exchanger.png"><img alt="first law for heat exchanger" src="../_images/heat-exchanger.png" style="width: 497.7px; height: 464.09999999999997px;" /></a>
+</div>
+<p>Let the two streams be ‘<span class="math">\(a\)</span> and ‘<span class="math">\(b\)</span> and their mass flow rates <span class="math">\(m_a\)</span> and <span class="math">\(m_b\)</span> respectively. Let subscript <span class="math">\(1\)</span> denote inlet and  subscript <span class="math">\(2\)</span> outlet as usual. Substituting in <a class="reference internal" href="#equation-first-law-controlled-volume-rigorous">(37)</a> we get the first law equation for heat exchanger:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>First Law applied to Heat Exchanger</p>
+<div class="last math">
+\[\dot{m}_a(h_{a_1} - h_{a_2}) = \dot{m}_b(h_{b_2} - h_{b_1})\]</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chap03.html" class="btn btn-neutral float-right" title="CHAPTER 3. - IDEAL GAS AND SPECIFIC HEATS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chap01.html" class="btn btn-neutral" title="CHAPTER 1. - INTRODUCTION AND KEY DEFINITIONS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sandeep Raheja.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

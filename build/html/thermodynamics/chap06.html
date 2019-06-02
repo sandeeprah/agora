@@ -1,0 +1,542 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="This chapter applies the principles of first law and second law of thermodynamics to compression process. The method for the determination of actual work of compressioncon from change in enthalpy is outlined for adiabatic compression case. Different approaches for the computation of ideal work reference are then introduced. These include isothermal, isentropic and polytropic work reference. The weakness of isentropic analysis for multistage compression is highlighted and a remedial approach for the same in the form of polytropic analysis is proposed. The concept of polytropic efficiency and polytropic head is explained and how they truely reflect the aerodynamic build quality of the machine.  " name="description" />
+<meta content="thermodynamics, compressor, isothermal efficiency, isentropic efficiency, polytropic efficiency, polytropic head, small stage efficiency, efficiency, polytropic, reversible, vdP" name="keywords" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CHAPTER 6. - COMPRESSORS &mdash; codecalculation.com 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="codecalculation.com 1 documentation" href="../index.html"/>
+        <link rel="up" title="Thermodynamics for Rotating Equipment (from the ground up)" href="index.html"/>
+        <link rel="next" title="CHAPTER 7. - TURBINES" href="chap07.html"/>
+        <link rel="prev" title="CHAPTER 5. - ENTROPY" href="chap05.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> codecalculation.com
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../docuMentor.html">docuMentor : Introduction to key features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../process/index.html">Process Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanical/index.html">Mechanical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrical/index.html">Electrical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../instrumentation/index.html">Instrumentation Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../civil/index.html">Civil/Structural Calculations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">E-Books:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Thermodynamics for Rotating Equipment (from the ground up)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap01.html">CHAPTER 1. - INTRODUCTION AND KEY DEFINITIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap02.html">CHAPTER 2. - FIRST LAW OF THERMODYNAMICS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap03.html">CHAPTER 3. - IDEAL GAS AND SPECIFIC HEATS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap04.html">CHAPTER 4. - SECOND LAW OF THERMODYNAMICS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap05.html">CHAPTER 5. - ENTROPY</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CHAPTER 6. - COMPRESSORS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#actual-work-of-compression">Actual Work of Compression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-1">Ideal Work of Compression and Types of Compression Efficiencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#isothermal-head">Isothermal Head</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#isentropic-head">Isentropic Head</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#polytropic-head">Polytropic Head</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chap07.html">CHAPTER 7. - TURBINES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#index">Index</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">codecalculation.com</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Thermodynamics for Rotating Equipment (from the ground up)</a> &raquo;</li>
+        
+      <li>CHAPTER 6. - COMPRESSORS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/thermodynamics/chap06.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chapter-6-compressors">
+<h1>CHAPTER 6. - COMPRESSORS<a class="headerlink" href="#chapter-6-compressors" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="actual-work-of-compression">
+<span id="index-0"></span><h2>Actual Work of Compression<a class="headerlink" href="#actual-work-of-compression" title="Permalink to this headline">¶</a></h2>
+<p id="actual-work">A compressor is device to raise the pressure of a compressible fluid. Work is required as an input to the compressor in this process.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/compressor2.png"><img alt="compressor schematic" src="../_images/compressor2.png" style="width: 352.09999999999997px; height: 306.59999999999997px;" /></a>
+</div>
+<p>The first law of thermodynamics, which is just the application of energy balance, when applied in the context of steady flow compression gives us the following relationship which was derived in Chapter 02 as <a class="reference internal" href="chap02.html#equation-first-law-compressor">(42)</a></p>
+<div class="math">
+\[\dot{W}_{input} = \dot{Q}_{loss} + \dot{m}(h_{2_{total}} - h_{1_{total}})\]</div>
+<p>where</p>
+<p><br> <span class="math">\(\dot{W}_{input}\)</span> is the rate of work input to the compressor or Power input
+<br> <span class="math">\(\dot{Q}_{loss}\)</span> is the rate of heat loss from compressor body, bearing, seals etc.
+<br> <span class="math">\(\dot{m}\)</span> is the mass flow rate
+<br> <span class="math">\(h_{2_{total}}\)</span> is the total or stagnation enthalpy at outlet conditions
+<br> <span class="math">\(h_{1_{total}}\)</span> is the total or stagnation enthalpy at inlet conditions</p>
+<p>For the sake of brevity alone, we shall write total enthalpies as if they were just static enthalpies. Practically, the kinetic energy effect might be insignificant, but if we find that the accuracy has fallen below our expectation, we can use total enthalpies instead of static enthalpies without altering the structure of these equations.</p>
+<p>So for the sake of brevity, the first law equation can be written as:</p>
+<div class="math" id="equation-compression-work-actual">
+<span class="eqno">(1)<a class="headerlink" href="#equation-compression-work-actual" title="Permalink to this equation">¶</a></span>\[\dot{W}_{actual} = \dot{Q}_{loss} + \dot{m}(h_2 - h_1)\]</div>
+<p>or dividing by <span class="math">\(\dot{m}\)</span>, we get on per unit mass basis as</p>
+<div class="math">
+\[{w}_{actual} = q_{loss} + (h_2 - h_1)\]</div>
+<p>For a perfect gas the enthalpy difference can be arrived in a more simple manner and we can write as</p>
+<div class="math">
+\[w_{actual} = q_{loss} + c_{p_{avg}}(T_2 - T_1)\]</div>
+<p>In most practical scenarios, the actual work process is adiabatic in nature, and we can simplify the above further by taking <span class="math">\(q_{loss}=0\)</span> in such cases. Therefore,</p>
+<div class="math">
+\[w_{actual} = c_{p_{avg}}(T_2 - T_1)\]</div>
+<p>Please note that compressors using interstage cooling or diaphragm cooling should never use this approximation as the error would be unacceptable.</p>
+</div>
+<div class="section" id="index-1">
+<span id="ideal-work-of-compression-and-types-of-compression-efficiencies"></span><h2>Ideal Work of Compression and Types of Compression Efficiencies<a class="headerlink" href="#index-1" title="Permalink to this headline">¶</a></h2>
+<p>While the first law helps us to establish the power consumption of an actual compressor, we have not been guided about the power that would be consumed by an ideal compressor. So what is an ideal compressor (or a compression process) ? Theoritically there are three cases of process compression which can be used for benchmarking the performance of an actual compression process. These are:</p>
+<ol class="loweralpha simple">
+<li>Isothermal Process (<span class="math">\(PV = constant\)</span>)</li>
+<li>Adiabatic (Isentropic) Process (<span class="math">\(PV^k = constant\)</span>)</li>
+<li>Polytropic Process (<span class="math">\(PV^n = constant\)</span>)</li>
+</ol>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Pv-process-comparison.png"><img alt="Generalised Polytropic Process" src="../_images/Pv-process-comparison.png" style="width: 640.0px; height: 480.0px;" /></a>
+</div>
+<p>These processes have been illustrated on the P-v diagram above. Isothermal and Isentropic processes can be obtained by assigning specific value to the polytropic index <span class="math">\(n\)</span> in the polytropic process as shown in the figure.</p>
+<p>We have already demonstrated in Chapter 05, that out all processes that can occur between two states, the reversible process is the most efficient. So while benchmarking, the compression processes, reversibility will also be a condition for computing the ideal head. The equation for work done in a reversible steady flow process was derived in Chapter 05 as equation <a class="reference internal" href="chap05.html#equation-work-steady-reversible-flow">(19)</a> and is reproduced below:</p>
+<div class="math">
+\[w_{rev}  =  -\int_1^2 vdP +  \frac{V_1^2-V_2^2}{2} +  g(z_1 - z_2)\]</div>
+<p>For the case of compressor where we want to treat work input as positive quantity and after neglecting the kinetic energy and potential energy terms, the ideal work of compression can be expressed as:</p>
+<div class="math" id="equation-reversible-compression-work">
+<span class="eqno">(2)<a class="headerlink" href="#equation-reversible-compression-work" title="Permalink to this equation">¶</a></span>\[w_{ideal}  =  \int_1^2 vdP\]</div>
+<p>In order to evaluate the above integral, the specific volume <span class="math">\(v\)</span> should be available as a function of <span class="math">\(P\)</span>. The type of compression process chosen decides this function <span class="math">\(v=v(P)\)</span> and allows us to perform this integral. This function <span class="math">\(v=v(P)\)</span> need not necessarily pertain to a reversible work process, but the <span class="math">\(\int_1^2 vdP\)</span> will always give us the least amount of work that is possible for compression from <span class="math">\(P_1\)</span> to <span class="math">\(P_2\)</span> .</p>
+<p>The quantity work per unit mass is also customarily known as <em>Head</em> (<span class="math">\(H\)</span>). Henceforth, the specific ideal work will be denoted as <span class="math">\(H_{ideal}\)</span> and the above equation can then be written as</p>
+<div class="math" id="equation-reversible-head">
+<span class="eqno">(3)<a class="headerlink" href="#equation-reversible-head" title="Permalink to this equation">¶</a></span>\[H_{ideal}  =  \int_1^2 vdP\]</div>
+<p>The compression efficiency can then be defined as</p>
+<div class="math" id="index-2">
+\[\eta  =  \frac{H_{ideal}}{w_{actual}}\]</div>
+<p>The power consumed by the compressor can be written as</p>
+<div class="math" id="index-3">
+\[P = \frac{\dot{m} H_{ideal}}{\eta}\]</div>
+<p>A detailed discussion on each of these processes and the ideal work (<span class="math">\(H_{ideal}\)</span>) and efficiency (<span class="math">\(\eta\)</span>) associated with each of them is presented in the sections below.</p>
+<div class="section" id="isothermal-head">
+<span id="index-4"></span><h3>Isothermal Head<a class="headerlink" href="#isothermal-head" title="Permalink to this headline">¶</a></h3>
+<p>In an isothermal process, the heat developed in the compression process is allowed to escape by arranging sufficient cooling and the temperature remains constant. Practically, a finite temperature gradient is required, for a heat transfer to happen. Therefore, implementation of isothermal compression would require, infinite amount of heat transfer area and infinite amount of time for this thermal interaction. While, it may be impractical to build a compressor that truly behaves like an isothermal machine, we can try to build machines that are more and more closer to this, by increasing the amount of intercooling during the compression process.</p>
+<p>From an isothermal process from ideal gas law we have</p>
+<div class="math">
+\[\begin{split}Pv &amp;= C \\
+v &amp;= \frac{C}{P}\end{split}\]</div>
+<p>where <span class="math">\(C\)</span> is a constant and <span class="math">\(C=RT_0=P_1V_1=P_2V_2\)</span></p>
+<p>Substituting the value of <span class="math">\(v\)</span> obtained above in the reversible compressor work equation <a class="reference internal" href="#equation-reversible-compression-work">(2)</a>, we get isothermal head as</p>
+<div class="math">
+\[H_{t} = \int_1^2 \frac{CdP}{P}\]</div>
+<p>On evaluating the above integral the ideal work in for the compression process assuming isothermal compression as reference is</p>
+<div class="math">
+\[H_{t} = Cln \frac{P_2}{P_1} = RT_0ln\frac{P_2}{P_1}\]</div>
+<p>Isothermal compression is best visualised on a T-s diagram. The area under the curve shows the heat rejected by the compressor. For an ideal gas, isothermal compression does not involve any change in enthalpy of the gas hence the heat rejected is same as the compression work done in accordance with equation <a class="reference internal" href="#equation-compression-work-actual">(1)</a>.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/compression-isothermal.png"><img alt="compression isothermal" src="../_images/compression-isothermal.png" style="width: 483.0px; height: 452.0px;" /></a>
+</div>
+</div>
+<div class="section" id="isentropic-head">
+<span id="index-5"></span><h3>Isentropic Head<a class="headerlink" href="#isentropic-head" title="Permalink to this headline">¶</a></h3>
+<p>In an isentropic compression the compression process is adiabatic (does not allow for any heat exchange with the surroundings) and also reversible (no mechanical friction, viscous losses etc. and therefore no entropy change).</p>
+<p>If the compression process is carried out fast (which is usually the case) there is hardly any time for heat interaction to happen and the process can be approximated as an adiabatice process. In Chapter 05, isentropic relationships were developed for state variables P, v, T in the case of Perfect gas. Those relationships are reproduced below:</p>
+<div class="math">
+\[\begin{split}Tv^{k-1} &amp;= C \\
+TP^{\frac{1-k}{k}} &amp;= C \\
+Pv^{k} &amp;= C \\\end{split}\]</div>
+<p>From the above relationships we can express <span class="math">\(v\)</span> as function of <span class="math">\(P\)</span> as</p>
+<div class="math">
+\[v = \frac{C^{\frac{1}{k}}}{P^{\frac{1}{k}}}\]</div>
+<p>where <span class="math">\(C\)</span> is a constant and <span class="math">\(C=P_1v_1^k=P_2v_2^k\)</span></p>
+<p>Substituting the value of <span class="math">\(v\)</span> obtained above in the reversible compressor work equation <a class="reference internal" href="#equation-reversible-compression-work">(2)</a>, we get</p>
+<div class="math">
+\[H_{s} = \int_1^2 \frac{C^{\frac{1}{k}}dP}{P^{\frac{1}{k}}}\]</div>
+<p>On evaluating the above integral we get</p>
+<div class="math">
+\[\begin{split}H_{s} &amp;= \frac{C^{\frac{1}{k}}}{1-\frac{1}{k}} \left(P_2^{\frac{k-1}{k}} - P_1^{\frac{k-1}{k}} \right) \\
+H_{s} &amp;= C^{\frac{1}{k}}\frac{k}{k-1}P_{1}^{\frac{k-1}{k}}\left(\left(\frac{P_{2}}{P_{1}}\right)^{\frac{k-1}{k}}-1\right)\end{split}\]</div>
+<p>Substituting the value of <span class="math">\(C\)</span> in the above as <span class="math">\(P_1v_1^k\)</span> we get</p>
+<div class="math">
+\[H_{s} = P_1v_1\frac{k}{k-1}\left(\left(\frac{P_{2}}{P_{1}}\right)^{\frac{k-1}{k}}-1\right)\]</div>
+<p>Using ideal gas equation we can substitute <span class="math">\(P_1v_1\)</span> we can write as</p>
+<div class="math">
+\[H_{s} = Z_1RT_1\frac{k}{k-1}\left(\left(\frac{P_{2}}{P_{1}}\right)^{\frac{k-1}{k}}-1\right)\]</div>
+<p>The isentropic efficiency is evaluated as</p>
+<div class="math">
+\[\eta_{s}  = \frac{H_{s}}{w_{actual}}\]</div>
+<p>The figure below, shows the the actual process path of compression and the idealised isentropic reference work path on an h-s diagram. The isentropic head for compression from pressure <span class="math">\(P_1\)</span> to <span class="math">\(P_2\)</span> is shown as <span class="math">\(H_s\)</span>. Asuming that the actual process is also adiabatic, the actual specific work <span class="math">\(w_{actual}\)</span> can also be read from the diagram with ease.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/compression-isentropic.png"><img alt="compression isentropic" src="../_images/compression-isentropic.png" style="width: 640.0px; height: 480.0px;" /></a>
+</div>
+<p>The isentropic analysis of compression has some disadvantages:</p>
+<ol class="arabic simple">
+<li>If the compression process is broken into a series of compression steps, then the compression efficiency of the overall process is found to be less than the compression efficiency of the series steps. So, if multiple compression stages are stacked together that the have the same build quality and aerodynamic characteristics, the efficiency of the overall compression attained would not remain the same but appear reduced.</li>
+<li>The isentropic head requirements of the individual stages does not arithmetically add up and give the isentropic head of the overall compression.</li>
+<li>Using isentropic relationships, the temperature predicted is not the same as the actual discharge temperature.</li>
+</ol>
+<p>The above problems as well as its solutions are discussed in the next section which deals with polytropic analysis of the compression process.</p>
+</div>
+<div class="section" id="polytropic-head">
+<span id="index-6"></span><h3>Polytropic Head<a class="headerlink" href="#polytropic-head" title="Permalink to this headline">¶</a></h3>
+<p>Before we dive into what polytropic compression is, let us take a look at multistage compressions and see some weaknesses of a polytropic analysis.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/compression-multistage-isentropic.png"><img alt="isentropic analysis of multistage compression" src="../_images/compression-multistage-isentropic.png" style="width: 640.0px; height: 480.0px;" /></a>
+</div>
+<p>The figure above shows a multistage compression (which is typical of centrifugal compressor stages). The whole process is adiabatic in nature and no intercooling is done.  The overall compression process is from state <span class="math">\(1\)</span> to state <span class="math">\(2\)</span>, with <span class="math">\(x\)</span> and <span class="math">\(y\)</span>  as intermediate states. The actual process is shown as a blue line.</p>
+<p>As part of the compression process, the pressure is raised as <span class="math">\(P_1\)</span> -&gt; <span class="math">\(P_x\)</span> -&gt; <span class="math">\(P_y\)</span> -&gt; <span class="math">\(P_2\)</span>, sequentially through these small stages of compression. The isobars corresponding to these pressures are shown on the h-s diagram. These isobars on an h-s diagram fan out in the increasing direction of enthalpy and entropy.</p>
+<p>If the whole process is carried out isentropically the process will trace a path <span class="math">\(1\)</span> -&gt; <span class="math">\(2_s\)</span> shown by the magenta line. The isentropic head can be clearly read out from the h-s diagram as <span class="math">\(H_s\)</span>. The isentropic efficiency of the whole compression process can be written as</p>
+<div class="math" id="equation-ch06-01">
+<span class="eqno">(4)<a class="headerlink" href="#equation-ch06-01" title="Permalink to this equation">¶</a></span>\[\eta_{s} = \frac{H_s}{w_{actual}}\]</div>
+<p>If an independent isentropic assessment is carried out for the small compression stages, then the isentropic efficienies of each of the stage can be written as</p>
+<div class="math">
+\[\begin{split}\eta_{sa} &amp;= \frac{H_{pa}}{w_a} \\
+\eta_{sb} &amp;= \frac{H_{pb}}{w_b} \\
+\eta_{sc} &amp;= \frac{H_{pc}}{w_c} \\\end{split}\]</div>
+<p>Let us now make an assumption that each of these small stages has identical isentropic efficiency of <span class="math">\(\eta_{small}\)</span> then we have the following relationship</p>
+<div class="math">
+\[\eta_{small} = \frac{H_{pa}}{w_a} = \frac{H_{pb}}{w_b} = \frac{H_{pc}}{w_c} = \frac{H_{pa}+H_{pb}+H_{pc}}{w_a+w_b+w_c}\]</div>
+<p>Since <span class="math">\(w_a + w_b + w_c = w_{actual}\)</span>, upon substitution</p>
+<div class="math" id="equation-ch06-02">
+<span class="eqno">(5)<a class="headerlink" href="#equation-ch06-02" title="Permalink to this equation">¶</a></span>\[\eta_{small} = \frac{H_{pa}+H_{pb}+H_{pc}}{w_{actual}}\]</div>
+<p>Now upon comparison we find that</p>
+<div class="math">
+\[H_{pa} + H_{pb} + H_{pc} &gt; H_s\]</div>
+<p>Divding both sides of the above equation by <span class="math">\(w_{actual}\)</span> we get</p>
+<div class="math">
+\[\frac{H_{pa}+H_{pb}+H_{pc}}{w_{actual}} &gt; \frac{H_s}{w_{actual}}\]</div>
+<p>Or by using <a class="reference internal" href="#equation-ch06-01">(4)</a> and <a class="reference internal" href="#equation-ch06-02">(5)</a>, we get</p>
+<div class="math">
+\[\eta_{small} &gt; \eta_{s}\]</div>
+<p>Which can be interpreted as that “If the isentropic efficiencies of all constituent compression stages in a device are equal and referred to as small stage efficiency, then this would be greater than the overall isentropic efficiency of the device.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p>In case you can not make out, pay attention to the shaded grey area which is a quadrilateral. The length of the right edge is greater than the length of the left edge. This is because the top edge has a greater slope than the bottom edge.  This also applies to the other two quadrilaterals underneath. Therefore each of <span class="math">\(H_{pa}\)</span>, <span class="math">\(H_{pb}\)</span> and <span class="math">\(H_{pc}\)</span> which form the right edges of these quadrilaterals, are bigger than their corresponding left edges which together total up and make the isentropic head <span class="math">\(H_s\)</span></p>
+<p>This difference is due to the fanning effect (divergence) of the isobars on the h-s diagram. How do we explain these diverging isobars ?? Now, as per the second Tds relationship which was derived in Chapter 05  <a class="reference internal" href="chap05.html#equation-second-tds">(11)</a></p>
+<div class="math">
+\[Tds  = dh -vdP\]</div>
+<p>for an isobar <span class="math">\(vdP=0\)</span> and therefore,</p>
+<div class="math">
+\[dh = Tds\]</div>
+<p>Or,</p>
+<div class="math">
+\[\left( \frac{\partial h}{\partial s}\right)_p = T\]</div>
+<p>which means that the slope of the isobar increases with temperature. For an ideal gas enthalpy is a function of temperature, higher temperature means more enthalpy and vice versa. Therefore the slope of the line <span class="math">\(p_2\)</span> will be greater than the slope of the line <span class="math">\(p_1\)</span> for the same value of entropy.</p>
+<p>Let us try to give a physical explanation to the above conclusion. The amount of compression work done is less for a denser gas. As the gas heats up and occupies more volume, more work is required for compression. When a gas is compressed adiabatically and reversibly, it heats up due to thermodynamic effects without any change in entropy . When the compression stage has irreversabilities, the gas heats up more with an increase in entropy level and requires even more work. As the pressure ratio keeps increasing, the difference between ideal isentropic work and actual work keeps amplifying. The overall isentropic efficiency will keep reducing with pressure ratio increase.</p>
+<p class="last">While doing an independent assessment of a small stage (for example let us take stage from y-&gt;2). The computation of ideal head <span class="math">\(H_{pc}\)</span>, is done on a reversible path which becomes a vertical line on an h-s diagram for adiabatic process. This work is lossless in the sense, that it is the ideal work if there had there been no irreversibilities in compression path y-2. But in evaluating <span class="math">\(H_{pc}\)</span> the inlet conditions to this stage are considered after duly accounting for the losses incurred in the previous stage. By using this approach the efficiency evaluation of this stage will not be penalised due to the inefficiencies of upstream stages and will look constant and higher than the overall efficiency.</p>
+</div>
+<p>The sum of <span class="math">\(H_{pa}\)</span>, <span class="math">\(H_{pb}\)</span> and <span class="math">\(H_{pc}\)</span> demands more of our attention. Let us denote this sum by <span class="math">\(H_p\)</span>. If this sum total of ideal work (<span class="math">\(H_p\)</span>) computed in a manner as described above, is used as an ideal work reference for the overall compression, we can make the following statements easily by virtue of the definition of ideal head itself (no big underlying mystery):</p>
+<ol class="loweralpha simple">
+<li>The sum total of individual ideal heads for the stages is the same as the ideal head of the overall process (<span class="math">\(H_{pa} + H_{pb} +  H_{pc}\)</span>).</li>
+<li>The efficiency of the overall process is the same as the efficiency of the individual components:</li>
+</ol>
+<div class="math">
+\[\eta_{small} = \frac{H_p}{w_{actual}} = \eta_{overall}\]</div>
+<p>The example above inspires us to develop a new definition of ideal work reference.</p>
+<p>For the purpose of illustration we had chosen to divide the overall compression in three small stages of compression, but to improve our accuracy we could very well divide the compression in infinite number of steps. We similarly, assume that the irreversibilities in the compression process are uniform in nature, and the small isentropic efficiency at the infinitismal stage of compression remains constant. Thus polytropic efficiency is defined in differential terms as</p>
+<div class="admonition important" id="index-7">
+<p class="first admonition-title">Important</p>
+<p>polytropic efficiency</p>
+<div class="last math" id="equation-polytropic-efficiency-definition">
+<span class="eqno">(6)<a class="headerlink" href="#equation-polytropic-efficiency-definition" title="Permalink to this equation">¶</a></span>\[\eta_{p} = \frac{dh_s}{dh}\]</div>
+</div>
+<p>This is illustrated in the figure below</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/polytropic-concept.png"><img alt="concept illustration for polytropic efficiency" src="../_images/polytropic-concept.png" style="width: 640.0px; height: 480.0px;" /></a>
+</div>
+<p>From the second Tds relationship we have</p>
+<div class="math">
+\[Tds = dh - vdP\]</div>
+<p>For isentropic compression process <span class="math">\(ds=0\)</span> hence,</p>
+<div class="math">
+\[dh_s = vdP\]</div>
+<p>Substituting in the equation for polytropic efficiency and some rearrangement we have</p>
+<div class="math" id="equation-equation-one">
+<span class="eqno">(7)<a class="headerlink" href="#equation-equation-one" title="Permalink to this equation">¶</a></span>\[dh = \frac{vdP}{\eta_p}\]</div>
+<p>Taking the integral over the process path we have</p>
+<div class="math" id="equation-equation-two">
+<span class="eqno">(8)<a class="headerlink" href="#equation-equation-two" title="Permalink to this equation">¶</a></span>\[w_{actual} = h_2 - h_1 =  \int_1^2 \frac{vdP}{\eta_p} = \frac{1}{\eta_p} \int_1^2 vdP\]</div>
+<p>Since <span class="math">\(\eta_p\)</span> was assumed constant at the infinitismal level of compression, we were able to take this out of the integral in the equation above. The integral <span class="math">\(\int_1^2 vdP\)</span> is analogous to the quantity <span class="math">\(H_p\)</span> in the example case above.</p>
+<p>While for any flow process, <span class="math">\(\int vdP\)</span> will always, give reversible work, for the special case when the isentropic efficiency of infinitismal stage is constant, this integral is given the special name of polytropic head.  Therefore, we have the following definition:</p>
+<div class="admonition important" id="index-8">
+<p class="first admonition-title">Important</p>
+<p>Polytropic Head Definition</p>
+<p>For a process in which the isentropic efficiency of infinitismal stage is constant, the polytropic head is defined as</p>
+<div class="last math">
+\[H_p = \int_1^2 vdP\]</div>
+</div>
+<p>and upon substitution in <a class="reference internal" href="#equation-equation-two">(8)</a>,</p>
+<div class="math">
+\[w_{actual} = \frac{H_p}{\eta_p}\]</div>
+<p>The polytropic head is an integral expression and can only be evaluated if <span class="math">\(v\)</span> is known as a function of <span class="math">\(P\)</span>. So the nature of this function <span class="math">\(v=v(P)\)</span> needs to be established.</p>
+<p>Now, from equation <a class="reference internal" href="#equation-equation-one">(7)</a>, using ideal gas relationships we have</p>
+<div class="math">
+\[dh = \frac{vdP}{\eta_p} = \frac{1}{\eta_p} \frac{RT}{P}dP\]</div>
+<p>for a perfect gas</p>
+<div class="math">
+\[dh = c_pdT\]</div>
+<p>Upon substitution</p>
+<div class="math">
+\[c_pdT = \frac{1}{\eta_p} \frac{RT}{P}dP\]</div>
+<p>or</p>
+<div class="math">
+\[\frac{dT}{T} = \left(\frac{R}{\eta_p c_p}\right) \frac{dP}{P}\]</div>
+<p>Using the specific heat relationships <span class="math">\(R=c_p-c_v\)</span> and <span class="math">\(k=\frac{c_p}{c_v}\)</span> we have</p>
+<div class="math">
+\[\frac{dT}{T} = \frac{\gamma-1}{\gamma \eta_p}\frac{dP}{P}\]</div>
+<p>taking the integral between (1) and (2) of the above differential we have</p>
+<div class="math">
+\[ln \left( \frac{T_2}{T_1}\right) = \frac{\gamma-1}{\gamma \eta_p} ln \frac{P_2}{P_1}\]</div>
+<p>or</p>
+<div class="math" id="equation-temp-ratio-one">
+<span class="eqno">(9)<a class="headerlink" href="#equation-temp-ratio-one" title="Permalink to this equation">¶</a></span>\[ \frac{T_2}{T_1}=  \left(\frac{P_2}{P_1}\right)^{\frac{\gamma-1}{\gamma \eta_p}}\]</div>
+<p>If we define <span class="math">\(n\)</span> such that</p>
+<div class="math">
+\[\frac{\gamma-1}{\gamma \eta_p} = \frac{n-1}{n}\]</div>
+<p>then upon substitution in <a class="reference internal" href="#equation-temp-ratio-one">(9)</a> we have</p>
+<div class="math">
+\[\frac{T_2}{T_1}=  \left(\frac{P_2}{P_1}\right)^{\frac{n-1}{n}}\]</div>
+<p>Using ideal gas laws and rearrangements the following relationships can be established in the case of this process:</p>
+<div class="math">
+\[\begin{split}T_1v_1^{n-1} &amp;= T_2v_2^{n-1}\\
+T_1P_1^{\frac{1-n}{n}} &amp;= T_2P_2^{\frac{1-n}{n}} \\
+P_1v_1^{n} &amp;= P_2v_2^{n} \\\end{split}\]</div>
+<p>A process which obeys the relationships of the above form, are referred to as polytropic process. These relationships can be written in a compact form as</p>
+<div class="admonition important" id="index-9">
+<p class="first admonition-title">Important</p>
+<p>Polytropic Process</p>
+<div class="math" id="equation-polytropic-relationships">
+<span class="eqno">(10)<a class="headerlink" href="#equation-polytropic-relationships" title="Permalink to this equation">¶</a></span>\[\begin{split}Tv^{n-1} &amp;= C \\
+TP^{\frac{1-n}{n}} &amp;= C \\
+Pv^{n} &amp;= C \\\end{split}\]</div>
+<p>where the polytropic exponent <span class="math">\(n\)</span> is related to polytropic efficiency by the following relationship</p>
+<div class="last math">
+\[\frac{n-1}{n} = \frac{\gamma-1}{\gamma \eta_p}\]</div>
+</div>
+<p>The relationship between polytropic exponent and efficiency can be used at design stage, to estimate the value of polytropic index <span class="math">\(n\)</span> when the design stage polytropic efficiency <span class="math">\(\eta_p\)</span> is known. At testing stage the polytropic index <span class="math">\(n\)</span> can be obtained from the test results of suction and discharge pressure temperatures. Using the same relationship,  the polytropic efficiency can be determined.</p>
+<p>Now, having established a relationship between <span class="math">\(v\)</span> and <span class="math">\(P\)</span> for a polytropic process, the integral in the polytropic head expression can be evaluated.</p>
+<div class="math">
+\[H_p = \int_1^2 vdP\]</div>
+<p>From the polytropic_relationships given in <a class="reference internal" href="#equation-polytropic-relationships">(10)</a>  we can express <span class="math">\(v\)</span> as function of <span class="math">\(P\)</span> as</p>
+<div class="math">
+\[v = \frac{C^{\frac{1}{n}}}{P^{\frac{1}{n}}}\]</div>
+<p>Substituting,</p>
+<div class="math">
+\[H_{p} = \int_1^2 \frac{C^{\frac{1}{n}}dP}{P^{\frac{1}{n}}}\]</div>
+<p>The above form of the integral is of the same form as the integral evaluated for isentropic head, and therefore has the result of the same form. So after evaluation of the above integral for ideal gas we get the final and useable form of the polytropic head</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Polytropic Head</p>
+<div class="last math">
+\[H_{p} = Z_1RT_1\frac{n}{n-1}\left(\left(\frac{P_{2}}{P_{1}}\right)^{\frac{n-1}{n}}-1\right)\]</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chap07.html" class="btn btn-neutral float-right" title="CHAPTER 7. - TURBINES" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chap05.html" class="btn btn-neutral" title="CHAPTER 5. - ENTROPY" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sandeep Raheja.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
