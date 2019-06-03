@@ -2,9 +2,9 @@ Process Calculations
 =======================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
-   thermophysical
-   pressure-drop
+   thermophysical/index
+   pressure-drop/index
    storage/index
