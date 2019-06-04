@@ -5,5 +5,5 @@ Compressors
    :maxdepth: 1
    :caption: Contents:
 
-   sizing-centrifugal
-   fad-calculate
+   centrifugal-estimate/help
+   fad-calculate/help

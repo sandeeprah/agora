@@ -5,6 +5,6 @@ Engines, Gas Turbine and Steam Turbines
    :maxdepth: 1
    :caption: Contents:
 
-   gas-turbine-deration
-   steam-turbine-performance
-   diesel-fuel-consumption
+   diesel-fuel-consumption/help
+   gas-turbine-deration/help
+   steam-turbine-performance/help

@@ -5,5 +5,7 @@ Pumps
    :maxdepth: 1
    :caption: Contents:
 
-   viscosity-correction
-   sizing-centrifugal
+   design-estimate/help
+   viscosity-conversions/help
+   viscous2water/help
+   water2viscous/help

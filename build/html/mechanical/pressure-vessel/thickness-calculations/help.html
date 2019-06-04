@@ -1,0 +1,582 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="Pressure Vessel Thickness/MAWP Calculation - Reference" name="title" />
+<meta content="Help/Reference for the thickness/MAWP, volume and weight estimation of pressure vessels. The thickness and MAWP are calculated based on the internal design pressures as per ASME Section VIII Div-1 requirements." name="description" />
+<meta content="pressure vessel thickness MAWP volume weight calculation ASME" name="keywords" />
+<meta content="Sandeep Raheja" name="author" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pressure Vessel Thickness Calculation &mdash; codecalculation.com 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="codecalculation.com 1 documentation" href="../../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> codecalculation.com
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../docuMentor.html">docuMentor : Introduction to key features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../process/index.html">Process Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Mechanical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../electrical/index.html">Electrical Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../instrumentation/index.html">Instrumentation Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../civil/index.html">Civil/Structural Calculations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">E-Books:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../thermodynamics/index.html">Thermodynamics for Rotating Equipment (from the ground up)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">codecalculation.com</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Pressure Vessel Thickness Calculation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/mechanical/pressure-vessel/thickness-calculations/help.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pressure-vessel-thickness-calculation">
+<h1>Pressure Vessel Thickness Calculation<a class="headerlink" href="#pressure-vessel-thickness-calculation" title="Permalink to this headline">¶</a></h1>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/vessel.jpg"><img alt="pressure vessel" src="../../../_images/vessel.jpg" style="width: 522.9px; height: 413.7px;" /></a>
+</div>
+<div class="section" id="design-formulas">
+<h2>Design Formulas<a class="headerlink" href="#design-formulas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="minimum-thickness-requirement-ug-16">
+<h3>Minimum thickness requirement (UG-16)<a class="headerlink" href="#minimum-thickness-requirement-ug-16" title="Permalink to this headline">¶</a></h3>
+<p>The minimum thickness requirement of any pressure retaining component (excluding corrosion allowance) is 1.5 mm in accordance with the provisions of UG-16 i.e.</p>
+<div class="math" id="equation-minimum-thickness">
+<span class="eqno">(1)<a class="headerlink" href="#equation-minimum-thickness" title="Permalink to this equation">¶</a></span>\[t_u = 1.5 mm\]</div>
+</div>
+<div class="section" id="thickness-mawp-and-volume-of-cylindrical-shells">
+<h3>Thickness, MAWP and Volume of Cylindrical Shells<a class="headerlink" href="#thickness-mawp-and-volume-of-cylindrical-shells" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/cylinder.png"><img alt="Cylindrical Shell" src="../../../_images/cylinder.png" style="width: 448.0px; height: 336.0px;" /></a>
+</div>
+<p><strong>Thickness</strong></p>
+<p>The thickness required (<span class="math">\(t_c\)</span>) to handle circumferential stress arising due to internal pressure (<span class="math">\(P_i\)</span>) is given as:</p>
+<p>If <span class="math">\(P_i \leq 0.385SE\)</span>, using <strong>UG-27(1)</strong></p>
+<div class="math" id="equation-ug-27-1">
+<span class="eqno">(2)<a class="headerlink" href="#equation-ug-27-1" title="Permalink to this equation">¶</a></span>\[t_c = \frac{P_iR}{SE-0.6P_i}\]</div>
+<p>else if <span class="math">\(P_i &gt; 0.385SE\)</span>, using <strong>Appendix 1-2(1)</strong></p>
+<div class="math" id="equation-app-1-2-1">
+<span class="eqno">(3)<a class="headerlink" href="#equation-app-1-2-1" title="Permalink to this equation">¶</a></span>\[t_c = R\left(e^{\frac{P_i}{SE}}-1\right)\]</div>
+<p>The thickness required (<span class="math">\(t_l\)</span>) to handle longitudinal stress arising due to internal pressure (<span class="math">\(P_i\)</span>) is given as:</p>
+<p>If <span class="math">\(P_i \leq 1.25SE\)</span>, using <strong>UG-27(2)</strong></p>
+<div class="math" id="equation-ug-27-2">
+<span class="eqno">(4)<a class="headerlink" href="#equation-ug-27-2" title="Permalink to this equation">¶</a></span>\[t_l =  \frac{P_iR}{2SE+0.4P_i}\]</div>
+<p>else if <span class="math">\(P_i &gt; 1.25SE\)</span>, using <strong>Appendix 1-2(3)</strong></p>
+<div class="math" id="equation-app-1-2-3">
+<span class="eqno">(5)<a class="headerlink" href="#equation-app-1-2-3" title="Permalink to this equation">¶</a></span>\[t_l = R\left(\sqrt{Z} - 1\right)\]</div>
+<p>where,</p>
+<div class="math">
+\[Z = \left( \frac{P_i}{SE} + 1\right)\]</div>
+<p>The shell thickness excluding corrosion allowance (<span class="math">\(t\)</span>) is the highest of the thickness amongst <span class="math">\(t_c\)</span>, <span class="math">\(t_l\)</span>, <span class="math">\(t_u\)</span>:</p>
+<div class="math">
+\[t = max(t_c, t_l, t_u)\]</div>
+<p><strong>MAWP</strong></p>
+<p>The MAWP for the available thickness is determined for circumferential stress (<span class="math">\(MAWP_c\)</span>) as:</p>
+<p>If <span class="math">\(t \leq \frac{R}{2}\)</span>, using <strong>UG-27(1)</strong></p>
+<div class="math" id="equation-p-ug-27-1">
+<span class="eqno">(6)<a class="headerlink" href="#equation-p-ug-27-1" title="Permalink to this equation">¶</a></span>\[MAWP_c = \frac{SEt}{R + 0.6t}\]</div>
+<p>else if <span class="math">\(t &gt; \frac{R}{2}\)</span>, using <strong>Appendix 1-2(2)</strong></p>
+<div class="math" id="equation-app-1-2-2">
+<span class="eqno">(7)<a class="headerlink" href="#equation-app-1-2-2" title="Permalink to this equation">¶</a></span>\[MAWP_c = SElog_e\left(\frac{R + t}{R}\right)\]</div>
+<p>The MAWP for the available thickness is determined for longitudinal stress (<span class="math">\(MAWP_l\)</span>) as:</p>
+<p>If <span class="math">\(t \leq \frac{R}{2}\)</span>, using <strong>UG-27(2)</strong></p>
+<div class="math" id="equation-p-ug-27-2">
+<span class="eqno">(8)<a class="headerlink" href="#equation-p-ug-27-2" title="Permalink to this equation">¶</a></span>\[MAWP_l =  \frac{2SEt}{R-0.4t}\]</div>
+<p>else if <span class="math">\(t &gt; \frac{R}{2}\)</span>, using <strong>Appendix 1-2(4)</strong></p>
+<div class="math" id="equation-app-1-2-4">
+<span class="eqno">(9)<a class="headerlink" href="#equation-app-1-2-4" title="Permalink to this equation">¶</a></span>\[MAWP_l = SE\left(Z-1\right)\]</div>
+<p>where,</p>
+<div class="math">
+\[Z = \left( \frac{R+t}{R}\right)^2\]</div>
+<p>The shell MAWP (<span class="math">\(MAWP\)</span>) is the lowest of the MAWP amongst <span class="math">\(MAWP_c\)</span> and <span class="math">\(MAWP_l\)</span>:</p>
+<div class="math">
+\[MAWP = min(MAWP_c, MAWP_l)\]</div>
+<p><strong>Volume</strong></p>
+<p>The inner volume (<span class="math">\(V\)</span>) of a cylindrical shell is obtained from the following:</p>
+<div class="math">
+\[V = \pi R^2 S\]</div>
+<p>The volume of steel (<span class="math">\(V_m\)</span>) for weight computation is obtained from the following:</p>
+<div class="math">
+\[V_m = \pi S (R_o^2 -R^2)\]</div>
+</div>
+<div class="section" id="thickness-mawp-and-volume-of-spherical-shells">
+<h3>Thickness, MAWP and Volume of Spherical Shells<a class="headerlink" href="#thickness-mawp-and-volume-of-spherical-shells" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/sphere.png"><img alt="Spherical Shell" src="../../../_images/sphere.png" style="width: 448.0px; height: 336.0px;" /></a>
+</div>
+<p><strong>Thickness</strong></p>
+<p>If <span class="math">\(P_i \leq 0.665SE\)</span>, using <strong>UG-27(3)</strong></p>
+<div class="math" id="equation-ug-27-3">
+<span class="eqno">(10)<a class="headerlink" href="#equation-ug-27-3" title="Permalink to this equation">¶</a></span>\[t =  \frac{P_iR}{2SE-0.2P_i}\]</div>
+<p>else if <span class="math">\(P_i &gt; 0.665SE\)</span>, using <strong>Appendix 1-3(1)</strong></p>
+<div class="math" id="equation-app-1-3-1">
+<span class="eqno">(11)<a class="headerlink" href="#equation-app-1-3-1" title="Permalink to this equation">¶</a></span>\[t = R\left(e^{\left[\frac{0.5P_i}{SE}\right]} - 1\right)\]</div>
+<p><strong>MAWP</strong></p>
+<p>If <span class="math">\(t \leq 0.356R\)</span>, using <strong>UG-27(3)</strong></p>
+<div class="math" id="equation-p-ug-27-3">
+<span class="eqno">(12)<a class="headerlink" href="#equation-p-ug-27-3" title="Permalink to this equation">¶</a></span>\[MAWP =  \frac{2SEt}{R-0.4t}\]</div>
+<p>else if <span class="math">\(t &gt; 0.356R\)</span>, using <strong>Appendix 1-3(2)</strong></p>
+<div class="math" id="equation-app-1-3-2">
+<span class="eqno">(13)<a class="headerlink" href="#equation-app-1-3-2" title="Permalink to this equation">¶</a></span>\[MAWP = 2SElog_e\left( \frac{R+t}{R} \right)\]</div>
+<p><strong>Volume</strong></p>
+<p>The inner volume (<span class="math">\(V\)</span>) of a spherical shell is obtained from the following:</p>
+<div class="math">
+\[V = \frac{4}{3}\pi R^3\]</div>
+<p>The volume of steel (<span class="math">\(V_m\)</span>) for weight computation is obtained from the following:</p>
+<div class="math">
+\[V_m = \frac{4}{3}\pi \left(R_o^3 - R^3\right)\]</div>
+</div>
+<div class="section" id="thickness-mawp-and-volume-of-ellipsoidal-head">
+<h3>Thickness, MAWP and Volume of Ellipsoidal Head<a class="headerlink" href="#thickness-mawp-and-volume-of-ellipsoidal-head" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/ellipsoidal.png"><img alt="Ellipsoidal Head" src="../../../_images/ellipsoidal.png" style="width: 262.5px; height: 204.0px;" /></a>
+</div>
+<p>For an ellipsoidal head the aspect ratio (<span class="math">\(\beta\)</span>) is defined as:</p>
+<div class="math" id="equation-beta-from-h">
+<span class="eqno">(14)<a class="headerlink" href="#equation-beta-from-h" title="Permalink to this equation">¶</a></span>\[\beta = \frac{D}{2h}\]</div>
+<p>where:</p>
+<p><span class="math">\(h\)</span> is the inner height of the head
+<br> <span class="math">\(D\)</span> is the inner diameter of the head skirt</p>
+<p>this can be used to determine the inner height (<span class="math">\(h\)</span>) of the ellipsoid when the aspect ratio (<span class="math">\(\beta\)</span>) is known:</p>
+<div class="math" id="equation-h-from-beta">
+<span class="eqno">(15)<a class="headerlink" href="#equation-h-from-beta" title="Permalink to this equation">¶</a></span>\[\begin{split}h = \frac{D}{2\beta} \\\end{split}\]</div>
+<p>Factor (K) for ellipsoid is obtained as:</p>
+<div class="math" id="equation-ellipsoid-k">
+<span class="eqno">(16)<a class="headerlink" href="#equation-ellipsoid-k" title="Permalink to this equation">¶</a></span>\[K = \frac{1}{6}\left[2 + \beta^2 \right]\]</div>
+<p><strong>Thickness</strong></p>
+<p>Using the equation <strong>Appendix 1-4(1)</strong>, the thickness for ellipsoidal head is given as:</p>
+<div class="math" id="equation-ellipsoidal-head-thickness">
+<span class="eqno">(17)<a class="headerlink" href="#equation-ellipsoidal-head-thickness" title="Permalink to this equation">¶</a></span>\[t = \frac{P_iDK}{2SE - 0.2P_i}\]</div>
+<p><strong>MAWP</strong></p>
+<p>Using the equation <strong>Appendix 1-4(1)</strong>, the MAWP for ellipsoidal head is given as:</p>
+<div class="math">
+\[MAWP = \frac{2SEt}{KD + 0.2t}\]</div>
+<p><strong>Volume</strong></p>
+<p>The inner volume (<span class="math">\(V\)</span>) of an ellipsoidal head is obtained from the following:</p>
+<div class="math">
+\[V = \frac{2}{3}\pi R^2h\]</div>
+<p>The volume of steel (<span class="math">\(V_m\)</span>) for weight computation is obtained from the following:</p>
+<div class="math">
+\[V_m = \frac{2}{3}\pi \left(R_o^2h_o - R^2h\right)\]</div>
+<p>where :</p>
+<p><span class="math">\(R=\frac{D}{2}\)</span>
+<br> <span class="math">\(R_o=R+t\)</span>
+<br> <span class="math">\(h_o=h+t\)</span></p>
+</div>
+<div class="section" id="thickness-mawp-and-volume-of-torispherical-head">
+<h3>Thickness, MAWP and Volume of Torispherical Head<a class="headerlink" href="#thickness-mawp-and-volume-of-torispherical-head" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/torispherical.png"><img alt="Torispherical Head" src="../../../_images/torispherical.png" style="width: 319.0px; height: 258.5px;" /></a>
+</div>
+<p>The following relationships are applicable:</p>
+<p>Outer Diameter <span class="math">\(D_o=D+2t\)</span>
+<br> Outer Crown Radius <span class="math">\(L_o=L+t\)</span>
+<br> Outer knuckle radius <span class="math">\(r_o=r+t\)</span></p>
+<p>Factor M for the torispherical head is obtained as:</p>
+<div class="math">
+\[M = \frac{1}{4}\left( 3 + \sqrt{\frac{L}{r}}\right)\]</div>
+<p>where :</p>
+<p><span class="math">\(L\)</span> is the inner crown radius as shown in figure above
+<br> <span class="math">\(r\)</span> is the knuckle radius as shown in figure above</p>
+<p><strong>Thickness</strong></p>
+<p>Using the equation <strong>Appendix 1-4(3)</strong>, the thickness for torispherical head is given as:</p>
+<div class="math" id="equation-app-1-4-3">
+<span class="eqno">(18)<a class="headerlink" href="#equation-app-1-4-3" title="Permalink to this equation">¶</a></span>\[t = \frac{P_iLM}{2SE - 0.2P_i}\]</div>
+<p><strong>MAWP</strong></p>
+<p>Using the equation <strong>Appendix 1-4(3)</strong>, the MAWP for torispherical head is given as:</p>
+<div class="math" id="equation-p-app-1-4-3">
+<span class="eqno">(19)<a class="headerlink" href="#equation-p-app-1-4-3" title="Permalink to this equation">¶</a></span>\[MAWP = \frac{2SEt}{LM + 0.2t}\]</div>
+<p><strong>Volume</strong></p>
+<p>The inner volume of the torispherical head is given by:</p>
+<div class="math">
+\[V = V(D,L,R) = \frac{\pi}{3} \left[ 2hL^2 - (2r^2 + c^2 + 2rL)(L-h) + 3r^2c sin^{-1} \left(\frac{L -h}{L - r} \right) \right]\]</div>
+<p>where :</p>
+<p><span class="math">\(c = \frac{D}{2} - r\)</span>
+<br> <span class="math">\(h = L - \sqrt{(r + c - L)(r - c - L)}\)</span></p>
+<p>The volume of steel (<span class="math">\(V_m\)</span>) for weight computation is obtained by the subtracting the inner volume of the toridome from the outer volume of the toridome:</p>
+<div class="math">
+\[V_m = V(D_o, L_o, r_o) - V(D, L, r)\]</div>
+</div>
+<div class="section" id="thickness-mawp-and-volume-of-hemispherical-head">
+<h3>Thickness, MAWP and Volume of Hemispherical Head<a class="headerlink" href="#thickness-mawp-and-volume-of-hemispherical-head" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/hemispherical.png"><img alt="Hemispherical Head" src="../../../_images/hemispherical.png" style="width: 270.0px; height: 210.0px;" /></a>
+</div>
+<p>The following relationships are applicable:</p>
+<p>Inner Radius <span class="math">\(R=\frac{D}{2}\)</span>
+<br> Outer Radius <span class="math">\(R_o=R+t\)</span></p>
+<p><strong>Thickness</strong></p>
+<p>If <span class="math">\(P_i \leq 0.665SE\)</span>, using <strong>UG-27(3)</strong></p>
+<div class="math">
+\[t =  \frac{P_iR}{2SE-0.2P_i}\]</div>
+<p>else if <span class="math">\(P_i &gt; 0.665SE\)</span>, using <strong>Appendix 1-3(1)</strong></p>
+<div class="math">
+\[t = R\left(e^{\left[\frac{0.5P_i}{SE}\right]} - 1\right)\]</div>
+<p><strong>MAWP</strong></p>
+<p>If <span class="math">\(t \leq 0.356R\)</span>, using <strong>UG-27(3)</strong></p>
+<div class="math">
+\[MAWP =  \frac{2SEt}{R-0.4t}\]</div>
+<p>else if <span class="math">\(t &gt; 0.356R\)</span>, using <strong>Appendix 1-3(2)</strong></p>
+<div class="math">
+\[MAWP = 2SElog_e\left( \frac{R+t}{R} \right)\]</div>
+<p><strong>Volume</strong></p>
+<p>The inner volume (<span class="math">\(V\)</span>) of a hemispherical shell is obtained from the following:</p>
+<div class="math">
+\[V = \frac{2}{3}\pi R^3\]</div>
+<p>The volume of steel (<span class="math">\(V_m\)</span>) for weight computation is obtained from the following:</p>
+<div class="math">
+\[V_m = \frac{2}{3}\pi \left(R_o^3 - R^3\right)\]</div>
+</div>
+<div class="section" id="thickness-mawp-and-volume-of-conical-head">
+<h3>Thickness, MAWP and Volume of Conical Head<a class="headerlink" href="#thickness-mawp-and-volume-of-conical-head" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/conical.png"><img alt="Conical Head" src="../../../_images/conical.png" style="width: 343.5px; height: 297.0px;" /></a>
+</div>
+<p>The following relationships are applicable:</p>
+<p>Inner radius <span class="math">\(R=\frac{D}{2}\)</span>
+<br> Outer radius <span class="math">\(R_o=\frac{D + 2t}{2}\)</span>
+<br> Inner height <span class="math">\(h = \frac{D}{2 tan\alpha}\)</span>
+<br> Outer height <span class="math">\(h_o = h + t\)</span></p>
+<p><strong>Thickness</strong></p>
+<p>For semi apex angle, <span class="math">\(\alpha\)</span> not exceeding 30 degrees, the thickness and MAWP are obtained using the following formulas.</p>
+<p>The thickness for conical head is obtained as :</p>
+<div class="math" id="equation-app-1-4-5">
+<span class="eqno">(20)<a class="headerlink" href="#equation-app-1-4-5" title="Permalink to this equation">¶</a></span>\[t = \frac{P_iD}{2cos \alpha \left(SE - 0.6P_i\right)}\]</div>
+<p><strong>MAWP</strong></p>
+<p>The MAWP for conical head is obtained as :</p>
+<div class="math" id="equation-p-app-1-4-5">
+<span class="eqno">(21)<a class="headerlink" href="#equation-p-app-1-4-5" title="Permalink to this equation">¶</a></span>\[MAWP = \frac{2SEtcos \alpha}{D + 1.2tcos \alpha}\]</div>
+<p><strong>Volume</strong></p>
+<p>The inner volume (<span class="math">\(V\)</span>) of a conical head is obtained from the following:</p>
+<div class="math">
+\[V = \frac{2}{3}\pi R^2h\]</div>
+<p>The volume of steel (<span class="math">\(V_m\)</span>) for weight computation is obtained from the following:</p>
+<div class="math">
+\[V_m = \frac{4}{3}\pi \left(R_o^2h_o - R^2h\right)\]</div>
+</div>
+<div class="section" id="thickness-mawp-and-volume-of-toriconical-head">
+<h3>Thickness, MAWP and Volume of Toriconical Head<a class="headerlink" href="#thickness-mawp-and-volume-of-toriconical-head" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/toriconical.png"><img alt="Toriconical Head" src="../../../_images/toriconical.png" style="width: 374.0px; height: 332.5px;" /></a>
+</div>
+<p>The following relationships are applicable:</p>
+<p>the inside diameter of the conical portion <span class="math">\(D_i = D - 2r(1- cos \alpha)\)</span>
+<br> the inner crown radius <span class="math">\(L = \frac{D_i}{2cos \alpha}\)</span></p>
+<p><strong>Thickness</strong></p>
+<p>The thickness  of the knuckle portion (<span class="math">\(t_{knuckle}\)</span>) can be obtained using Appendix 1-4(3) as given in <a class="reference internal" href="#equation-app-1-4-3">(18)</a> above.</p>
+<p>The thickness of the conical portion (<span class="math">\(t_{cone}\)</span>)can be obtained using Appendix 1-4(5) as given in <a class="reference internal" href="#equation-app-1-4-5">(20)</a>.</p>
+<p>The thickness of the toricone is obtained as:</p>
+<div class="math">
+\[t = max(t_{knuckle}, t_{cone} )\]</div>
+<p><strong>MAWP</strong></p>
+<p>The MAWP of the knuckle portion (<span class="math">\(MAWP_{knuckle}\)</span>) can be obtained using Appendix 1-4(3) as given in <a class="reference internal" href="#equation-p-app-1-4-3">(19)</a> above.</p>
+<p>The MAWP of the conical portion (<span class="math">\(MAWP_{cone}\)</span>) can be obtained using Appendix 1-4(5) as given in <a class="reference internal" href="#equation-p-app-1-4-5">(21)</a> above.</p>
+<p>The MAWP of the toricone is obtained as the minimum of the two.</p>
+<div class="math">
+\[MAWP = min(MAWP_{knuckle}, MAWP_{cone} )\]</div>
+<p><strong>Volume</strong></p>
+<p>Presently the program estimates the volume of the toricone, with a cone so the equations given in conical head sections apply. In future this may change by making use of more accurate relationships.</p>
+</div>
+</div>
+<div class="section" id="calculation-procedure">
+<h2>Calculation Procedure<a class="headerlink" href="#calculation-procedure" title="Permalink to this headline">¶</a></h2>
+<p><strong>Shell Evaluation</strong></p>
+<p><em>Step -1 :</em> : Determine the unknown dimensions of the vessel shell from the dimensions as provided.</p>
+<p>If the user has provided outer diameter (<span class="math">\(D_o\)</span>) of the vessel then the inner diameter (<span class="math">\(D\)</span>) can be obtained as :</p>
+<div class="math">
+\[D = D_o - 2t_n\]</div>
+<p>If the user has provided inner diameter (<span class="math">\(D\)</span>) of the vessel then the outer diameter (<span class="math">\(D_o\)</span>) can be obtained as :</p>
+<div class="math">
+\[D_o = D + 2t_n\]</div>
+<p>The inner (<span class="math">\(R\)</span>) and outer (<span class="math">\(R_o\)</span>) radius of the shell  can be determined as:</p>
+<div class="math">
+\[\begin{split}R &amp;= \frac{D}{2} \\
+R_o &amp;= \frac{D_o}{2} \\\end{split}\]</div>
+<p><em>Step -2 :</em> Establish the dimensions under corroded conditions. The dimensions as used in the formulas shall be considered after considering the removal of material on account of corrosion. This implies adding the specified corrosion allowance on the inner dimensions which are exposed to the fluid and deducting the corrosion allowance from the nominal thickness provided. Thus,</p>
+<div class="math">
+\[\begin{split}D_{cor} &amp;= D + 2ca \\
+R_{cor} &amp;= R + ca \\
+t_{cor} &amp;= t_n - ca\end{split}\]</div>
+<p><em>Step -3 :</em> Based on the value of internal design temperature lookup and interpolate the allowable stress of the specified material as furnished in ASME-II Part D.</p>
+<p><em>Step -4 :</em> Establish the minimum thickness of any component required to meet the requirement of UG-16 as below.</p>
+<div class="math">
+\[t_u = 1.5mm\]</div>
+<p><em>Step -5 :</em> Calculate the thickness of the shell based on the internal design pressure i.e. <span class="math">\(t_c\)</span> and <span class="math">\(t_l\)</span> for cylinder and <span class="math">\(t_{sph}\)</span> for sphere.</p>
+<p>For cylindrical shell the thickness (<span class="math">\(t\)</span>) shall be the maximum amongst <span class="math">\(t_c\)</span>, <span class="math">\(t_l\)</span> and <span class="math">\(t_u\)</span> i.e.</p>
+<div class="math">
+\[t = max(t_c, t_l, t_u)\]</div>
+<p>For spherical shell the thickness (<span class="math">\(t\)</span>) shall be the maximum amongst <span class="math">\(t_{sph}\)</span> and <span class="math">\(t_u\)</span> i.e.</p>
+<div class="math">
+\[t = max(t_{sph}, t_u)\]</div>
+<p><em>Step -5 :</em> Calculate the required thickness of the shell (<span class="math">\(t_r\)</span>) of the vessel shell after adding the corrosion allowance i.e. :</p>
+<div class="math">
+\[t_r = t + ca\]</div>
+<p>The provided shell thickness (<span class="math">\(t_n\)</span>) is adequate if the provided nominal thickness exceeds the required thickness (<span class="math">\(t_r\)</span>):</p>
+<div class="math">
+\[t_n \geq t_r\]</div>
+<p><em>Step -6 :</em> Calculate the MAWP of the shell using the design formulas as applicabe for the shell Shape (cylindrical or spherical) with the inner shell dimensions under corroded conditions. The thickness available (<span class="math">\(t_{cor}\)</span>) under corroded conditions shall be used for the purpose of MAWP calculation.</p>
+<p><strong>Head Evaluation</strong></p>
+<p><em>Step -7 :</em> : Determine the dimensions of the head.</p>
+<p>It is assumed that the inner dimension of the head skirt is the same as the inner dimension of the cylindrical shell. Thus, <span class="math">\(D_1 = D_2 = D\)</span> and  <span class="math">\(R_1 = R_2 = \frac{D}{2}\)</span>.</p>
+<p>The outer diameters of the head are obtained as:</p>
+<div class="math">
+\[\begin{split}D_{o1} &amp;= D_1 + 2t_{n1} \\
+D_{o2} &amp;= D_2 + 2t_{n2} \\\end{split}\]</div>
+<p>The outer radiuses of the head are obtained as:</p>
+<div class="math">
+\[\begin{split}R_{o1} &amp;= \frac{D_{o1}}{2}  \\
+R_{o2} &amp;= \frac{D_{o2}}{2}  \\\end{split}\]</div>
+<p><em>Step -8 :</em> Determine the dimensions of the head in corroded conditions.</p>
+<div class="math">
+\[\begin{split}D_{cor1} &amp;= D_1 + 2ca \\
+R_{cor1} &amp;= R_1 + ca \\
+h_{cor1} &amp;= h_1 + ca \\
+L_{cor1} &amp;= L_1 + ca \\
+r_{cor1} &amp;= r_1 + ca \\
+t_{cor1} &amp;= t_{n1} - ca \\\end{split}\]</div>
+<p>The relationship for head 2 are identical to the above.</p>
+<p><em>Step -9 :</em> Calculate the thickness of Head 1 (<span class="math">\(t_{h1}\)</span>) and Head 2 ( <span class="math">\(t_{h2}\)</span>) for the internal design pressure based on the relevant formula as applicable to the head shape. The calculated thickness of the head shall be obtained by application of the provisions of UG-16 for minimum thickness i.e.</p>
+<div class="math">
+\[\begin{split}t_1 &amp;= max(t_{h1}, t_u) \\
+t_2 &amp;= max(t_{h2}, t_u) \\\end{split}\]</div>
+<p><em>Step -10 :</em> The required thickness of the heads (<span class="math">\(t_{r1}\)</span> and <span class="math">\(t_{r2}\)</span>) is obtained by adding the corrosion allowance to the calculated thickness.</p>
+<div class="math">
+\[\begin{split}t_{r1} &amp;= t_1 + ca \\
+t_{r2} &amp;= t_2 + ca \\\end{split}\]</div>
+<p>The provided head thickness (<span class="math">\(t_{n1}\)</span> / <span class="math">\(t_{n2}\)</span>  ) is adequate if it exceeds the required thickness (<span class="math">\(t_{r1}\)</span>/<span class="math">\(t_{r2}\)</span>):</p>
+<div class="math">
+\[\begin{split}t_{n1} &amp;\geq t_{r1} \\
+t_{n2} &amp;\geq t_{r2} \\\end{split}\]</div>
+<p><em>Step -11 :</em> Calculate the MAWP of Head-1 (<span class="math">\(MAWP_1\)</span>) and Head-2 (<span class="math">\(MAWP_2\)</span>) using the design formulas as applicabe for the head shape (ellipsoidal, torispherical, hemispherical, conical or toriconical) with head inner dimensions under corroded conditions. The thickness available (<span class="math">\(t_{cor1}\)</span>/<span class="math">\(t_{cor2}\)</span>) under corroded conditions shall be used for the purpose of MAWP calculation.</p>
+<p><strong>Overall MAWP and Hydrotest Pressure</strong></p>
+<p><em>Step -12 :</em> Determine the overall MAWP of the vessel which is the least amongst the MAWP as determined for the shell and the heads.</p>
+<div class="math">
+\[MAWP = min(MAWP_{sh}, MAWP_1, MAWP_2)\]</div>
+<p><em>Step -13 :</em> Determine the hydrotest pressure requirements as per the provisions of UG-99 (b).</p>
+<div class="math">
+\[P_t = 1.3MAWP(\frac{S_t}{S})\]</div>
+<p>where :</p>
+<p><span class="math">\(S_t\)</span> is the allowable stress of the material at hydrotest temperatures.</p>
+<p><strong>Volumes and Weights</strong></p>
+<p><em>Step -14 :</em> : Determine the inner volume of the shell (<span class="math">\(V_{sh}\)</span>), Head-1 (<span class="math">\(V_{1}\)</span>) and Head-2 (<span class="math">\(V_{2}\)</span>) using the formulas as applicable to the geometry.</p>
+<p>The volume of the vessel (<span class="math">\(V\)</span>) is obtained as:</p>
+<div class="math">
+\[V = V_{sh} + V_{1} + V_{2}\]</div>
+<p><em>Step -15 :</em> : Determine the material volume (steel volume) of the shell (<span class="math">\(V_{msh}\)</span>), Head-1 (<span class="math">\(V_{m1}\)</span>) and Head-2 (<span class="math">\(V_{m2}\)</span>) using the formulas as applicable to the geometry. Knowing the density of steel (<span class="math">\(\rho_{steel}\)</span>) the fabricated weight of the shell(<span class="math">\(W_{sh}\)</span>), Head-1 (<span class="math">\(W_{1}\)</span>) and Head-2 (<span class="math">\(W_{w2}\)</span>) can be obtained as:</p>
+<div class="math">
+\[\begin{split}W_{sh} &amp;= \rho_{steel}*V_{msh} \\
+W_{1} &amp;= \rho_{steel}*V_{m1} \\
+W_{2} &amp;= \rho_{steel}*V_{m2} \\\end{split}\]</div>
+<p>The fabrication weight of the vessel is obtained as:</p>
+<div class="math">
+\[W = W_{sh} +  W_{1} + W_{2}\]</div>
+<p>Knowing the markup weight as a percent (<span class="math">\(\zeta\)</span>) for additional items like vessel supports, nozzles etc. the gross fabrication weight of the vessel is obtained as:</p>
+<div class="math">
+\[W_{gross} = W(1 + \frac{\zeta}{100})\]</div>
+<p>Knowing the density of water (<span class="math">\(\rho_{water}\)</span>) the hydrotest weight of the vessel (<span class="math">\(W_t\)</span>) is obtained as:</p>
+<div class="math">
+\[W_t = W_{gross} + \rho_{water}V\]</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sandeep Raheja.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

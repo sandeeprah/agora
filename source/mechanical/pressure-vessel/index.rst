@@ -5,4 +5,4 @@ Pressure Vessels
    :maxdepth: 1
    :caption: Contents:
 
-   thickness-calculation
+   thickness-calculations/help

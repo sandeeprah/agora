@@ -5,4 +5,4 @@ Fired Heater and Boilers
    :maxdepth: 1
    :caption: Contents:
 
-   efficiency-measurements
+   efficiency-measurements/help

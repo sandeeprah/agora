@@ -5,4 +5,4 @@ Storage
    :maxdepth: 1
    :caption: Contents:
 
-   receiver-sizing
+   receiver-sizing/help

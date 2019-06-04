@@ -2,11 +2,11 @@ Electrical Calculations
 =======================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
-   cables
-   ups-battery
-   motors
-   lighting
-   miscellaneous
+   cables/index
+   ups-battery/index
+   motors/index
+   lighting/index
+   miscellaneous/index

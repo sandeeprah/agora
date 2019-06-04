@@ -2,7 +2,7 @@ Mechanical Calculations
 =======================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    pumps/index
@@ -12,8 +12,8 @@ Mechanical Calculations
    heater/index
    pressure-vessel/index
    piping/index
-   hvac/index
+   HVAC/index
    seals/index
-   fluidmech/index
-   noise
-   emissions
+   flumech/index
+   noise/index
+   emissions/index

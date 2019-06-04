@@ -5,4 +5,4 @@ Seals and Seal Systems
    :maxdepth: 1
    :caption: Contents:
 
-   labyrinth-leakage
+   labyrinth-leakage/help

@@ -2,8 +2,8 @@ Instrumentation Calculations
 ============================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
+   :caption: Contents
 
-   control-valves
-   relief-valves
+   control-valves/index
+   relief-valves/index

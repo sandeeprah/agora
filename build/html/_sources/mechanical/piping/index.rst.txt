@@ -5,5 +5,5 @@ Piping
    :maxdepth: 1
    :caption: Contents:
 
-   pipe-dimensions
-   pipe-wall-thickness
+   pipe-dimensions/help
+   pipe-wall-thickness/help
